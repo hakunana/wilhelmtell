@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- All exclusively possible datatypes according to schema.org -->
+	<xs:simpleType name="schemaorgdatatype">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="http://schema.org/Boolean"/>
+			<xs:enumeration value="http://schema.org/Date"/>
+			<xs:enumeration value="http://schema.org/DateTime"/>
+			<xs:enumeration value="http://schema.org/Time"/>
+			<xs:enumeration value="http://schema.org/Number"/>
+			<xs:enumeration value="http://schema.org/Float"/>
+			<xs:enumeration value="http://schema.org/Integer"/>
+			<xs:enumeration value="http://schema.org/URL"/>
+			<xs:enumeration value="http://schema.org/Text"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+<!-- The rootelement can only have nodeid="root" -->
+	<xs:simpleType name="rootelement">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="root"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+<!-- All attributes which can only have values true or false are of this type -->
+	<xs:simpleType name="bool">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="true"/>
+		<xs:enumeration value="false"/>
+	</xs:restriction>
+	</xs:simpleType>
+
+<!-- Validates input element, e.g. input element cannot have any children -->
+	<xs:complexType name="input">		
+		<xs:attribute name="nodeid" type="xs:string" use="required"/>
+		
+		<xs:attribute name="labelde" type="xs:string"/>
+		<xs:attribute name="labelfr" type="xs:string"/>
+		<xs:attribute name="labelen" type="xs:string"/>
+		<xs:attribute name="labelit" type="xs:string"/>
+		<xs:attribute name="displaylabel" type="bool"/>
+		<xs:attribute name="required" type="bool"/>
+		<xs:attribute name="edit" type="bool"/>
+		<xs:attribute name="value" type="xs:string"/>
+		<xs:attribute name="datatype" type="schemaorgdatatype"/>
+		
+	</xs:complexType> 
+
+<!-- Validates nodeelem element -->
+	<xs:complexType name="nodeelem">
+	
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="node" type="node" maxOccurs="unbounded"/>
+			<xs:element name="input" type="input" maxOccurs="unbounded"/>
+		</xs:choice>
+		
+		<xs:attribute name="labelde" type="xs:string"/>
+		<xs:attribute name="labelfr" type="xs:string"/>
+		<xs:attribute name="labelen" type="xs:string"/>
+		<xs:attribute name="labelit" type="xs:string"/>
+		<xs:attribute name="displaylabel" type="bool"/>
+		
+	</xs:complexType>
+
+	<xs:complexType name="node">
+		
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="node" type="node" maxOccurs="unbounded"/>
+				<xs:element name="nodeelem" type="nodeelem" maxOccurs="unbounded"/>
+				<xs:element name="input" type="input" maxOccurs="unbounded"/>
+			</xs:choice>
+			
+			<xs:attribute name="nodeid" type="xs:string" use="required"/>
+			
+			<xs:attribute name="labelde" type="xs:string"/>
+			<xs:attribute name="labelfr" type="xs:string"/>
+			<xs:attribute name="labelen" type="xs:string"/>
+			<xs:attribute name="labelit" type="xs:string"/>
+			<xs:attribute name="displaylabel" type="bool"/>
+			<xs:attribute name="required" type="bool"/>
+			<xs:attribute name="edit" type="bool"/>
+			<xs:attribute name="multiplechildren" type="bool"/>
+			
+	</xs:complexType> 
+
+	<xs:element name="node">
+		<xs:complexType>
+		
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="node" type="node" maxOccurs="unbounded"/>
+				<xs:element name="input" type="input" maxOccurs="unbounded"/>
+			</xs:choice>
+			
+			<xs:attribute name="nodeid" type="rootelement" use="required"/>
+			
+			<xs:attribute name="labelde" type="xs:string"/>
+			<xs:attribute name="labelfr" type="xs:string"/>
+			<xs:attribute name="labelen" type="xs:string"/>
+			<xs:attribute name="labelit" type="xs:string"/>
+			<xs:attribute name="displaylabel" type="bool"/>
+			
+			<!-- 
+			Following XQueries should not return any result. If they should return a result, the listed element is invalid:
+
+			Labels should only be displayed if there are label values, check with:
+				//input[@displaylabel='true' and ((not(@labelde)) or (not(@labelfr)) or (not(@labelen)) or (not(@labelit)))]
+
+			Any <node required="true"> should have at least one descendant <[descendant] required="true"> 
+				Amount of elements: count(//node[@required="true" and not (descendant::*[@required="true"])])
+				List of elements: //node[@required="true" and not (descendant::*[@required="true"])]
+
+			Any <node multiplechildren="true"> should have at least one <nodeelem> as child
+				Amount of elements: count(//node[@multiplechildren="true" and not(child::nodeelem)])
+				List of elements: //node[@multiplechildren="true" and not(child::nodeelem)]
+
+			Any <nodeelem> should have parent <node multiplechildren="true">
+				Amount of elements: count(//nodeelem[not(parent::node[@multiplechildren="true"])])
+				List of elements: //nodeelem[not(parent::node[@multiplechildren="true"])]
+
+			Any element with children <input> should have exactly one <input nodeid="@type">
+				List of elements with more than one @type element: //*[count(child::input[@nodeid="@type"])>1]
+
+			Any element with children <input> should have exactly one <input nodeid="@id">
+				List of elements with more than one @id element: //*[count(child::input[@nodeid="@id"])>1]
+
+			1 Zusatz:
+			Wenn node oder nodeelem kein -> child -> nodeid = @type
+			//node[not(child::input[@nodeid="@type"])]/input/..
+
+			//nodeelem[not(child::input[@nodeid="@type"])]/input/..
+
+			Dann Warnung:
+			Wahrscheinlich falsch, da normalerweise type angegeben wird…
+
+			2 Zusatz:
+			Wenn node oder nodeelem kein -> child -> nodeid =@id
+			//node[not(child::input[@nodeid="@id"])]/input/..
+			//nodeelem[not(child::input[@nodeid="@id"])]/input/..
+
+			Dann Info:
+			Empfohlen ist wo möglich eine URI anzugeben.
+			-->
+			
+		</xs:complexType> 
+	</xs:element>
+	
+</xs:schema> 

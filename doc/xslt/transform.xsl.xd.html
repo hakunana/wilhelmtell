@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="A Javadoc-like Documentation Tool for for all versions of XSLT (1.0, 1.1, 2.0). Available for free on a GPL licence. " />
+		<meta name="author" content="P&amp;P Software GmbH" />
+		<meta name="keywords" content="XSLT, XSLT documentation, XSLT 2.0, Open Source, Documenting XSLT, xsltdoc, xsldoc, Javadoc, Doxygen, xdoc, gpl" />
+    <title>
+      Library JSON - transform.xsl
+    </title>
+    <link href="XSLTdoc.css" rel="stylesheet" type="text/css" /><link href="../../../../../../../../../../../../css/XSLTdoc.css" rel="stylesheet" type="text/css" media="print" />
+  </head>
+  <body>
+    <div id="navbar">
+      <div id="menuLinks">
+        <a class="menuLink" href="index.html">Main Page</a><a class="menuLink" href="stylesheetList.html">Stylesheet List</a><a class="menuLink" href="functionTemplateList.html">Function/Template List</a><a class="menuLink" href="../index.html">Doc Home</a>
+      </div>
+    </div>
+    <div id="content">
+      <div id="stylesheetDetail"><h1>transform.xsl</h1><div class="detailDoc"><div class="shortDescr">Main stylesheet for transformation</div><div class="properties"><div class="property"><div class="propertyCaption">XSLT Version:</div><div class="propertyContent">1.0</div></div><div class="property"><div class="propertyCaption">Namespace Prefix Summary:</div><div class="propertyContent"><div class="namespacePrefixDetail"><span class="namespacePrefix">#default</span> - <span class="namespace">http://www.w3.org/1999/xhtml</span></div><div class="namespacePrefixDetail"><span class="namespacePrefix">xd</span> - <span class="namespace">http://www.pnp-software.com/XSLTdoc</span></div><div class="namespacePrefixDetail"><span class="namespacePrefix">xsl</span> - <span class="namespace">http://www.w3.org/1999/XSL/Transform</span></div></div></div></div></div></div><div id="outputsSummary" class="summarySection"><h2>Outputs Summary</h2><div class="listItem"><div class="declaration"><span class="declName"><a class="declLink" href="#d19e9">#default</a></span> - <a class="sourceLink" href="transform.xsl.src.html#d19e6">source</a></div><div class="shortDoc"><div class="shortDescr">
+    Output will be XHTML</div></div></div></div><div id="parametersSummary" class="summarySection"><h2>Parameters Summary</h2><div class="listItem"><div class="declaration"><span class="paramType">string </span><span class="declName"><a class="declLink" href="#d19e14">labellang</a></span> - <a class="sourceLink" href="transform.xsl.src.html#d19e11">source</a></div><div class="shortDoc"><div class="shortDescr">
+    Parameter used for setting the labels to the corresponding chosen language on the webpage</div></div></div></div><div id="matchTemplatesSummary" class="summarySection"><h2>Match Templates Summary</h2><div class="listItem"><div class="declaration"><span class="declName"><a class="declLink" href="#d19e20">/</a></span> - <a class="sourceLink" href="transform.xsl.src.html#d19e17">source</a></div><div class="shortDoc"><div class="shortDescr">
+    Entry template wich is run first and matching everything in root</div></div></div><div class="listItem"><div class="declaration"><span class="declName"><a class="declLink" href="#d19e50">input</a></span> - <a class="sourceLink" href="transform.xsl.src.html#d19e45">source</a></div><div class="shortDoc"><div class="shortDescr">
+    Template matching each input field on one given hierarchy (the hierarchy is determined by the caller)</div></div></div><div class="listItem"><div class="declaration"><span class="declName"><a class="declLink" href="#d19e276">node</a></span> - <a class="sourceLink" href="transform.xsl.src.html#d19e273">source</a></div><div class="shortDoc"><div class="shortDescr">
+    Template matching each node on one given hierarchy (the hierarchy is determined by the caller)</div></div></div><div class="listItem"><div class="declaration"><span class="declName"><a class="declLink" href="#d19e230">nodeelem</a></span> - <a class="sourceLink" href="transform.xsl.src.html#d19e226">source</a></div><div class="shortDoc"><div class="shortDescr">
+    Template matching each nodeelem on one given hierarchy (the hierarchy is determined by the caller)</div></div></div></div><div id="namedTemplatesSummary" class="summarySection"><h2>Named Templates Summary</h2><div class="listItem"><div class="declaration"><span class="declName"><a class="declLink" href="#d19e20">/</a></span> - <a class="sourceLink" href="transform.xsl.src.html#d19e17">source</a></div><div class="shortDoc"><div class="shortDescr">
+    Entry template wich is run first and matching everything in root</div></div></div><div class="listItem"><div class="declaration"><span class="declName"><a class="declLink" href="#d19e276">node</a></span> - <a class="sourceLink" href="transform.xsl.src.html#d19e273">source</a></div><div class="shortDoc"><div class="shortDescr">
+    Template matching each node on one given hierarchy (the hierarchy is determined by the caller)</div></div></div><div class="listItem"><div class="declaration"><span class="declName"><a class="declLink" href="#d19e50">input</a></span> - <a class="sourceLink" href="transform.xsl.src.html#d19e45">source</a></div><div class="shortDoc"><div class="shortDescr">
+    Template matching each input field on one given hierarchy (the hierarchy is determined by the caller)</div></div></div><div class="listItem"><div class="declaration"><span class="declName"><a class="declLink" href="#d19e230">nodeelem</a></span> - <a class="sourceLink" href="transform.xsl.src.html#d19e226">source</a></div><div class="shortDoc"><div class="shortDescr">
+    Template matching each nodeelem on one given hierarchy (the hierarchy is determined by the caller)</div></div></div></div><div id="outputsDetail" class="detailSection"><h2>Outputs Detail</h2><div class="listItem"><div class="declaration"><span class="declName"><a name="d19e9">#default</a></span> - <a class="sourceLink" href="transform.xsl.src.html#d19e6">source</a></div><div class="detailDoc"><div class="shortDescr">
+    Output will be XHTML</div><div class="detailDescr"> 
+    It is recommended to set output to XML instead to HTML for XHTML.
+  </div><div class="outputAttributes"><div class="outputAttributesHeader">Attributes</div><div class="outputAttributeItem"><div class="outputAttributeName">encoding</div><div class="outputAttributeValue">UTF-8</div></div><div class="outputAttributeItem"><div class="outputAttributeName">indent</div><div class="outputAttributeValue">yes</div></div><div class="outputAttributeItem"><div class="outputAttributeName">method</div><div class="outputAttributeValue">xml</div></div></div></div></div></div><div id="parametersDetail" class="detailSection"><h2>Parameters Detail</h2><div class="listItem"><div class="declaration"><span class="paramType">string </span><span class="declName"><a name="d19e14">labellang</a></span> - <a class="sourceLink" href="transform.xsl.src.html#d19e11">source</a></div><div class="detailDoc"><div class="shortDescr">
+    Parameter used for setting the labels to the corresponding chosen language on the webpage</div><div class="detailDescr">
+  </div></div></div></div><div id="matchTemplatesDetail" class="detailSection"><h2>Match Templates Detail</h2><div class="listItem"><div class="declaration"><span class="declName"><a name="d19e20">/</a></span> - <a class="sourceLink" href="transform.xsl.src.html#d19e17">source</a></div><div class="detailDoc"><div class="shortDescr">
+    Entry template wich is run first and matching everything in root</div><div class="detailDescr">
+    This template generates the create JSON button and calls the other templates recursively.
+  </div></div></div><div class="listItem"><div class="declaration"><span class="declName"><a name="d19e50">input</a></span> - <a class="sourceLink" href="transform.xsl.src.html#d19e45">source</a></div><div class="detailDoc"><div class="shortDescr">
+    Template matching each input field on one given hierarchy (the hierarchy is determined by the caller)</div><div class="detailDescr">
+    This template generates the html input tags including labels, attributes and unique id.
+  </div></div></div><div class="listItem"><div class="declaration"><span class="declName"><a name="d19e276">node</a></span> - <a class="sourceLink" href="transform.xsl.src.html#d19e273">source</a></div><div class="detailDoc"><div class="shortDescr">
+    Template matching each node on one given hierarchy (the hierarchy is determined by the caller)</div><div class="detailDescr">
+    This template generates the HTML var tags which represent the square brackets (in case of attribute multiplechildren = true) and curly brackets surrounding each object in the JSON.
+    Also, this template generates the div container representing each JSON object.
+  </div></div></div><div class="listItem"><div class="declaration"><span class="declName"><a name="d19e230">nodeelem</a></span> - <a class="sourceLink" href="transform.xsl.src.html#d19e226">source</a></div><div class="detailDoc"><div class="shortDescr">
+    Template matching each nodeelem on one given hierarchy (the hierarchy is determined by the caller)</div><div class="detailDescr">
+    This template generates the HTML var tags which represent the curly brackets surrounding each object in the JSON.
+    This template is only used for nodes which have attribute multiplechildren = true.
+  </div></div></div></div><div id="namedTemplatesDetail" class="detailSection"><h2>Named Templates Detail</h2><div class="listItem"><div class="declaration"><span class="declName"><a name="d19e20">/</a></span> - <a class="sourceLink" href="transform.xsl.src.html#d19e17">source</a></div><div class="detailDoc"><div class="shortDescr">
+    Entry template wich is run first and matching everything in root</div><div class="detailDescr">
+    This template generates the create JSON button and calls the other templates recursively.
+  </div></div></div><div class="listItem"><div class="declaration"><span class="declName"><a name="d19e276">node</a></span> - <a class="sourceLink" href="transform.xsl.src.html#d19e273">source</a></div><div class="detailDoc"><div class="shortDescr">
+    Template matching each node on one given hierarchy (the hierarchy is determined by the caller)</div><div class="detailDescr">
+    This template generates the HTML var tags which represent the square brackets (in case of attribute multiplechildren = true) and curly brackets surrounding each object in the JSON.
+    Also, this template generates the div container representing each JSON object.
+  </div></div></div><div class="listItem"><div class="declaration"><span class="declName"><a name="d19e50">input</a></span> - <a class="sourceLink" href="transform.xsl.src.html#d19e45">source</a></div><div class="detailDoc"><div class="shortDescr">
+    Template matching each input field on one given hierarchy (the hierarchy is determined by the caller)</div><div class="detailDescr">
+    This template generates the html input tags including labels, attributes and unique id.
+  </div></div></div><div class="listItem"><div class="declaration"><span class="declName"><a name="d19e230">nodeelem</a></span> - <a class="sourceLink" href="transform.xsl.src.html#d19e226">source</a></div><div class="detailDoc"><div class="shortDescr">
+    Template matching each nodeelem on one given hierarchy (the hierarchy is determined by the caller)</div><div class="detailDescr">
+    This template generates the HTML var tags which represent the curly brackets surrounding each object in the JSON.
+    This template is only used for nodes which have attribute multiplechildren = true.
+  </div></div></div></div>
+    </div>
+    <div id="footer">
+      <div style="float:left">Generated with <a target="_blank" href="http://xsltdoc.sf.net">XSLTdoc 1.2.1</a></div>
+      <div style="float:right">
+        <a href="http://jigsaw.w3.org/css-validator/">CSS</a>
+        |
+        <a href="http://validator.w3.org/check?uri=referer">XHTML</a>
+        | © 2009, <a target="_blank" href="http://www.pnp-software.com/">P&amp;P Software</a>
+      </div>
+      <div> </div>
+    </div>
+  </body>
+</html>

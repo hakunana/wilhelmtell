@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DO NOT DELETE ROOT NODE - DO NOT CHANGE NODEID of ROOT NODE --> 
+<node nodeid="root">
+<!-- DO NOT DELETE ROOT NODE - DO NOT CHANGE NODEID of ROOT NODE --> 
+	<node nodeid="All_Visible_Required" multiplechildren="true" labelde="All_Visible_Required" labelfr="FR Formats" labelen="EN Formats" labelit="IT Formats" displaylabel="true" required="true">
+		<nodeelem labelde="Nodeelem mit allen Formate" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true">
+			<input nodeid="datetime" required="true" labelde="Format http://schema.org/DateTime" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="2017-11-24T19:30:00+01:00" datatype="http://schema.org/DateTime"/>
+			<input nodeid="date" required="true" labelde="Format http://schema.org/Date" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="2017-11-24" datatype="http://schema.org/Date"/>
+			<input nodeid="time" required="true" labelde="Format http://schema.org/Time" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="19:30:00+01:00" datatype="http://schema.org/Time"/>
+			<input nodeid="boolean" required="true" labelde="Format http://schema.org/Boolean" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="true" datatype="http://schema.org/Boolean"/>
+			<input nodeid="number" required="true" labelde="Format http://schema.org/Number" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="4" datatype="http://schema.org/Number"/>
+			<input nodeid="integer" required="true" labelde="Format http://schema.org/Integer" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="12" datatype="http://schema.org/Integer"/>
+			<input nodeid="float" required="true" labelde="Format http://schema.org/Float" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="12.4" datatype="http://schema.org/Float"/>
+			<input nodeid="url" required="true" labelde="Format http://schema.org/URL" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="http://schema.org/URL" datatype="http://schema.org/URL"/>
+			<input nodeid="text" required="true" labelde="Format http://schema.org/Text" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="mytext" datatype="http://schema.org/Text"/>
+			<input nodeid="currency" required="true" labelde="Währung mit id currency" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" datatype="http://schema.org/Text"/>
+			<input nodeid="priceCurrency" labelde="Währung mit id priceCurrency" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="guguds" datatype="http://schema.org/Text"/>
+		</nodeelem>
+	</node>
+	<node nodeid="All_Visible" multiplechildren="true" labelde="All_Visible" labelfr="FR Formats" labelen="EN Formats" labelit="IT Formats" displaylabel="true">
+		<nodeelem labelde="Nodeelem mit allen Formate" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true">
+			<input nodeid="datetime" required="true" labelde="Format http://schema.org/DateTime" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="2017-11-24T19:30:00+01:00" datatype="http://schema.org/DateTime"/>
+			<input nodeid="date" required="true" labelde="Format http://schema.org/Date" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="2017-11-24" datatype="http://schema.org/Date"/>
+			<input nodeid="time" required="true" labelde="Format http://schema.org/Time" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="19:30:00+01:00" datatype="http://schema.org/Time"/>
+			<input nodeid="boolean" required="true" labelde="Format http://schema.org/Boolean" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="true" datatype="http://schema.org/Boolean"/>
+			<input nodeid="number" required="true" labelde="Format http://schema.org/Number" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="4" datatype="http://schema.org/Number"/>
+			<input nodeid="integer" required="true" labelde="Format http://schema.org/Integer" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="12" datatype="http://schema.org/Integer"/>
+			<input nodeid="float" required="true" labelde="Format http://schema.org/Float" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="12.4" datatype="http://schema.org/Float"/>
+			<input nodeid="url" required="true" labelde="Format http://schema.org/URL" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="http://schema.org/URL" datatype="http://schema.org/URL"/>
+			<input nodeid="text" required="true" labelde="Format http://schema.org/Text" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="mytext" datatype="http://schema.org/Text"/>
+			<input nodeid="currency" required="true" labelde="Währung mit id currency" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="CHF" datatype="http://schema.org/Text"/>
+			<input nodeid="priceCurrency" required="true" labelde="Währung mit id priceCurrency" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="CHF" datatype="http://schema.org/Text"/>
+		</nodeelem>
+	</node>
+	<node nodeid="All_Not_Editable" multiplechildren="true" labelde="All_not_editable" labelfr="FR Formats" labelen="EN Formats" labelit="IT Formats" displaylabel="true">
+		<nodeelem labelde="Nodeelem mit allen Formate" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true">
+			<input nodeid="datetime" required="true" labelde="Format http://schema.org/DateTime" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="false" value="2017-11-24T19:30:00+01:00" datatype="http://schema.org/DateTime"/>
+			<input nodeid="date" required="true" labelde="Format http://schema.org/Date" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="false" value="2017-11-24" datatype="http://schema.org/Date"/>
+			<input nodeid="time" required="true" labelde="Format http://schema.org/Time" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="false" value="19:30:00+01:00" datatype="http://schema.org/Time"/>
+			<input nodeid="boolean" required="true" labelde="Format http://schema.org/Boolean" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="false" value="true" datatype="http://schema.org/Boolean"/>
+			<input nodeid="number" required="true" labelde="Format http://schema.org/Number" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="false" value="4" datatype="http://schema.org/Number"/>
+			<input nodeid="integer" required="true" labelde="Format http://schema.org/Integer" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="false" value="12" datatype="http://schema.org/Integer"/>
+			<input nodeid="float" required="true" labelde="Format http://schema.org/Float" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="false" value="12.4" datatype="http://schema.org/Float"/>
+			<input nodeid="url" required="true" labelde="Format http://schema.org/URL" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="false" value="http://schema.org/URL" datatype="http://schema.org/URL"/>
+			<input nodeid="text" required="true" labelde="Format http://schema.org/Text" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="false" value="mytext" datatype="http://schema.org/Text"/>
+			<input nodeid="currency" required="true" labelde="Währung mit id currency" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" value="CHF" datatype="http://schema.org/Text"/>
+			<input nodeid="priceCurrency" required="true" labelde="Währung mit id priceCurrency" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" value="CHF" datatype="http://schema.org/Text"/>
+		</nodeelem>
+	</node>
+	<node nodeid="All_Not_Visible" multiplechildren="true" labelde="All_not_Visible" labelfr="FR Formats" labelen="EN Formats" labelit="IT Formats" displaylabel="true">
+		<nodeelem>
+			<input nodeid="datetime" required="true" value="2017-11-24T19:30:00+01:00" datatype="http://schema.org/DateTime"/>
+			<input nodeid="date" required="true" value="2017-11-24" datatype="http://schema.org/Date"/>
+			<input nodeid="time" required="true" value="19:30:00+01:00" datatype="http://schema.org/Time"/>
+			<input nodeid="boolean" required="true" value="true" datatype="http://schema.org/Boolean"/>
+			<input nodeid="number" required="true" value="4" datatype="http://schema.org/Number"/>
+			<input nodeid="integer" required="true" value="12" datatype="http://schema.org/Integer"/>
+			<input nodeid="float" required="true" value="12.4" datatype="http://schema.org/Float"/>
+			<input nodeid="url" required="true" value="http://schema.org/URL" datatype="http://schema.org/URL"/>
+			<input nodeid="text" required="true" value="mytext" datatype="http://schema.org/Text"/>
+			<input nodeid="currency" required="true" value="CHF" datatype="http://schema.org/Text"/>
+			<input nodeid="priceCurrency" required="true" value="CHF" datatype="http://schema.org/Text"/>
+		</nodeelem>
+	</node>
+<!-- DO NOT DELETE ROOT NODE - DO NOT CHANGE NODEID of ROOT NODE --> 
+</node>
+<!-- DO NOT DELETE ROOT NODE - DO NOT CHANGE NODEID of ROOT NODE --> 

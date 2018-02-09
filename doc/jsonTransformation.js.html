@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: jsonTransformation.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: jsonTransformation.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Main parser function. Takes as input a jQuery object and parses it to JSON-LD according to schemaorg ruleset.
+ * 
+ * @event execParser
+ * @memberof validateAndParse
+ * @param {jQuery} $element The validated jQuery object to be parsed to JSON-LD.
+ */
+function execParser($element)
+{	
+  $('#'+getIdOfJsonContentDiv()).empty();
+  var jsonString = "";
+  
+  var myJsonLd = {};
+  myJsonLd["@context"]="http://schema.org";
+
+  myJsonLd= recursiveEach($element,myJsonLd);
+  myJsonLdString = JSON.stringify(myJsonLd, null, 2);
+  myJsonLdString = htmlEscape('&lt;script type="application/ld+json"> ')+"\n"+myJsonLdString;
+  myJsonLdString = myJsonLdString + "\n"+htmlEscape('&lt;/script>');
+  
+  $('#'+getIdOfJsonContentDiv()).append(myJsonLdString); 
+}
+
+/**
+ * Recursively loops trough the DOM, finds all relevant elements to create JSON from and adds them correctly formatted to the root object.
+ * @memberof validateAndParse
+ * @param {jQuery} $element 
+ * @param {Object} rootObj
+ * @returns {Object} 
+ */
+function recursiveEach($element,rootObj){
+
+    $element.children().each(function () {
+		var $currentElement = $(this);
+		if($currentElement.is("input") &amp;&amp; hasAttr($currentElement,"schemaorgid")){
+			rootObj[$currentElement.attr("schemaorgid")]=$currentElement.val();
+		} else if ($currentElement.is("div") &amp;&amp; hasAttr($currentElement,"schemaorgid")){
+			if($currentElement.attr("multiplechildren")=='true'){
+				rootObj[$currentElement.attr("schemaorgid")]=[];
+			}else{
+				rootObj[$currentElement.attr("schemaorgid")]={};
+			}
+			recursiveEach($currentElement,rootObj[$currentElement.attr("schemaorgid")]);
+		} else if ($currentElement.is("div") &amp;&amp; hasAttr($currentElement,"jsonval")){
+			if($currentElement.attr("jsonval")=='nodeelem'){
+				rootObj.push(recursiveEach($currentElement,{}));
+			} else {
+				alert("Error: Element with ID:"+$currentElement.attr('id')+". There is no rule on how to handle an element with attribute jsonval and attribute value:"+$currentElement.attr('jsonval')+"Thus proceding as if element is not in scope of JSON transformation");
+				recursiveEach($currentElement,rootObj);
+			}
+		} else{
+			recursiveEach($currentElement,rootObj)
+		}
+	});
+	
+	return rootObj;
+}
+
+/**
+ * Checks whether a given JQuery element has given attribute.
+ * @memberof validateAndParse
+ * @param {jQuery} $element 
+ * @param {string} attributeToCheck
+ * @returns {boolean} 
+ */
+function hasAttr($element,attributeToCheck){
+	if($($element).attr(attributeToCheck)){
+		return true;
+	} else {
+		return false;
+	}
+}
+
+/**
+ * Helper function escaping html tags. Needed especially for the SCRIPT element tag in the JSON-LD output. 
+ * String requires to be embedded in PRE tag to be displayed correctly after having been escaped.
+ * @memberof validateAndParse
+ * @param {string} str string containing html tags to be escaped. 
+ * @returns {string} html escaped string.
+ */
+function htmlEscape(str) {
+    return str.replace(/&lt;/g, '&amp;lt;').replace(/>/g, '&amp;gt;');
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Events</h3><ul><li><a href="transform.html#.event:displayHtmlFromXml">displayHtmlFromXml</a></li><li><a href="transform.html#.event:initMainFormValidation">initMainFormValidation</a></li><li><a href="validateAndParse.html#.event:execParser">execParser</a></li><li><a href="validateSchemaOrgElem.html#.event:displayValidationMessage">displayValidationMessage</a></li><li><a href="validateSchemaOrgElem.html#.event:removeValidationMessage">removeValidationMessage</a></li></ul><h3>Namespaces</h3><ul><li><a href="setAdditionalAttributes.html">setAdditionalAttributes</a></li><li><a href="transform.html">transform</a></li><li><a href="validateAndParse.html">validateAndParse</a></li><li><a href="validateSchemaOrgElem.html">validateSchemaOrgElem</a></li></ul><h3>Global</h3><ul><li><a href="global.html#appendInputToDOMElem">appendInputToDOMElem</a></li><li><a href="global.html#AvailableLanguageEnumeration">AvailableLanguageEnumeration</a></li><li><a href="global.html#currentLanguage">currentLanguage</a></li><li><a href="global.html#getErrorClass">getErrorClass</a></li><li><a href="global.html#getIdOfBodyContentDiv">getIdOfBodyContentDiv</a></li><li><a href="global.html#getIdOfJsonContentDiv">getIdOfJsonContentDiv</a></li><li><a href="global.html#getLanguageElementID">getLanguageElementID</a></li><li><a href="global.html#getXmlToHtmlXslPath">getXmlToHtmlXslPath</a></li><li><a href="global.html#isMsIE">isMsIE</a></li><li><a href="global.html#SchemaOrgDataTypeEnumeration">SchemaOrgDataTypeEnumeration</a></li><li><a href="global.html#stringGen">stringGen</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

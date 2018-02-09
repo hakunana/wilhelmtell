@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Nodes:
+- <node>
+	REQUIRED ATTRIBUTES:
+		nodeid
+	OPTIONAL ATTRIBUTES:
+		labelde, labelfr, labelen, labelit > if one label attribute is set, then all label attributes must be set
+		displaylabel > if attribute is not set, attribute is equal to displaylabel = false 
+		multiplechildren > if attribute is not set, attribute is equal to multiplechildren = false
+		required > if attribute is not set, attribute is equal to required = false
+	RULES:
+		1) The root node must always exist and contain all other elements. The root node must be <node nodeid="root"> with optional label attributes.
+		2) EACH <node> must have at least one (<input> or <nodeelem> or <node>) as child
+		3) IF <node multiplechildren = 'true'> THEN at least one <nodeelem> is required as child
+		4) IF <node> has at least one direct children of type <input> THEN exact one of them must have attribute nodeid='@type'
+		5) IF displaylabel = true THEN attributes labelde, labelfr, labelen, labelit must exist for same element
+		6) IF required = true THEN <node> must have at least a <input required = true> as element in its child tree (child, grandchild, etc...)
+
+- <nodeelem>
+	REQUIRED ATTRIBUTES:
+		none
+	OPTIONAL ATTRIBUTES:
+		labelde, labelfr, labelen, labelit > if one label attribute is set, then all label attributes must be set
+		displaylabel > if attribute is not set, attribute is equal to displaylabel = false
+	RULES:
+		1) Each <nodeelem> must have at least one <input> as child
+		2) Each <nodeelem> must have a <node> as parent
+		3) IF displaylabel = true then attributes labelde, labelfr, labelen, labelit must exist for same element
+		4) Each <nodeelem> represents an entity class (as defined by schema.org). It cannot contain standalone primitive datatypes. 
+			This means the abbreviated form for objects as it may be possible as per schema.org definition IS NOT SUPPORTED.
+			Example:
+			
+			Following JSON-LD element is valid according to schema.org ruleset. 
+			It is the abbreviated form for objetcs, but IS NOT SUPPORTED by this tool:	
+				'image' : 
+				[
+					"http://myphoto.com/1",
+					"http://myphoto.com/2"
+				]
+			
+			Instead you have to go for the fully described object, this is always possible. So instead of JSON-LD above do e.g.:
+				'image' : 
+				[
+					{
+						'@type':'ImageObject',
+						'url':'http://myphoto.com/1'
+					},
+					{
+						'@type':'ImageObject',
+						'url':'http://myphoto.com/2'
+					}
+				]
+
+- <input>
+	REQUIRED ATTRIBUTES:
+		nodeid
+	OPTIONAL ATTRIBUTES:
+		required > if attribute is not set, attribute is equal to required = false
+		labelde, labelfr, labelen, labelit > if one label attribute is set, then all label attributes must be set
+		displaylabel  > if attribute is not set, attribute is equal to displaylabel = false
+		edit > if attribute is not set, attribute is equal to edit = false
+		value > if attribute is not set, attribute is equal to value = ''
+		datatype > if attribute is not set, attribute is equal to datatype = 'http://schema.org/Text'
+	RULES:
+		1) <input> cannot have any child elements
+		2) Each <input> must have either a <node> or <nodeelem> as parent
+		3) IF displaylabel = true then attributes labelde, labelfr, labelen, labelit must exist for same element
+		4) IF (<input required = true> AND parent <node required = false>) THEN <input> will only be considered as required in case parent <node> is set/exists
+
+Allowed values per attribute:
+- nodeid:
+	[ANY TEXT]
+
+- multiplechildren:
+	(attribute is optional. If not set, same behaviour as false)
+	true
+	false
+
+- required:
+	(attribute is optional. If not set, same behaviour as false)
+	true
+	false
+
+- label*:
+	(attribute is optional. If not set, no label/text is created at all)
+	[ANY TEXT]
+
+- displaylabel:
+	(attribute is optional. If not set, same behaviour as false)
+	true
+	false
+
+- edit:
+	(attribute is optional. If not set, same behaviour as false)
+	true
+	false
+
+- value:
+	(attribute is optional. If not set, value will be an empty string)
+	[ANY TEXT]
+
+- datatype:
+	(attribute is optional. If not set, same behaviour as http://schema.org/Text)
+	http://schema.org/Boolean
+	http://schema.org/Date
+	http://schema.org/Time
+	http://schema.org/DateTime
+	http://schema.org/Number
+	http://schema.org/Float
+	http://schema.org/Integer
+	http://schema.org/URL
+	http://schema.org/Text
+--> 
+
+<!-- DO NOT DELETE ROOT NODE - DO NOT CHANGE NODEID of ROOT NODE --> 
+<node nodeid="roots" labelde="Veranstaltungsreihe" labelfr="Label FR" labelen="Label EN" labelit="Label IT">
+<!-- DO NOT DELETE ROOT NODE - DO NOT CHANGE NODEID of ROOT NODE --> 
+	<input nodeid="@id" required="true" displaylabel="true" value="http://www.BIBCHUR.CH/Reihe1" edit="false"/>
+	<input nodeid="@type" required="true" labelde="" labelfr="" labelen="Label EN" labelit="" displaylabel="false" value="Event" edit="false"/>
+	<input nodeid="name" required="true" labelde="Name der Veranstaltungsreihe" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="" datatype="http://schema.org/Text"/>
+	<node nodeid="subevent" multiplechildren="true" labelde="Zugehörige Einzelveranstaltungen" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="false">
+		<nodeelem labelde="Einzelveranstaltung" labelfr="Label FR" labelen="Label EN" labelit="Label IT">
+			<input nodeid="@type" required="true" labelde="" labelfr="" labelen="Label EN" labelit="" displaylabel="false" value="Event" edit="false"/>
+			<node nodeid="superevent" required="true" labelde="" labelfr="" labelen="Label EN" labelit="" displaylabel="false">
+				<input nodeid="@type" required="true" labelde="" labelfr="" labelen="Label EN" labelit="" displaylabel="false" value="Event" edit="false"/>
+				<input required="true" labelde="" labelfr="" labelen="Label EN" labelit="" displaylabel="false" value="http://www.BIBCHUR.CH/Reihe1" edit="false"/>
+			</node>
+			<input nodeid="name" required="true" labelde="Name des Events" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="" datatype="http://schema.org/Text"/>
+			<input nodeid="startDate" required="true" labelde="Start Datum und Zeit" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="2017-11-24T19:30-08:00" datatype="http://schema.org/DateTime"/>
+			<input nodeid="endDate" required="true" labelde="End Datum und Zeit" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="2017-11-24T23:00-08:00" datatype="http://schema.org/DateTime"/>
+			<input nodeid="description" required="true" labelde="Eventbeschreibung" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="" datatype="http://schema.org/Text"/>
+			<node nodeid="location" required="true" labelde="Details zum Veranstaltungsort" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true">
+				<input nodeid="@type" required="true" labelde="" labelfr="" labelen="Label EN" labelit=""  displaylabel="false" edit="false" value="Place"/>
+				<input nodeid="name" labelde="Name der Location" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="" datatype="http://schema.org/Text"/>
+				<node nodeid="address" labelde="Adresse" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true">
+					<input nodeid="@type" required="true" labelde="" labelfr="" labelen="Label EN" labelit=""  displaylabel="false" edit="false" value="PostalAddress"/>
+					<input nodeid="streetAddress" required="true" labelde="Strasse/Nr." labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="Churerweg 12" datatype="http://schema.org/Text"/>
+					<input nodeid="addressLocality" required="true" labelde="Ort" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="Chur" datatype="http://schema.org/Text"/>
+					<input nodeid="postalCode" required="true" labelde="PLZ" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="7000" datatype="http://schema.org/Texts"/>
+					<input nodeid="addressRegion" labelde="Kanton" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="GR" datatype="http://schema.org/Text"/>
+					<input nodeid="addressCountry" required="true" labelde="Land" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="Schweiz" datatype="http://schema.org/Text"/>
+				</node>
+			</node>
+			<node nodeid="offers" labelde="Eventdetails" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true">
+				<input nodeid="@type" required="true" labelde="" labelfr="" labelen="Label EN" labelit=""  displaylabel="false" edit="false" value="Offer"/>
+				<input nodeid="url" labelde="Link zur Reservation" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="http://www.BIBLINK.com/offer#1.com" datatype="http://schema.org/URL"/>
+				<input nodeid="price" labelde="Eintrittspreis" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="25.00" datatype="http://schema.org/Float"/>
+				<input nodeid="priceCurrency" labelde="Währung" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="CHF" datatype="http://schema.org/Text"/>
+			</node>
+			<node nodeid="performer" multiplechildren="true" labelde="Ensemble" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true">
+				<nodeelem labelde="Künstler/in - Referent/in" labelfr="Label FR" labelen="Label EN" labelit="Label IT">
+					<nodeelem>
+						<input nodeid="@type" required="true" labelde="" labelfr="" labelen="Label EN" labelit=""  displaylabel="false" edit="false" value="Person"/>
+					</nodeelem>
+					<input nodeid="@type" required="true" labelde="" labelfr="" labelen="Label EN" labelit=""  displaylabel="false" edit="false" value="Person"/>
+					<input nodeid="name" required="true" labelde="Name" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="" datatype="http://schema.org/Text"/>
+				</nodeelem>
+			</node>
+			<node nodeid="image" labelde="Verknüpfte Fotos" labelfr="Label FR" labelen="Label EN" labelit="Label IT" multiplechildren="true" displaylabel="true">
+				<nodelem labelde="Foto" labelfr="Label FR" labelen="Label EN" labelit="Label IT">
+					<input nodeid="@type" required="true" labelde="" labelfr="" labelen="Label EN" labelit="" displaylabel="false" edit="false" value="ImageObject"/>
+					<input nodeid="url" required="true" labelde="URL-Adresse" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="http://www.IMAGE1.com" datatype="http://schema.org/URL"/>
+				</nodelem>
+				<nodeelem labelde="Foto" labelfr="Label FR" labelen="Label EN" labelit="Label IT">
+					<input nodeid="@type" required="true" labelde="" labelfr="" labelen="Label EN" labelit="" displaylabel="false" edit="false" value="ImageObject"/>
+					<input nodeid="url" required="true" labelde="URL-Adresse" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="http://www.IMAGE2.com" datatype="http://schema.org/URL"/>
+				</nodeelem>
+			</node>
+		</nodeelem>
+	</node>
+	<node nodeid="TESTNODE_REQUIRED" required="true">
+				<nodeelem >
+					<input nodeid="@type"/>
+					<input nodeid="url"/>
+				</nodeelem>
+	</node>
+<!-- DO NOT DELETE ROOT NODE - DO NOT CHANGE NODEID of ROOT NODE --> 
+</node>
+<!-- DO NOT DELETE ROOT NODE - DO NOT CHANGE NODEID of ROOT NODE --> 

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: formattingHelper.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: formattingHelper.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Calls for each relevant HTML element in the DOM the corresponding formatting helper function.
+ * This function should be called ideally right after the XSL transformation.
+ * @namespace
+ */
+function setAdditionalAttributes() {
+    $("#genJSONbtn").attr(additionalMainSubmitBtnAttributes());
+
+    $("#"+getIdOfBodyContentDiv()).find('input[datatype="'+SchemaOrgDataTypeEnumeration.BOOLEAN+'"]').attr(additionalBooleanInputAttributes());
+    $("#"+getIdOfBodyContentDiv()).find('input[datatype="'+SchemaOrgDataTypeEnumeration.DATE+'"]').attr(additionalDateInputAttributes());
+    $("#"+getIdOfBodyContentDiv()).find('input[datatype="'+SchemaOrgDataTypeEnumeration.TIME+'"]').attr(additionalTimeInputAttributes());
+    $("#"+getIdOfBodyContentDiv()).find('input[datatype="'+SchemaOrgDataTypeEnumeration.DATETIME+'"]').attr(additionalDateTimeInputAttributes());
+    $("#"+getIdOfBodyContentDiv()).find('input[datatype="'+SchemaOrgDataTypeEnumeration.NUMBER+'"]').attr(additionalNumberInputAttributes());
+    $("#"+getIdOfBodyContentDiv()).find('input[datatype="'+SchemaOrgDataTypeEnumeration.FLOAT+'"]').attr(additionalFloatInputAttributes());
+    $("#"+getIdOfBodyContentDiv()).find('input[datatype="'+SchemaOrgDataTypeEnumeration.INTEGER+'"]').attr(additionalIntegerInputAttributes());
+    $("#"+getIdOfBodyContentDiv()).find('input[datatype="'+SchemaOrgDataTypeEnumeration.URL+'"]').attr(additionalURLInputAttributes());
+    $("#"+getIdOfBodyContentDiv()).find('input[datatype="'+SchemaOrgDataTypeEnumeration.TEXT+'"]').attr(additionalTextInputAttributes());
+
+    $("#"+getIdOfBodyContentDiv()).find('div[schemaorgid]').attr(additionalDivAttributes());
+    $("#"+getIdOfBodyContentDiv()).find('label[inschemaorg="visible"]').attr(additionalLabelWithVisibleInputAttributes());
+    $("#"+getIdOfBodyContentDiv()).find('label[inschemaorg="hidden"]').attr(additionalLabelWithHiddenInputAttributes());
+    $("#"+getIdOfBodyContentDiv()).find('p[usage="title"]').attr(additionalTitleAttributes());
+    $("#"+getIdOfBodyContentDiv()).find('p[usage="subtitle"]').attr(additionalSubtitleAttributes());
+    $("#"+getIdOfBodyContentDiv()).find('div[jsonval="nodeelem"]').attr(additionalNodeelemAttributes());
+}
+
+/**
+ * Used for localization of delete button text
+ * @memberof setAdditionalAttributes
+ * @returns {string}
+ */
+function buttonDeleteText(){
+    //Button Text
+    var frenchDel = "Eliminer";
+    var italianDel = "Elimina";
+    var englishDel = "Remove";
+    var germanDel = "Löschen";
+
+    if(currentLanguage()==AvailableLanguageEnumeration.FRENCH){
+        return frenchDel;
+    }else if(currentLanguage()==AvailableLanguageEnumeration.ITALIAN){
+        return italianDel;
+    }else if(currentLanguage()==AvailableLanguageEnumeration.ENGLISH){
+        return englishDel;
+    }else{
+        return germanDel;
+    }
+}
+
+/**
+ * Used for localization of add button text
+ * @memberof setAdditionalAttributes
+ * @returns {string}
+ */
+function buttonAddText(){
+
+    //Button Text
+    var frenchAdd = "Ajouter";
+    var italianAdd = "Aggiungere";
+    var englishAdd = "Add";
+    var germanAdd = "Hinzufügen";
+
+    if(currentLanguage()==AvailableLanguageEnumeration.FRENCH){
+        return frenchAdd;
+    }else if(currentLanguage()==AvailableLanguageEnumeration.ITALIAN){
+        return italianAdd;
+    }else if(currentLanguage()==AvailableLanguageEnumeration.ENGLISH){
+        return englishAdd;
+    }else{
+        return germanAdd;
+    }
+}
+
+/**
+ * Helper function providing the option to add additional attributes to schemaorg delete buttons.
+ * Can be used to add e.g. specific class attributes used by a framework.
+ * @memberof setAdditionalAttributes
+ * @returns {string}
+ */
+function additionalDeleteButtonattributes(){
+    var attributeNameAndValue = '';
+ 
+    //Usage Example:
+    attributeNameAndValue="class='btn btn-secondary'";
+    
+    return attributeNameAndValue;
+}
+
+/**
+ * Helper function providing the option to add additional attributes to schemaorg add buttons.
+ * Can be used to add e.g. specific class attributes used by a framework.
+ * @memberof setAdditionalAttributes
+ * @returns {string}
+ */
+function additionalAddButtonattributes(){
+    var attributeNameAndValue = '';
+    
+    //Usage Example:
+    attributeNameAndValue="class='btn btn-secondary'";
+    
+    return attributeNameAndValue;
+}
+
+/**
+ * Helper function providing the option to add additional attributes to schemaorg div elements.
+ * Can be used to add e.g. specific class attributes used by a framework.
+ * @memberof setAdditionalAttributes
+ * @returns {Object}
+ */
+function additionalDivAttributes(){
+    var attributeNameAndValueObject = {};
+
+    //Usage Example:
+    //attributeNameAndValueObject.style="background-color:powderblue;";
+
+    return attributeNameAndValueObject;
+}
+
+/**
+ * Helper function providing the option to add additional attributes to schemaorg label elements with visible input.
+ * Can be used to add e.g. specific class attributes used by a framework.
+ * @memberof setAdditionalAttributes
+ * @returns {Object}
+ */
+function additionalLabelWithVisibleInputAttributes() {
+    var attributeNameAndValueObject = {};
+
+    //Usage Example:
+    attributeNameAndValueObject.class="control-label col-md-6";
+
+    return attributeNameAndValueObject;
+}
+
+/**
+ * Helper function providing the option to add additional attributes to schemaorg label elements with hidden input.
+ * Can be used to add e.g. specific class attributes used by a framework.
+ * @memberof setAdditionalAttributes
+ * @returns {Object}
+ */
+function additionalLabelWithHiddenInputAttributes() {
+    var attributeNameAndValueObject = {};
+
+    //Usage Example:
+    //attributeNameAndValueObject.style="color:green;";
+
+    return attributeNameAndValueObject;
+}
+
+/**
+ * Helper function providing the option to add additional attributes to schemaorg paragraph elements used as titles.
+ * Can be used to add e.g. specific class attributes used by a framework.
+ * @memberof setAdditionalAttributes
+ * @returns {Object}
+ */
+function additionalTitleAttributes(){
+    var attributeNameAndValueObject = {};
+    
+    //Usage Example:
+    //attributeNameAndValueObject.style="color:blue;";
+    //attributeNameAndValueObject.style="background-color:white;";
+    
+    return attributeNameAndValueObject;
+
+}
+
+/**
+ * Helper function providing the option to add additional attributes to schemaorg paragraph elements used as subtitles.
+ * Can be used to add e.g. specific class attributes used by a framework.
+ * @memberof setAdditionalAttributes
+ * @returns {Object}
+ */
+function additionalSubtitleAttributes(){
+    var attributeNameAndValueObject = {};
+    
+    //Usage Example:
+    //attributeNameAndValueObject.style="color:red;";
+
+    return attributeNameAndValueObject;
+
+}
+
+/**
+ * Helper function providing the option to add additional attributes to schemaorg div elements representing nodeelements only.
+ * Can be used to add e.g. specific class attributes used by a framework.
+ * @memberof setAdditionalAttributes
+ * @returns {Object}
+ */
+function additionalNodeelemAttributes(){
+    var attributeNameAndValueObject = {};
+    
+    //Usage Example:
+    //attributeNameAndValueObject.style="color:red;";
+    //attributeNameAndValueObject.style="background-color:orange;";
+
+    return attributeNameAndValueObject;
+
+}
+
+/**
+ * Helper function providing the option to add additional attributes to the main JSON-LD submit button.
+ * Can be used to add e.g. specific class attributes used by a framework.
+ * @memberof setAdditionalAttributes
+ * @returns {Object}
+ */
+function additionalMainSubmitBtnAttributes(){
+    var attributeNameAndValueObject = {};
+    
+    //Usage Example:
+    attributeNameAndValueObject.class="btn btn-primary";
+    if(isMsIE()){
+        attributeNameAndValueObject.type="submit";
+        attributeNameAndValueObject.form="body-form";
+    }
+
+    return attributeNameAndValueObject;
+}
+
+/**
+ * Helper function providing the option to add additional attributes to schemaorg input fields marked as datatype boolean.
+ * Can be used to add e.g. specific class attributes used by a framework.
+ * @memberof setAdditionalAttributes
+ * @returns {Object}
+ */
+function additionalBooleanInputAttributes(){
+    var attributeNameAndValueObject = {};
+    
+    //Usage Example:
+    attributeNameAndValueObject.class="form-control";
+    attributeNameAndValueObject.onblur="validateSchemaOrgElem(this.id)"; 
+    attributeNameAndValueObject.onfocus="removeValidationMessage(this.id)";
+
+    return attributeNameAndValueObject;
+}
+
+/**
+ * Helper function providing the option to add additional attributes to schemaorg input fields marked as datatype date.
+ * Can be used to add e.g. specific class attributes used by a framework.
+ * @memberof setAdditionalAttributes
+ * @returns {Object}
+ */
+function additionalDateInputAttributes(){
+    var attributeNameAndValueObject = {};
+    
+    //Usage Example:
+    attributeNameAndValueObject.type="text";
+    attributeNameAndValueObject.class="form-control";
+    attributeNameAndValueObject.onblur="validateSchemaOrgElem(this.id)"; 
+    attributeNameAndValueObject.onfocus="removeValidationMessage(this.id)";
+
+    return attributeNameAndValueObject;
+}
+
+/**
+ * Helper function providing the option to add additional attributes to schemaorg input fields marked as datatype time.
+ * Can be used to add e.g. specific class attributes used by a framework.
+ * @memberof setAdditionalAttributes
+ * @returns {Object}
+ */
+function additionalTimeInputAttributes(){
+    var attributeNameAndValueObject = {};
+    
+    //Usage Example:
+    attributeNameAndValueObject.type="text";
+    attributeNameAndValueObject.class="form-control";
+    attributeNameAndValueObject.onblur="validateSchemaOrgElem(this.id)";
+    attributeNameAndValueObject.onfocus="removeValidationMessage(this.id)";
+
+    return attributeNameAndValueObject;
+}
+
+/**
+ * Helper function providing the option to add additional attributes to schemaorg input fields marked as datatype datetime.
+ * Can be used to add e.g. specific class attributes used by a framework.
+ * @memberof setAdditionalAttributes
+ * @returns {Object}
+ */
+function additionalDateTimeInputAttributes(){
+    var attributeNameAndValueObject = {};
+    
+    //Usage Example:
+    attributeNameAndValueObject.type="text";
+    attributeNameAndValueObject.class="form-control";
+    attributeNameAndValueObject.onblur="validateSchemaOrgElem(this.id)"; 
+    attributeNameAndValueObject.onfocus="removeValidationMessage(this.id)";
+
+    return attributeNameAndValueObject;
+}
+
+/**
+ * Helper function providing the option to add additional attributes to schemaorg input fields marked as datatype number.
+ * Can be used to add e.g. specific class attributes used by a framework.
+ * @memberof setAdditionalAttributes
+ * @returns {Object}
+ */
+function additionalNumberInputAttributes(){
+    var attributeNameAndValueObject = {};
+    
+    //Usage Example:
+    attributeNameAndValueObject.type="text";
+    attributeNameAndValueObject.class="form-control";
+    attributeNameAndValueObject.onblur="validateSchemaOrgElem(this.id)"; 
+    attributeNameAndValueObject.onfocus="removeValidationMessage(this.id)";
+
+    return attributeNameAndValueObject;
+}
+
+/**
+ * Helper function providing the option to add additional attributes to schemaorg input fields marked as datatype float.
+ * Can be used to add e.g. specific class attributes used by a framework.
+ * @memberof setAdditionalAttributes
+ * @returns {Object}
+ */
+function additionalFloatInputAttributes(){
+    var attributeNameAndValueObject = {};
+    
+    //Usage Example:
+    attributeNameAndValueObject.type="text";
+    attributeNameAndValueObject.class="form-control";
+    attributeNameAndValueObject.onblur="validateSchemaOrgElem(this.id)";
+    attributeNameAndValueObject.onfocus="removeValidationMessage(this.id)";
+
+    return attributeNameAndValueObject;
+}
+
+/**
+ * Helper function providing the option to add additional attributes to schemaorg input fields marked as datatype integer.
+ * Can be used to add e.g. specific class attributes used by a framework.
+ * @memberof setAdditionalAttributes
+ * @returns {Object}
+ */
+function additionalIntegerInputAttributes(){
+    var attributeNameAndValueObject = {};
+    
+    //Usage Example:
+    attributeNameAndValueObject.type="text";
+    attributeNameAndValueObject.class="form-control";
+    attributeNameAndValueObject.onblur="validateSchemaOrgElem(this.id)";
+    attributeNameAndValueObject.onfocus="removeValidationMessage(this.id)";
+
+    return attributeNameAndValueObject;
+}
+
+/**
+ * Helper function providing the option to add additional attributes to schemaorg input fields marked as datatype url.
+ * Can be used to add e.g. specific class attributes used by a framework.
+ * @memberof setAdditionalAttributes
+ * @returns {Object}
+ */
+function additionalURLInputAttributes(){
+    var attributeNameAndValueObject = {};
+    
+    //Usage Example:
+    attributeNameAndValueObject.type="text";
+    attributeNameAndValueObject.class="form-control";
+    attributeNameAndValueObject.onblur="validateSchemaOrgElem(this.id)";
+    attributeNameAndValueObject.onfocus="removeValidationMessage(this.id)";
+
+    return attributeNameAndValueObject;
+}
+
+/**
+ * Helper function providing the option to add additional attributes to schemaorg input fields marked as datatype text.
+ * Can be used to add e.g. specific class attributes used by a framework.
+ * @memberof setAdditionalAttributes
+ * @returns {Object}
+ */
+function additionalTextInputAttributes(){
+    var attributeNameAndValueObject = {};
+    
+    //Usage Example:
+    attributeNameAndValueObject.type="text";
+    attributeNameAndValueObject.class="form-control";
+    attributeNameAndValueObject.onblur="validateSchemaOrgElem(this.id)";
+    attributeNameAndValueObject.onfocus="removeValidationMessage(this.id)";
+
+    return attributeNameAndValueObject;
+}
+
+/**
+ * Helper function providing the option to add any kind of additional formats, html elements, etc... directly after xsl transformation.
+ * Can be used e.g. for adding additional structural elements needed by a specific framework.
+ * 
+ * @memberof transform
+ */
+function setAdditionalFormatsAfterXSLInit(){
+    //Usage Example:
+    //Embed each &lt;label>&lt;input schemaorgid="*">&lt;/input>&lt;/label> into a div with class form-group for formatting purposes
+    $("#"+getIdOfBodyContentDiv()).find('input[schemaorgid]').each(function (i) {
+        var parentContainer = $(this).parent();
+        var divContainerId = stringGen(20);
+
+        parentContainer.after('&lt;div id="'+divContainerId+'" class="form-group">&lt;/div>');
+        
+        $("#"+divContainerId).append(parentContainer);
+    });
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Events</h3><ul><li><a href="transform.html#.event:displayHtmlFromXml">displayHtmlFromXml</a></li><li><a href="transform.html#.event:initMainFormValidation">initMainFormValidation</a></li><li><a href="validateAndParse.html#.event:execParser">execParser</a></li><li><a href="validateSchemaOrgElem.html#.event:displayValidationMessage">displayValidationMessage</a></li><li><a href="validateSchemaOrgElem.html#.event:removeValidationMessage">removeValidationMessage</a></li></ul><h3>Namespaces</h3><ul><li><a href="setAdditionalAttributes.html">setAdditionalAttributes</a></li><li><a href="transform.html">transform</a></li><li><a href="validateAndParse.html">validateAndParse</a></li><li><a href="validateSchemaOrgElem.html">validateSchemaOrgElem</a></li></ul><h3>Global</h3><ul><li><a href="global.html#appendInputToDOMElem">appendInputToDOMElem</a></li><li><a href="global.html#AvailableLanguageEnumeration">AvailableLanguageEnumeration</a></li><li><a href="global.html#currentLanguage">currentLanguage</a></li><li><a href="global.html#getErrorClass">getErrorClass</a></li><li><a href="global.html#getIdOfBodyContentDiv">getIdOfBodyContentDiv</a></li><li><a href="global.html#getIdOfJsonContentDiv">getIdOfJsonContentDiv</a></li><li><a href="global.html#getLanguageElementID">getLanguageElementID</a></li><li><a href="global.html#getXmlToHtmlXslPath">getXmlToHtmlXslPath</a></li><li><a href="global.html#isMsIE">isMsIE</a></li><li><a href="global.html#SchemaOrgDataTypeEnumeration">SchemaOrgDataTypeEnumeration</a></li><li><a href="global.html#stringGen">stringGen</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
