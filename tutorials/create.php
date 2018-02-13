@@ -51,8 +51,8 @@
                                 <h2 class="section-heading">Wie erstelle ich den JSON Code für mein Event?</h2>
                             </div>
 
-                            <div class="col-lg-10">
-                                <div class="col-lg-3 col-md-6 text-center box box">
+                            <div class="col-lg-10 is-table-row">
+                                <div class="col-lg-3 col-md-6 text-center box">
                                     <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
                                     <h3 class="mb-3">Schritt 1</h3>
                                     <p class="text-muted mb-0">Wählen Sie im Bereich <br> <a href="index.php" class="btn btn-primary"> «Formulare» </a> <br> aus der Liste das benötigte Formular aus</p>
@@ -92,9 +92,6 @@
                                         <a href="#">          <i class="fa fa-book"></i>
                                   Create an eventcode</a>
                                     </li>
-                                    <li class="list-group-item">
-                                        <a href="">About events and event-series</a>
-                                    </li>
                                     <li class="list-group-item ">
                                         <a href="#">howto embedd within my page</a>
                                     </li>
@@ -107,7 +104,7 @@
                             </div>
 
 
-                            <div class="col-lg-10">
+                            <div class="col-lg-10 is-table-row">
                                 <div class="col-lg-3 col-md-6 text-center box">
                                     <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
                                     <h3 class="mb-3">Step 1</h3>
@@ -148,9 +145,6 @@
                                         <a href="#">          <i class="fa fa-book"></i>
                                   créer un événement</a>
                                     </li>
-                                    <li class="list-group-item">
-                                        <a href="">événement et plus</a>
-                                    </li>
                                     <li class="list-group-item ">
                                         <a href="#">intégrer dans ma page</a>
                                     </li>
@@ -162,7 +156,7 @@
                                 <h2 class="section-heading">Comment créer le code JSON pour votre événements?</h2>
                             </div>
 
-                            <div class="col-lg-10">
+                            <div class="col-lg-10 is-table-row">
                                 <div class="col-lg-3 col-md-6 text-center box">
                                     <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
                                     <h3 class="mb-3">Étape 1</h3>
@@ -201,13 +195,10 @@
                                 <ul class="nav nav-pills nav-stacked">
                                     <li class="list-group-item active">
                                         <a href="#"><i class="fa fa-book"></i>
-                                  Crea codice evento</a>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <a href="">Informazioni su eventi e serie di eventi</a>
+                                        Creare un testo evento JSON-LD</a>
                                     </li>
                                     <li class="list-group-item ">
-                                        <a href="#">Incorpora la mia pagina</a>
+                                        <a href="#">Come integrare nella mia pagina</a>
                                     </li>
                                 </ul>
                             </div>
@@ -217,35 +208,34 @@
                                 <h2 class="section-heading">Come posso creare il codice JSON per i miei eventi?</h2>
                             </div>
 
-                            <div class="col-lg-10">
+                            <div class="col-lg-10 is-table-row">
                                 <div class="col-lg-3 col-md-6 text-center box">
                                     <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
-                                    <h3 class="mb-3">Passaggio 1</h3>
-                                    <p class="text-muted mb-0">Scegli all'interno del selettore <br> <a href="index.php" class="btn btn-primary"> "Forms" </a> <br> la forma giusta per te bisogno </p>
+                                    <h3 class="mb-3">1. passo</h3>
+                                    <p class="text-muted mb-0">Scegliere all' ambito del selettore<br> <a href="index.php" class="btn btn-primary"> "Forms" </a> <br> la forma giusta di cui si ha bisogno </p>
 
                                 </div>
 
                                 <div class="col-lg-3 col-md-6 text-center box">
                                     <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
-                                    <h3 class="mb-3">Passaggio 2</h3>
-                                    <p class="text-muted mb-0">Compila i campi del modulo</p>
+                                    <h3 class="mb-3">2. passo</h3>
+                                    <p class="text-muted mb-0">Compilare i campi del modulo</p>
                                     <ul class="text-left">
-                                        <p>I campi contrassegnati con * sono campi obbligatori e devono essere compilati, altrimenti il ​​set di dati non può essere generato. I termini sottolineati contengono una descrizione. Clicca sui termini e apparirà una
-                                            finestra popup con una spiegazione. Utilizzando la lingua tedesca, inglese o francese, la traduzione verrà eseguita automaticamente tramite google translate e quindi può contenere alcuni errori. </p>
+                                        <p> <small>I campi contrassegnati con * sono campi obbligatori e devono essere compilati, altrimenti il set di dati non può essere generato. I termini sottolineati contengono una descrizione. Fare clic sui termini e apparirà una finestra popup con una spiegazione. </small> <small>Utilizzando il linguaggio tedesco, inglese o francese, la traduzione sarà fatta automaticamente attraverso google translate e quindi può contenere alcuni errori. </small></p>
                                     </ul>
                                 </div>
 
                                 <div class="col-lg-3 col-md-6 text-center box">
                                     <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
-                                    <h3 class="mb-3">Passaggio 3</h3>
-                                    <p class="text-muted mb-0">Premi "Crea pulsante JSON" quando hai finito e inserisci tutti i dati necessari nel modulo.</p>
+                                    <h3 class="mb-3">3. passo</h3>
+                                    <p class="text-muted mb-0">Premere il pulsante "Crea JSON" al termine dell' operazione e inserire tutti i dati necessari nel modulo.</p>
                                 </div>
 
                                 <div class="col-lg-3 col-md-6 text-center box">
                                     <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
                                     <h3 class="mb-3">Passaggio 4</h3>
                                     <p class="text-muted mb-0">
-                                        Copia lo script JSON-LD negli appunti e inserisci il codice all'interno dell'intestazione del tuo sito web. Ulteriori tutorial su questo argomento sono disponibili in <a href="/copyToHeader.php" class="btn btn-primary"> Implementare la mia pagina </a>                                    </p><br>
+                                        opiare lo script JSON-LD negli appunti e inserire il codice all' interno dell' intestazione del sito Web. Ulteriori guide su questo punto si trovano in questo sito  <a href="/copyToHeader.php" class="btn btn-primary"> Implementare la mia pagina </a></p><br>
                                 </div>
                             </div>
                             <!-- ENDE ERKLAERUNG IT -->

@@ -18,9 +18,7 @@
 </head>
 
 <body>
-<div class="row">
-<?php include("../includes/docHead.html");?>
-</div>
+
 <div class="container">
 <div id="main">
 

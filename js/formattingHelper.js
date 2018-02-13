@@ -119,7 +119,7 @@ function additionalAddButtonattributes(){
 
     attributeNameAndValue="class='btn btn-secondary addbtn'";
 
-    // $( ".addbtn:last-child" ).wrap( "<div class='col-lg-12' />");
+    $(".additionalDivAttributes>.addbtn").last().addClass("col-md-12");
     
     return attributeNameAndValue;
 }
@@ -216,12 +216,20 @@ function additionalNodeelemAttributes(){
 
     //Usage Example:
     // attributeNameAndValueObject.style="color:red;";
-    // attributeNameAndValueObject.style="background-color:#fefefe;";
-
     return attributeNameAndValueObject;
 
 }
 
+function findHighestNode(){
+            var elementHeights = $('.nodeelement').map(function() {
+            return $(this).height();
+          }).get();
+            
+            console.log('elementHeights' + elementHeights);
+            return findHighestNode;
+
+
+}
 /**
  * Helper function providing the option to add additional attributes to the main JSON-LD submit button.
  * Can be used to add e.g. specific class attributes used by a framework.
@@ -238,7 +246,6 @@ function additionalMainSubmitBtnAttributes(){
         attributeNameAndValueObject.form="body-form";
     }
     $( "#genJSONbtn" ).wrapAll( "<div class='col-lg-12 r' />");
-console.log("FUbutton2");
     
     return attributeNameAndValueObject;
 }

@@ -1,0 +1,422 @@
+<div class="projektdoku">
+<h2>Projektdokumentation</h2>
+
+<div class="index " id="index">
+	<ul class="listindex">
+		<ul><a href="#100">1 Einleitung</a>
+      <ul>
+				<li> <a href="#110">1.1 Auftrag und Zielsetzung</a></li>
+				<li> <a href="#120">1.2 Abgrenzungen und Vorgehensweise</a></li>
+				<li> <a href="#130">1.3 Auftrag und Zielsetzung</a></li>
+      </ul>
+		</ul>
+
+    <ul><a href="#200">2 Use Cases</a>
+			<ul>
+        <li><a href="#210">2.1 Use Case Endnutzer</a></li>
+        <li><a href="#220">2.2 Use Case Entwickler</a></li>
+       </ul>
+		</ul>
+    
+    <ul><a href="#300">3 Komponenten des Tools</a>
+			<ul>
+        <li><a href="#310">3.1 Formular</a></li>
+        <li><a href="#320">3.2 Tutorial</a></li>
+        <li><a href="#330">3.3 Entwickler</a></li>
+				<ul>
+          <li><a href="#331">3.3.1 XML-Anleitung und Validator</a></li>
+				  <li><a href="#332">3.3.2 Source Code-Dokumentation (JavaScript und XSLT)</a></li>
+				  <li><a href="#333">3.3.3 Projektdokumentation und technische Details</a></li>
+        </ul>
+      </ul>
+		 </ul>
+    
+		<ul><a href="#400">4 Design und technische Details</a>
+			<ul>
+        <li><a href="#410">4.1 Entscheidungen betreffend Design</a></li>
+        <li><a href="#420">4.2 Verwendete Technologien</a></li>
+				<ul>
+          <li><a href="#421">4.2.1 XML</a></li>
+          <li><a href="#422">4.2.2 XSD</a></li>
+          <li><a href="#423">4.2.3 XSLT</a></li>
+          <li><a href="#426">4.2.4 HTML</a></li>
+          <li><a href="#426">4.2.5 JavaScript</a></li>
+          <li><a href="#426">4.2.6 JSON-LD</a></li>
+        </ul>
+        <li><a href="#430">4.3 Technische Details zur Anwendungsebene</a></li>
+        <ul>
+          <li><a href="#431">4.3.1 Browser-Support</a></li>
+          <li><a href="#432">4.3.2 Serverseitige Tasks (PHP</a></li>
+          <li><a href="#433">4.3.3 Besonderheiten des Formulars</a></li>
+        </ul>
+			</ul>
+    </ul>
+      
+    <ul><a href="#500">5 Ergebnis des Projektes</a>
+			<ul>
+        <li><a href="#510">5.1 Bewertung der Zielerreichung</a></li>
+        <li><a href="#520">5.2 Endprodukt Tool #wilhelmtell</a></li>
+       </ul>
+		</ul>
+
+    <ul><a href="#600">6 Erweiterungsideen und Empfehlungen</a>
+			<ul>
+        <li><a href="#610">6.1 Funktionale Erweiterungen</a></li>
+        <li><a href="#620">6.2 Ideen für Design-Optimierungen</a></li>
+        <li><a href="#630">6.3 Empfehlungen für die Dokumentation</a></li>
+      </ul>
+		</ul>
+    
+    <ul><a href="#700">7 Reflexion des Projektes und Ausblick</a></ul>
+    
+    <ul><a href="#800">8 Quellenverzeichnis</a></ul>
+    
+    <ul><a href="#900">9 Abgabeverzeichnis</a></ul>
+    
+    <ul><a href="#1000">10 Anhang</a>
+      <ul>
+        <li><a href="#1010">Anhang A - Komponenten des Tools</a></li>
+        <li><a href="#1020">Anhang B - Erste Entwürfe des Layouts</a></li>
+        <li><a href="#1030">Anhang B - Finales Layout des Tools</a></li>
+      </ul>
+    </ul>
+	</ul>
+</div>
+<!--Kapitel 1-->
+<div class="col-lg-12" id="100">
+  <h2>1 Einleitung</h2><a href="#index" class =" btn btn-secondary pull-right" > Back to top </a>
+    <p>In der Schweiz bieten viele Bibliotheken neben dem klassischem Buchverleih weitere Zusatzdienstleistung wie das Veranstalten von eigenen Events an. Diese Veranstaltungen werden von den Bibliotheken auf ihren eigenen Websites angeboten, einen bibliotheksübergreifenden Veranstaltungskalender gibt es jedoch nicht. Dies soll durch ein Praxisprojekt im Masterstudiengang Information and Data Management an der HTW Chur geändert werden.</p>
+    <p>Der Auftraggeber Prof. Bruno Wenk hat hierfür ein Konzept zur Realisierung eines zentralen Veranstaltungskalenders erarbeitet. Das Konzept fusst auf den Grundsätzen des „Semantic Web“, bei dem Anbieter von Daten (Bibliotheken) diese mit Metainformation anreichern und als maschinenlesbares Format im Internet bereitstellen. Daraufhin können automatisierte „Web-Crawler“ diese Daten (zentraler Veranstaltungskalender) regelmässig abgreifen und weiterverarbeiten. Dateiformat und Schema wurden auf JSON-LD Format nach schema.org Definition festgelegt. Die Erstellung der JSON-LD Daten soll dabei für das Bibliothekspersonal möglichst einfach sein.</p>
+    <b><img id="abb1" style="color:red;" alt="Abbildung 1"></b>
+    <p>In den nachfolgenden Abschnitten werden Auftrag und Ziele genauer definiert, die gewählte Vorgehensweise beschrieben sowie die festgelegten Phasen im Projektverlauf erläutert.</p>
+    <p>Die Use Cases im zweiten Kapitel sollen aufzeigen, welche Prozesse hinter dem Tool stehen.</p>
+    <p>Das dritte Kapitel befasst sich mit den Komponenten, welche das Tool beinhalten soll, im vierten Kapitel werden dann die genutzten Technologien für die Prozessschritte festgehalten und erklärt.</p>
+    <p>Kapitel fünft zeigt den Stand des Tools bei Abschluss des Projektes auf und bietet damit einen Überblick, was konkret vorhanden ist.</p>
+    <p>Bevor im siebten Kapitel das Projekt reflektiert und ein Blick in die Zukunft geworfen wird, sollen bereits in Kapitel sechst erste Handlungsempfehlungen und Ideen für die Weiterentwicklung des Tools konkretisiert werden.</p>
+
+    <h3 id="110">1.1 Auftrag und Zielsetzung</h3>
+      <p>Ausgangslage für das Projekt waren der schriftliche Auftrag, die Auftragsbesprechung mit dem Referenten sowie weitere Projekte um die Seite http://mas-is.lima-city.de/, welche in anderen Kursen durchgeführt wurden.</p>
+      <p>Die Projektgruppe erhielt den Auftrag, ein webbasiertes Tool zu entwickeln, welches auch Bibliotheksangestellten ohne spezifische Kenntnisse von JSON-LD die Erfassung von Events ermöglicht. Das Tool soll mittels XML-File konfigurierbar sein, etwa um im Vorfeld definieren zu können, welche Mindestangaben zu den jeweiligen Events erfasst werden sollen. Die eingegebenen Daten sollen dann auf Knopfdruck in das erforderte JSON-LD Format umgewandelt werden und für die weitere Bearbeitung durch die Website-Administration bereitgestellt werden. Die Administration kann die JSON-LD Daten auf der Website der Bibliothek veröffentlichen und diese so semantisch auszeichnen. Eine zweite, separate Projektgruppe ist verantwortlich, den Veranstaltungskalender zu entwickeln und die online gestellten JSON-LD Daten jeder Bibliothek abzugreifen.</p>
+      <p>Bei Abschluss des Projektes sollen konkret folgende Komponenten vorhanden sein:</p>
+
+      <b><img id="tab1" style="color:red;" alt="Tabelle 1"></b>
+
+    <h3 id="120">1.2 Abgrenzung und Vorgehensweise</h3>
+      <p>Bei Erstellung der gesamten Website werden wissenschaftliche Prinzipien wie bspw. die der Usability berücksichtigt.</p>
+      <p>Für die Erarbeitung des Tools wurde von der Projektgruppe ein agiler Ansatz gewählt. Das Projekt wurde in drei Phasen aufgeteilt, welche die Maturitätsstufen nach Priorität des Auftraggebers umfassen. Diese Phasen werden in mehreren Durchläufen abgehandelt. Ein solches Vorgehen ermöglicht dem Team, immer wieder Rücksprache mit dem Auftraggeber zu nehmen und dessen Wünsche, Ideen und Anforderungen aufzufassen. Durch die Integration neuer Komponenten kann das Tool schrittweise entwickelt und ausgebaut werden.</p>
+
+      <b><img id="abb2" style="color:red;" alt="Abbildung 2"></b>
+
+      <ul><li>Phase 1: Entwicklung der Anwendung</li></ul>
+      <p>Die erste Phase des Projektes hat höchste Priorität und beinhaltet die Realisierung eines groben Tools. Dieses wird in diesem ersten Schritt auf rein technischer Ebene umgesetzt. Das konkrete Ziel dieser Phase ist ein funktionierendes Formular sowie eine erste grobe Zusammenstellung technischer Details. Die Entwicklung des Tools wird für den Auftraggeber sichtbar gemacht, indem er über Neuerungen informiert wird.</p>
+
+      <ul><li>Phase 2: Erarbeitung des Layouts</li></ul>
+      <p>In einem weiteren Schritt wird die Maturitätsstufe erhöht beziehungsweise das Tool verbessert, indem es einen optischen Feinschliff erhält. Das Design soll einfach, aber ansprechend sein und den Prinzipien von Usability und User Experience folgen. Sobald das Tool funktionsfähig ist, verläuft die Erarbeitung des Layouts Hand in Hand mit der Anwendungsentwicklung. Dadurch wird eine optimale Abstimmung von Anwendung und User Interface gewährleistet.</p>
+
+      <ul><li>Phase 3: Erstellung der Tutorials</li></ul>
+      <p>In der letzten Phase geht es um das Verfassen der Anleitungen für Endnutzer und Entwickler. Die Tutorials werden zum Schluss erstellt, da diese im Zusammenhang mit eigenen „Live-Tests“ erstellt und zugleich mit hilfreichen, optisch finalen Screenshots versehen werden können.</p>
+
+    <h3 id="130">1.3 Hinweise zur Dokumentation</h3>
+      <p>Text-Abschnitte, die mit einem <i class="fa fa-book"></i> gekennzeichnet sind, beziehen sich auf Literatur und theoretische Ansätze. Die dazugehörigen Quellenangaben finden sich dementsprechend in Kapitel <a href="#800">8 Quellenverzeichnis</a></p>
+      <p>Bereiche, denen ein <i class="fa fa-bullhorn"></i> vorausgeht, deuten auf Alternativen hin. Hierbei kann es sich um Applikationen handeln, die stattdessen genutzt werden können oder um andere Ausgangslagen für die Nutzung von #wilhemtell.</p>
+      <p>Wann immer von Ordnern die Rede ist, sind die Ordner im Code-Repository gemeint, welches unter anderem via <a target="_blank" href="https://github.com/hakunana/wilhelmtell">GitHub</a> abgerufen werden kann.</p>
+</div>
+
+
+<!--Kapitel 2-->
+<div class="col-lg-12" id="200">
+  <h2>2 Use Case</h2><a href="#index" class =" btn btn-secondary pull-right" > Back to top </a>
+    <p>Die als Ablaufdiagramme dargestellten Use Cases helfen bei der Sicherstellung von konzeptionell sauberen Abläufen und machen potentielle Abbruchbedingungen&sup1; deutlich.</p>
+
+    <h3 id="210">2.1 Use Case Endnutzer</h3>
+      <p>Der erste Use Case befasst sich mit dem Prozess, den ein Endnutzer wie beispielsweise ein Bibliotheksmitarbeitender durchläuft.</p>
+      <b><img style="color:red;" alt="Abbildung Use Case 1"></b>
+
+    <h3 id="220">2.2 Use Case Entwickler</h3>
+      <p>Der zweite Use Case beschreibt den Prozess, der ausgeführt wird, wenn jemand ein XML-Template hoch lädt und validiert.</p>
+      <b><img style="color:red;" alt="Abbildung Use Case 2"></b>
+</div>
+
+
+<!--Kapitel 3-->
+<div class="col-lg-12" id="300">
+  <h2>3 Komponenten des Tools</h2><a href="#index" class =" btn btn-secondary pull-right" > Back to top </a>
+    <p></p>
+  <h3 id="310">3.1 Formular</h3>
+    <p></p>
+    <p></p>
+  <h3 id="320">3.2 Tutorial</h3>
+    <p></p>
+    <p></p>
+  <h3 id="330">3.3 Entwickler</h3>
+    <p></p>
+
+
+    <h4 id="331">3.3.1 XML-Anleitung und Validator</h4>
+      <p>Damit zukünftig neue Formulare erstellt werden können, wird ein Tutorial für Entwickler angeboten. In dieser Anleitung wird aufgezeigt:</p>
+      <ul>
+        <li>wie das XML-File für ein neues Formular aufgebaut sein muss</li>
+        <li>welche Elemente und Attribute Verwendung finden (obligatorisch oder optional)</li>
+        <li>wo die Datei auf dem Server abgelegt werden muss</li>
+        <li>wie das File validiert werden kann</li>
+      </ul>
+      <p>Für die Validierung wird ein eigener Bereich zur Verfügung gestellt. Die Grundidee der vorgängigen Validierung der Files ist die Sicherstellung, dass ein XML-File korrekt für das Bibliothekspersonal aufbereitet wird und anschliessend ohne Komplikationen genutzt werden kann.</p>
+      <p>Die Verfasser der XML-Templates laden diese hierfür in das separate Verzeichnis [WEBROOT]/xmltovalidate&sup2; auf den Server. Danach können sie auf einfache Art und Weise das hochgeladene XML-File via [meine_URL]/validate validieren. Wenn bei der Validierung keine Fehler entdeckt werden, kann der Entwickler das validierte File auf Knopfdruck "veröffentlichen". Das File wird dabei serverseitig in das Verzeichnis [WEBROOT]/xml kopiert und somit für den eigentlichen JSON-LD Prozess zur Verfügung gestellt.</p>
+      <p>Das XML-File wird 4-Stufig validiert:</p>
+      <ul>
+        <li><b>1. Stufe - Fehler</b><p>Prüfung ob das XML-File den Anforderungen gemäss XSD entspricht. Erfolgt serverseitig via PHP default XML-XSD Validierungsfunktion.</p></li>
+        <li><b>2. Stufe - Fehler</b><p>Prüfung nach Logik-Fehlern wie bspw. Check, dass bei als sichtbar konfigurierten Labels auch ein Wert für die Labels mitgegeben wird. Erfolgt serverseitig via XPath-Abfragen.</p></li>
+        <li><b>3. Stufe - Warnung</b><p>Es wird eine Warnung ausgegeben, falls nicht alle Elemente eine @type-Annotation besitzen.</p></li>
+        <li><b>4. Stufe - Info</b><p>Ein Info-Text wird ausgegeben, falls nicht alle Elemente eine @id-Annotation besitzen.</p></li>
+      </ul>
+      <p>Wie bei Validierungen üblich, gibt es verschiedene Schweregrade.</p>
+      <p>Stufe 1 und 2 haben den Schweregrad Fehler (Error). Das XML-File kann dann nicht für das Bibliothekspersonal zur Verfügung gestellt werden.</p>
+      <p>Stufe 3 hat den Schweregrad Warnung (Warning). Dabei wird der validierenden Person nahegelegt, eine Korrektur vorzunehmen, das XML-File kann aber trotzdem verfügbar gemacht werden. </p>
+      <p>Stufe 4 hat den Schweregrad Info. Es wird lediglich eine Zusatzinfo angezeigt, wie sich das XML-File noch verbessern liesse, das XML-File kann aber ohne weiteres publiziert werden. </p>
+      <p>Jede angezeigte Meldung enthält eine Zusammenfassung des Fehlers und die entsprechende Zeilennummer im XML-File.</p>
+    <h4 id="332">3.3.2 Source Code-Dokumentation (JavaScript und XSLT)</h4>
+      <p>Die Dokumentation des Source Codes umfasst sämtliche Files aus dem Code-Ordner „js“ und beschränkt sich dadurch auf JavaScript und XSLT. Grundlage für die Zusammenstellung waren die Kommentare im Source Code, für die Erstellung wurde JSDoc/XSLTDoc zu Hilfe gezogen.</p>
+      <div class="row col-lg-12">
+        <div class="col-lg-2"> <i class="fa fa-book"></i></div>
+        <div class="col-lg-10">
+          <p>JSDoc ist eine Programmschnittstelle (auch API genannt) für JavaScript, mit der aus Programmcode automatisch eine Dokumentation generiert werden kann.</p>
+          <p>Durch klares Kennzeichnen des zu dokumentierenden Codes mittels /** und der Vergabe von Tags wird dem JSDoc-Parser ermöglicht, Kommentare im Quellcode zu erkennen, zuzuordnen und zusammengefasst in einer eigenen Website im HTML-Format wiederzugeben (JSDoc 3 2017).</p>
+        </div>
+      </div>
+      <p>Die Sequenzen für die Source Code Dokumentation wurden vor den entsprechenden JavaScript-Functions definiert. Weitere erläuternde Kommentare im Source Code (auch in anderen Code-Files wie z.B. PHP) wurden auskommentiert und werden nicht separat in der Dokumentation aufgeführt.</p>
+      <p>Bei der Dokumentation des Source Codes wurde der Open-Source Gedanke berücksichtigt, indem sämtliche Files in Englisch kommentiert wurden.</p>
+    <h4 id="333">3.3.3 Projektdokumentation und technische Details</h4>
+      <p>Gemäss Absprache mit dem Auftraggeber ist die Projektdokumentation vor allem für die Weiterführung des Projektes relevant. Aus diesem Grund soll die hier vorliegende Dokumentation aufzeigen, auf welche Ausgangslage dem Projekt zugrunde liegt, welche Entscheidungen getroffen wurden und was für eine Weiterführung speziell zu berücksichtigen ist.</p>
+      <p>Entscheidungen zu technischen Details hinsichtlich Design und genutzter Technologien werden im nächsten Kapitel genauer ausgeführt und sind insbesondere für Personen von Bedeutung, welche das Tool weiter ausbauen möchten.</p>
+</div>
+
+
+<!--Kapitel 4-->
+<div class="col-lg-12" id="400">
+  <h2>4 Design und technische Details</h2><a href="#index" class =" btn btn-secondary pull-right" > Back to top </a>
+    <p>In den nachfolgenden Abschnitten wird erläutert, auf welcher Grundlage die Entscheidungen für das Design gefällt wurden und welche Technologien für die Umsetzung des Projektes verwendet wurden.</p>
+
+    <h3 id="410">4.1 Entscheidungen betreffend Design</h3>
+      <p>Das Design für die Repräsentation des Tools wurde ausgehend von den definierten und im vorausgehenden Kapitel erläuterten Komponenten entwickelt. Um diese an einem Ort zu vereinen und damit unter anderem eine einfache Weiterentwicklung zu gewährleisten, wurde entschieden, eine umfassende Website zu erstellen.</p>
+      <p>Anhand einer ersten Skizze wurde der Aufbau der Seite definiert, der sowohl den Endnutzern bzw. dem Bibliothekspersonal gerecht werden soll, als auch den Entwicklern, welche dieses Projekt weiterführen möchten.</p>
+      <b><img id="abb3" style="color:red;" alt="Abbildung 3"></b>
+      <p>Um die Nutzung der Formulare für Anwender zu erleichtern, wird das Portal aufgeteilt in einen zentralen Anwendungsbereich für Endbenutzer sowie in einen abgegrenzten und klar erkennbaren Entwicklerbereich, in der Skizze rot und grün gekennzeichnet. Der Bereich für die Endnutzer beinhaltet die beiden roten Menüpunkte und umfasst einerseits die Seite mit den Formularen sowie andererseits die Seite mit dem Tutorial. Dadurch wird gewährleistet, dass die Formulare schnell auffindbar sind und ohne Umwege genutzt werden können, die Nutzer aber dennoch über die Existenz eines Tutorials Bescheid wissen und bei Problemen schnell darauf zugreifen können.</p>
+      <p>Der Entwicklerbereich ist für den Endnutzer nicht relevant und kann problemlos ignoriert werden. Für die Verantwortlichen, die sich mit der Weiterentwicklung des Projektes beschäftigten, soll jedoch eine gute Basis zur Verfügung gestellt werden. Der Bereich wiederum ist aufgeteilt in drei Unterbereiche, welche bereits in Abschnitt <a href="#330">3.3 Entwickler</a> genauer definiert wurden.</p>
+      <p>Für die Umsetzung des Frontend der Website und die Darstellung der Elemente wurde auf Bootstrap 3 gesetzt. Die aktuelle Alpha-Version von Bootstrap 4 (v4.0.0-alpha.6) wurde aufgrund von Kompatibilitätsproblemen (insbesondere mit IE11) abgetan.</p>
+    
+    <h3 id="420">4.2 Verwendete Technologien</h3>
+      <p>In diesem Abschnitt werden die genutzten Technologien und Standards erläutert und im Kontext des Prozesses dargestellt.</p>
+
+      <h4 id="421">4.2.1 XML</h4>
+        <p>Ausgangslage für das Formular ist ein XML-File, das von Experten erstellt und eingepflegt wird. Das File definiert, welche Inhalte via #wilhelmtell von dem Bibliothekspersonal erfasst werden sollen.</p>
+        <div class="row col-lg-12">
+          <div class="col-lg-2"> <i class="fa fa-book"></i></div>
+          <div class="col-lg-10">
+            <p>Extensible Markup Language, kurz XML, ist eine vom W3C&sup3; definierte Auszeichnungs- und Metasprache. XML bestimmt, wie „benutzerspezifische Vokabeln in XML-Dokumenten zu verwenden sind“. Diese Vokabeln (sogenannten „tags“, gekennzeichnet mit <…>) wiederum beschreiben die Textabschnitte, die sich in diesem XML-Dokument befinden (Moos 2008, S. 1).</p>
+          </div>
+        </div>
+        <p>Wie ein XML-Template für das Tool #wilhelmtell aufgebaut sein muss, wird im dafür angefertigten Tutorial erläutert, beschrieben in Abschnitt <a href="#331">3.3.1 XML-Anleitung und Validator</a>.</p>
+        <div class="row col-lg-12">
+          <div class="col-lg-2"> <i class="fa fa-bullhorn"></i></div>
+          <div class="col-lg-10">
+            <p>Als (technische) Design-Alternative zur Generierung von HTML-Formularen kann die Auszeichnungssprache XForms verwendet werden, welche stark mit XML verbunden ist. Der W3C-Standard stellt eine XML-Spezifikation für webbasierte Formulare dar und war als Nachfolger von HTML-Formularen angedacht. XForms trennt im Gegensatz zu HTML die Darstellung des Formulars von der Verarbeitung der Daten und orientiert sich damit am Model-View-Controller-Prinzip (W3C 2009)<sup>4</sup>.</p>
+          </div>
+        </div>
+
+      <h4 id="422">4.2.2 XSD</h4>
+        <p>Das vorgängig definierte XML-File wird auf den Server, in den Ordner [WEBROOT]/xmltovalidate hochgeladen und kann danach maschinell mittels XML-Schema (XSD) Validierung und XPath Abfragen validiert werden.</p>
+        <div class="row col-lg-12">
+          <div class="col-lg-2"> <i class="fa fa-book"></i></div>
+          <div class="col-lg-10">
+            <p>Die W3C-Empfehlung XSD definiert die Strukturen von XML-Dokumenten und gibt Elemente und Attribute vor, die verwendet werden dürfen. Diese Vorgaben wiederum ermöglichen eine Validierung bzw. Überprüfung von XML-Files auf deren Wohlgeformtheit<sup>5</sup>. Erst eine erfolgreiche Validierung macht das XML-File für eine Anwendung verständlich und ermöglicht dadurch die (W3C 2004).</p>
+          </div>
+        </div>
+        <p>Es wird XSD Version 1.0 verwendet: XSD Version 1.1 bietet zwar die Möglichkeit an erweiterte Schema-Regeln Regeln direkt im XSD-File zu definieren (basierend auf XPath 2.0 Abfragen), wird aber generell wenig unterstützt. Auch die vom Projektteam verwendeten Testserver der HTW-Chur unterstützen nur Version 1.0, für die Validierung wurde deshalb ein zweiteiliger Ansatz gewählt:</p>
+        <p>Die Basis-Validierung erfolgt mittels XML-Schema (XSD v1.0) Verifikation. Im nächsten Schritt werden komplexere Prüfungen, PHP-serverseitig mittels separaten XPath (v1.0) Abfragen durchgeführt. Die XPath Abfragen sind dabei so gestaltet, dass für ein positives Ergebnis ein leeres Resultat erwartet wird. Gibt die Abfrage ein Resultat zurück, so handelt es sich um einen Fehler und das Abfrageergebnis kann direkt an den Benutzer zurückgegeben werden. Beispiel: Suche nach allen Feldern ohne Label  Wenn etwas gefunden, dann „FAIL“ und gebe die jeweilige Zeilennummer der Resultate an, sonst „PASS“.</p>
+        <p>Wie die Validierung im Detail funktioniert, kann in Abschnitt <a href="#331">3.3.1 XML-Anleitung und Validator</a> nachgelesen werden.</p>
+
+      <h4 id="423">4.2.3 XSLT</h4>
+        <p>XML-Files, welche die Validierung erfolgreich durchlaufen haben und anschliessend publiziert wurden, können von dem User in der Formular-Maske ausgewählt werden. Beim Anwählen, wird das selektierte XML-File in HTML umgewandelt. Diese Umwandlung erfolgt mittels automatisierter XSL Transformation (XSLT).</p>
+        <div class="row col-lg-12">
+          <div class="col-lg-2"> <i class="fa fa-book"></i></div>
+          <div class="col-lg-10">
+            <p>XSLT ist ebenfalls eine Empfehlung des W3C und definiert eine Sprache, welche XML-Dokumente in ein anderes Dokument umwandelt. Zentrale Aufgabe von XSLT ist es, „Styling-Informationen zu einem XML-Quelldokument hinzuzufügen“<sup>6</sup>. Dazu kann beispielsweise eine Umwandlung in ein darstellungsorientiertes Format wie SVG, HTML oder XHTML stattfinden. Es gibt jedoch auch weitere Transformationsaufgaben, für die XSLT verwendet wird. „Eine in XSLT ausgedrückte Transformation beschreibt Regeln für die Transformation von Eingangsdaten in Ausgangsdaten“ (W3C 2017).</p>
+          </div>
+        </div>
+
+      <h4 id="426">4.2.4 HTML</h4>
+        <p>Nach erfolgter Transformation steht dem User eine einfache und verständliche Eingabemaske bzw. ein HTML-Formular zur Verfügung. In das Formular können nun alle erforderlichen und relevanten Daten für eine Veranstaltung eingegeben werden.</p>
+        <div class="row col-lg-12">
+          <div class="col-lg-2"> <i class="fa fa-book"></i></div>
+          <div class="col-lg-10">
+            <p>HTML steht für HyperText Markup Language und beschreibt die gängige Auszeichnungssprache, die zur Erstellung von Websites verwendet wird. Mit HTML können Dokumentinhalte wie z.B. Kopfdaten (header), anzuzeigender Inhalt (body) oder Fusszeilen (footer) sowie Elemente wie Überschriften, Absätze, Grafiken, etc. ausgezeichnet werden. Diese Auszeichnungen werden von Webbrowsern aufgelöst und entsprechend am Bildschirm, für den Nutzer grafisch aufbereitet, ausgegeben (SELFHTML 2017).</p>
+          </div>
+        </div>
+        <p>Für die gestalterische Bearbeitung des Formulars in #wilhelmtell ist zu berücksichtigen, dass keine HTML-Elemente hinzugefügt werden sollten, die sich statisch auf die IDs von anderen HTML-Elementen beziehen. Da alle Elemente geklont werden können und bei einem solchen Vorgang die IDs neu generiert werden, wird die Referenzierung auf statische IDs erheblich erschwert. Beispielsweise werden explizite label-Elemente, also labels, die auf die ID von input-Elementen referenzieren, nicht unterstützt. Stattdessen wird die indirekte Referenzierung verwendet (input-Element als Kind-Element des labels). Diese Tatsache stellt primär aber kein Problem dar, da gemäss W3C-Standard implizite Referenzierungen vollumfänglich unterstützt werden.</p>
+
+      <h4 id="426">4.2.5 JavaScript</h4>
+        <p>Hat der User alle relevanten Daten eingegeben, kann die Transformation zu JSON-LD durchgeführt werden. Hierzu klickt der User auf den entsprechenden Button (JSON erzeugen), woraufhin die eingepflegten Daten mittels JavaScript in das JSON-LD Format übertragen werden.</p>
+        <div class="row col-lg-12">
+          <div class="col-lg-2"> <i class="fa fa-book"></i></div>
+          <div class="col-lg-10">
+            <p>JavaScript (JS) ist eine von der Firma Netscape entwickelte Skriptsprache, mit der Funktionen für Interaktionen in eine Website integriert und statische HTML-Websites dadurch dynamisch erweitert werden können. Das JS-Skript wird bei Aufruf der Seite von einem sogenannten Interpreter in Maschinencode umgewandelt und ausgeführt (Bewersdorff 2014, S. 42).</p>
+          </div>
+        </div>
+        <p>Im Code-Repository gibt es ein JS-File mit Helferklassen, anhand dessen die Attribute aller relevanten Elemente via diese Helferklassen bearbeitet werden können. Zusätzlich kann man in dem JS-File auch die Texte bzw. Error-Messages anpassen. Das JS-File heisst formattingHelper.js, die Nutzung wurde, wo sinnvoll, mit Anwendungsbeispielen verdeutlicht, sollte aber grundsätzlich selbsterklärend sein.</p>
+
+      <h4 id="426">4.2.6 JSON-LD</h4>
+        <p>Der JSON-LD-Datensatz wird dem User in einem separaten Ausgabefeld angezeigt. Diese kann der User abspeichern oder kopieren und den IT-Experten bzw. Administratoren zur Veröffentlichung auf der Website der Bibliothek aushändigen.</p>
+        <div class="row col-lg-12">
+          <div class="col-lg-2"> <i class="fa fa-book"></i></div>
+          <div class="col-lg-10"><p>JavaScript Object Notation for Linked Data, kurz JSON-LD ist eine Annotation für Daten, die automatisiert verarbeitet werden sollen und bildet damit unter anderem eine Grundlage für die semantische Auszeichnung von Websites. JSON-LD hat gegenüber Mikrodaten, RDFa, etc. einige Vorteile. Einerseits ist ein JSON-LD-Datensatz kompakter und für Menschen leichter lesbar, andererseits ist keine konkrete Unterstützung durch Content Management Systeme erforderlich, da der Datensatz einfach mittels separatem script-Tag in den Header integriert werden kann (Ryte GmbH, o.J.).</p>
+          </div>
+        </div>
+        <p>Bei der Generierung des JSON-LD Textes im Tool #wilhelmtell ist zu berücksichtigen, dass alle leeren Objekte vor dem Anzeigen gelöscht werden. Das, damit nur relevante Attribute angezeigt werden. Leer definiert sich hier als leeres Array, leeres Objekt oder als Objekt mit nichts ausser einem default @type-Attribut.</p>
+        <div class="row col-lg-12">
+          <div class="col-lg-2"> <i class="fa fa-bullhorn"></i></div>
+          <div class="col-lg-10">
+            <p>Strukturierte Daten wie JSON-LD können unter anderem auch für eine bessere Auffindbarkeit in Suchmaschinen (SEO) wie z.B. Google genutzt werden. Ob der generierte JSON-LD-Datensatz demnach auch für die Google-Crawler auffindbar ist, kann getestet werden via <a href="https://search.google.com/structured-data/testing-tool">Google Testing Tool</a>.</p>
+            <p>Das XML-Template (s. Abschnitt <a href="#421">4.2.1 XML</a>) sollte hierfür gemäss Google-Richtlinien<sup>7</sup> aufgebaut werden.</p>
+          </div>
+        </div>
+
+    <h3 id="430">4.3 Technische Details zur Anwendungsebene</h3>
+      <p>Die folgenden Abschnitte gehen auf weitere notwendige technische Details ein und erläutern unter anderem, welche Browser das Tool unterstützen, welcher Server benötigt wird und was es in Bezug auf das Formular bzw. einzelne Felder zu berücksichtigen gibt.</p>
+
+      <h4 id="431">4.3.1 Browser-Support</h4>
+        <p>Unterstützt werden mindestens alle gängigen Browser der aktuellen und letzten Version (Stand Ende 2017). Kompatibel sollten jedoch alle Web-Engines sein, die JavaScript ECMAScript 5 unterstützen. Es wird vermutet, dass die native Version des Internet Explorer 9 und solche darunter nicht unterstützt werden, da diese nicht zuverlässig getestet werden konnten. Es wird empfohlen, jede Änderung des Tools insbesondere auf die Kompatibilität der Trident Engine (vor allem MS Internet Explorer – ohne Edge) zu testen.</p>
+
+      <h4 id="432">4.3.2 Serverseitige Tasks (PHP)</h4>
+        <p>Alle serverseitigen Aufgaben erfolgen via PHP Script, weshalb das Tool auf einem PHP-Server laufen muss. PHP Version 5 bis 7 werden unterstützt, unter der Voraussetzung, dass die Standard Library zur XML-Verarbeitung installiert ist (XSD und XPath v1.0). Es werden PHP-Funktionen verwendet, die in den PHP-Versionen 4 und darunter nicht oder nur teilweise unterstützt werden.</p>
+        <p>Folgende Tasks erfolgen serverseitig:</p>
+        <ul>
+          <li>XSD-Validierung</li>
+          <li>Fetching<sup>8</sup> der Währungen</li>
+          <li>Fetching und maschinelle Übersetzung von schema.org-Beschreibungen</li>
+          <li>Fetching der XML-Files auf dem Server</li>
+        </ul>
+        <p>Währungs- und Schema.org-Fetch haben einen Fallback auf die lokale Datei im Ordner [WEBROOT]/php/local-bakfalls die remote-Files nicht verfügbar wären. Der Order „local-bak“ ist relevant und sollte nur sporadisch aktualisiert werden. Eine lokale „fallback-Datei“ wird verwendet, da damit das Tool auch ohne Internet-Verbindung funktioniert. Zudem können remote-Abfragen immer mal wieder fehlerhaft sein (bspw. remote-host offline oder host-Datei fehlerhaft). Die lokale „fallback-Datei“ könnte auch automatisiert periodisch heruntergeladen werden (bspw. via Cron-Job). Bei dieser Variante wird ein manuelles nach-testen strengstens empfohlen.</p>
+
+      <h4 id="433">4.3.3 Besonderheiten des Formulars</h4>
+        <p>Für das Formular, welches dem Endnutzer angezeigt wird, gibt es einige Spezialitäten. Diese sind auch bei der Weiterentwicklung zu berücksichtigen.</p>
+        <ul>
+          <li><b>Validierung der Eingabefelder</b>
+            <p>Die Eingabemaske wird auf zwei verschiedene Arten validiert:</p>
+            <p><b>Pflichtfelder</b> werden für alle Browser ausser für MS-IE mittels Standard HTML5 Validierung gemacht. Die Dialoge der HTML5-Validierung sind jeweils immer in der Systemsprache des Users. Das bedeutet, dass bei Systemsprache Deutsch eine Meldung in Deutsch ausgegeben wird, auch wenn für das Formular die Sprache Französisch (FR) ausgewählt wurde. Aufgrund von Kompatibilitätsgründen wurde für die Trident-Engine (bspw. MS-IE ohne Edge) eine eigene Validierung mittels Popups entwickelt. Diese Popups sind folglich in der Sprache, die im Formular eingestellt wurde (nicht zwingend die Systemsprache).</p>
+            <p>Die Validierung der <b>Datentypen</b>, ob also beispielsweise auch wirklich eine Zahl in ein Zahlenfeld eingegeben wurde, wird mittels regex überprüft, allfällige Fehlermeldungen werden via Bootstrap Elemente angezeigt. Hier ist zu beachten, dass bei Drücken des „JSON-erzeugen“-Buttons geprüft wird, ob noch Fehlermeldungen zum Format bestehen. Sollen die Format-Fehlermeldungen angepasst werden, muss dies auch bei der „finalen“ Prüfung vor der JSON-LD-Generierung mitberücksichtigt werden.</p>
+          </li>
+          <li><b>Datumsfelder</b><p>Alle Datumsfelder werden live an die Zeitzone des Users angepasst. Wenn im XML-Template beispielsweise der Default-Wert Zeitzone US-Ostküste gespeichert ist, wird das Datum beim Aufrufen in die lokale Zeit konvertiert (lokale Zeit entspricht der Lokalisation des Clients).</p></li>
+          <li><b>Add-/Delete-Buttons</b><p>Jedes Node-Element kann mit einem Klick auf den „löschen“-Button gelöscht werden. Pflichtelemente können nur solange gelöscht werden, wie es mehr als ein gleiches Element gibt. Das letzte Pflichtelement kann nicht gelöscht werden. Weitere Node-Elemente können via „hinzufügen“-Button hinzugefügt werden. Bei erstmaligem Aufruf des Formulars werden relevante Elemente geklont, deren Inhalt gelöscht und zwischengespeichert. Bei Klick auf „hinzufügen“ wird schliesslich das zu klonende Element identifiziert und innerhalb der entsprechenden Hierarchiestufe zuunterst hinzugefügt. Das Klonen der Elemente bei erstmaligem Aufruf („Blueprinting“) ermöglicht es, dass ein Element hinzugefügt werden kann, auch wenn keine „peer-Elemente“ mehr existieren (bspw. Hinzufügen eines Fotos, auch wenn keine vorgehenden Fotos mehr vorhanden sind).</p></li>
+        </ul>
+        <p></p>
+  </div>
+
+
+<!--Kapitel 5-->
+  <div class="col-lg-12" id="500">
+    <h2>5 Ergebnis des Projektes</h2><a href="#index" class =" btn btn-secondary pull-right" > Back to top </a>
+      <p>Das übergreifende Ziel des Projektes ist ein Tool, welches Bibliotheken in der semantischen Auszeichnung von Veranstaltungen auf ihrer Website unterstützen soll. Dieser Schritt ist erforderlich, damit der von Bruno Wenk geplante bibliotheksübergreifende Veranstaltungskalender die Daten auslesen kann. Mit der Website #wilhelmtell wird ein einfaches Tool zur Verfügung gestellt, das zudem Potential für Weiterentwicklungen bietet. Für diesen Auftrag wurden in Abschnitt <a href="#110">1.1 Auftrag und Zielsetzung</a> genaue Ziele definiert, deren Erreichung nachfolgend nach eigener Einschätzung bewertet wird.</p>
+      
+      <h3 id="510">5.1 Bewertung der Zielerreichung</h3>
+        <p>Das primäre Ziel ist erfüllt, das Tool bietet den Usern an, über eine einfache Maske Daten in das JSON-LD Format zu konvertieren.</p>
+        <p>Mit der ausführlichen Dokumentation des Projektes wurde zudem eine gute Grundlage für den Unterhalt und die Weiterentwicklung des Tools geschaffen.</p>
+        <p>Des Weiteren sind bereits viele Verbesserungen implementiert, die über das Primärziel hinausgehen. Alle Masken (inkl. die wichtigsten Tutorials für Endbenutzer) sind viersprachig vorhanden, resp. können via XML-Template viersprachig konfiguriert werden. Zusätzlich werden automatisiert und dynamisch die aktuellsten Definitionen gemäss schema.org live abgegriffen und maschinell in die User-Sprache übersetzt. Um die Qualität der XML-Templates zu verbessern und die Administration zu erleichtern, wurde eine hochwertige Validierungsfunktion erstellt, die nicht nur auf das XML-Schema prüft, sondern auch erweiterte Prüfungen mittels XPath Abfragen durchführt.</p>
+        <ul>
+          <li><b>Intuitives webbasiertes Formular</b><p>Das Formular ist einfach zu bedienen und orientiert sich optisch an gängigen Formularen auf Websites. Dies bietet Nutzern einen gewissen Wiedererkennungswert, was es intuitiv macht. Die Platzierung auf der Startseite macht es leicht auffindbar und Nutzer können ohne Umwege starten. Unterstrichene Begriffe beinhalten Beschreibungen, die automatisch aus schema.org übersetzt werden. Hier besteht allenfalls Optimierungsbedarf, da die Übersetzungen maschinell geschehen und die Sätze je nach dahinter stehendem HTML-Element nicht vollständig sind. Um die Qualität der übersetzen Elemente zu erhöhen, könnte zusätzlich eine manuelle Übersetzung von ausgewählten Elementen durchgeführt werden, es ist jedoch fraglich ob der dadurch entstehende Aufwand gerechtfertigt wäre. Weiter sollen Platzhalter in den Felder Beispiele anzeigen, wie das Formular ausgefüllt werden muss.</p></li>
+          <li><b>Umfassendes Tutorial</b><p>Das Tutorial für die Nutzung des Formulars ist kurz und verständlich gehalten. Es ist in einer einfachen Sprache verfasst und auf komplizierte Satzstellungen wurde bewusst verzichtet. Erweiterungspotential bietet sich besonders in der Erläuterung der JSON-LD-Einbindung, eine erste Empfehlung findet sich im nächsten Kapitel. Das Tutorial ist mit Screenshots eines konkreten Beispiels versehen, was es für Nutzer noch einfacher macht.</p></li>
+          <li><b>Anleitung zur Erstellung von XML-Templates</b><p>Das XML-Tutorial für die Generierung neuer Formulare ist detailliert und dennoch kurz gehalten. Es legt den Aufbau eines XML-Files dar und beschreibt die Elemente und Attribute die vorhanden sein müssen und optional genutzt werden können. Zudem wurden gezielt XML-Templates erstellt, die als Beispiel dienen können: Ein komplexes Beispiel, ein einfaches Beispiel und jeweils Testfiles für alle Formate und Hierarchieausprägungen zu Testingzwecke. Auch liegen Testfiles für die XML-Validierung vor, bei denen jede einzelne Prüfung greift und entsprechend ausgegeben wird.</p></li>
+          <li><b>Projektdokumentation</b><p>In der Projektdokumentation wurden die Zielsetzung, das Vorgehen und angewandte Methoden sowie Entscheidungsgrundlagen ausführlich festgehalten. Des Weiteren enthält sie technische Details sowie Grundlagen theoretischer Konzepte. Es ist zu berücksichtigen, dass es sich hierbei um eine zusammengefasste Dokumentation des Projektes und nicht um einen detaillierten Bericht handelt.</p></li>
+          <li><b>Vollständige technische Dokumentation</b><p>Die technischen Erläuterungen sind umfassend und bestehen aus Code-Kommentare, der Quellcode-Dokumentation (JS-DOC/XSLT-DOC), den Entwickler-Tutorials und den Angaben in dieser Hauptdokumentation.</p></li>
+        </ul>
+
+      <h3 id="520">5.2 Endprodukt Tool #wilhelmtell</h3>
+        <p>Das Tool #wilhelmtell steht als produktive Version auf der Website <a href="http://770695-1.web1.fh-htwchur.ch/">http://770695-1.web1.fh-htwchur.ch/</a> zur Verfügung und umfasst die Formulare, das Tutorial für Endnutzer sowie den Bereich mit den Dokumentationen für Entwickler.</p>
+        <p>Die Produktdokumentation steht als PDF zur Verfügung, ist aber ebenfalls auf der Website eingebunden. Die Quellcode-Dokumentation zu JS und XSLT wird automatisch generiert und ist auf der Website verlinkt. Weitere Kommentare zum Source Code finden sich in den entsprechenden Code-Files.</p>
+        <p>Der gesamte Code ist auf GitHub verfügbar und kann abgerufen werden unter <a href="https://github.com/hakunana/wilhelmtell">https://github.com/hakunana/wilhelmtell</a>.</p>
+  </div>
+
+
+<!--Kapitel 6-->
+  <div class="col-lg-12" id="600">
+    <h2>6 Erweiterungsideen und Empfehlungen</h2><a href="#index" class =" btn btn-secondary pull-right" > Back to top </a>
+      <p>Das entwickelte Tool hat Potential für Weiterentwicklungen. Erste Ideen und Empfehlungen werden nachfolgend aufgeführt. Dabei wird unterschieden zwischen funktionaler Weiterentwicklung und der Optimierung des Layouts.</p>
+      <h3 id="610">6.1 Funktionale Erweiterungen</h3>
+        <p>Die gesamte Website ist, soweit möglich, „responsive“ und damit Smartphone-freundlich aufgebaut. Dies mit dem Hintergedanken, dass beispielsweise Bibliotheksmitarbeitende das Formular auch dann ausfüllen können, wenn sie unterwegs bzw. nicht an einem stationären Computer sind (bspw. Tablet-Computer). Damit der JSON-LD-Datensatz dennoch schnellstmöglich von den Administratoren in die Website eingepflegt werden kann, bietet es sich an, das Formular um einen <b>E-Mail-Versand</b> zu erweitern. Per Knopfdruck soll der Datensatz in eine E-Mail kopiert und versandt werden können, was jedoch erweiterte Konfigurationen bezüglich IT-Security (spam-mails / robos) und Mailserver bedingt.</p>
+        <p>Eine weitere Möglichkeit, den generierten Datensatz schnell verschicken oder in die Website einpflegen zu können, ist die Speicherung in der Zwischenablage. Mit einem <b>Button „In Zwischenablage speichern“</b> kann dafür gesorgt werden, dass der gesamte Datensatz mit einem Klick zur Weiterverarbeitung gesichert wird. Dadurch werden den Bibliotheksmitarbeitenden die Schritte des Markierens sowie des Kopierens erspart.</p>
+        <p>Für weitere Zeitersparnis könnte eine <b>Upload-Funktion</b> integriert werden. Diese soll den Bibliotheksmitarbeitenden ermöglichen, alte Datensätze erneut ins Formular zu laden um dann beispielsweise nur geringfügige Änderungen im Formular vorzunehmen. Vergangene Events, die sich in den Folgejahren ähnlich wiederholen, könnten im JSON-LD-Format gesichert und zukünftig erneut, mit wenigen Anpassungen, verwendet werden. Die Erweiterung ist jedoch sehr Aufwändig, da eine „Rückkonvertierung“ von JSON-LD in XML nicht vorgesehen ist. Zudem sind Security-Aspekte zu berücksichtigen (bspw. das Hochladen von Schadcode verhindern). Als Workaround kann aktuell ein XML-Template dienen, dass Default-Werte enthält.</p>
+        <p>Mit den aktuellen XML-Vorlagen können die Formulare in den Sprachen Deutsch, Englisch, Französisch und Italienisch ausgegeben werden. Die Übersetzung erfolgt manuell im XML-File, indem die Labels für die Sprachen befüllt werden. Das bedeutet, dass die Formulare nicht in anderen Sprachen zur Verfügung stehen, wenn diese nicht bewusst übersetzt werden. Dennoch erscheinen die Sprachmöglichkeiten in der Dropdown-Liste auf der Formular-Seite. Um Unmut seitens der Endnutzer zu vermeiden, für die die gewünschte Sprache trotz Anzeige nicht zur Verfügung steht, empfiehlt sich eine <b>dynamisch generierte Dropdown-Liste</b>. Sprachen sollten demnach nur angezeigt werden, wenn die Labels entsprechend ausgefüllt wurden. Werden die Labels leer gelassen, soll die Sprache nicht in der Liste zur Verfügung stehen. Da der Aufwand verhältnismässig gross ist, beispielsweise man feststellt, dass eine Sprache nicht vergessen wurde, sondern absichtlich fehlt, ist diese Optimierung noch nicht erfolgt.</p>
+        <p>Das Tool kann nach heutigem Stand aus JSON-LD aus einem XML-Template erstellten. Zudem verarbeitet es live schema.org-Referenzen für die Übersetzungen im Formular. Hier bietet es sich als Weiterentwicklung an, die <b>Generierung von XML-Templates zu automatisieren</b>. Zeitgleich könnten schema.org-Klassen vorgeschlagen oder gegengeprüft werden. Dies würde die Bereitstellung von Formularen unterstützten und könnte der Anwendung eine breitere Nutzung ermöglichen.</p>
+      <h3 id="620">6.2 Ideen für Design-Optimierungen</h3>
+      <h3 id="630">6.3 Empfehlungen für die Dokumentation</h3>
+        <p>Um CMS-Verantwortlichen die Einbindung des JSON-LD-Datensatzes in die Website zu erleichtern, wird eine ausführliche Erweiterung des Tutorials empfohlen. Insbesondere wenn nur begrenzt Kenntnisse zur Handhabung des CMS vorhanden sind, kann die <b>Integration externer Links</b> zu konkreten CMS-Tutorials hilfreich sein. Für das CMS Wordpress gibt es beispielsweise diverse Plug-Ins<sup>9</sup>, um den Header zu bearbeiten, die Anzahl solcher Erweiterungen stellt Verantwortliche aber auch vor die Qual der Wahl. Links mit guten und einfach einsetzbaren Plug-Ins können demnach auch die Motivation steigern.</p>
+  </div>
+
+
+<!--Kapitel 7-->
+  <div class="col-lg-12" id="700">
+    <h2>7 Reflexion des Projektes und Ausblick</h2><a href="#index" class =" btn btn-secondary pull-right" > Back to top </a>
+      <p>Im Rahmen des Praxisprojektes wurde eine vollumfängliche und funktionsfähige Anwendung erstellt, die einen Mehrwert für das Bibliothekswesen darstellt. Weiter besteht durch den Aufbau des Tools und die umfangreiche Dokumentation ein grosses Potential für Weiterentwicklungen.</p>
+      <p>Der Ablauf und Umfang des Projektes waren angemessen, das agile Vorgehen in der Gruppe hat gut funktioniert und hat sich bewährt. Durch diese Form der Zusammenarbeit sind viele Ideen entstanden, die unter anderem auch in den Empfehlungen abzulesen sind. Die Gruppe konnte gut die individuellen Stärken kombinieren und hat die Projektarbeit entsprechend aufgeteilt.</p>
+      <p>Dieses Projekt hat nach Ansicht der Projektgruppe zu einem guten Resultat geführt, auch weil Umfang und Komplexität gut zur Teamgrösse und dem agilen Vorgehen gepasst hat. Zusätzlich war auch Bruno Wenk in der Rolle des Auftraggebers sehr hilfreich, da eine klare Zielsetzung gegeben wurde und er die Bereitschaft zeigte, der agilen Vorgehensweise entsprechend zu handeln und für Rücksprachen zur Verfügung stand.</p>
+      <p>Ein weiterer Lerneffekt bei der Gruppe entstand dadurch, dass sich die agile Vorgehensweise als sehr flexibel erwies, auch im Hinblick auf das Zeitmanagement. Da alle Projektmitglieder berufstätig sind, konnte so den individuellen Ansprüchen entgegengekommen werden ohne die Erreichung der Projektziele massgeblich zu gefährden.</p>
+  </div>
+
+
+<!--Kapitel 8-->
+  <div class="col-lg-12" id="800">
+    <h2>8 Quellenverzeichnis</h2><a href="#index" class =" btn btn-secondary pull-right" > Back to top </a>
+      <p>Bewersdorff, Jörg (2014): <i>Objektorientierte Programmierung mit JavaScript. Direktstart für Einsteiger.</i> Wiesbaden: Springer Vieweg.</p>
+      <p>JSDoc 3 (2017): <i>@use JSDoc. JSDoc 3 documentation project.</i> Verfügbar unter: <a href="http://usejsdoc.org/index.html">http://usejsdoc.org/index.html</a> [30.12.2017].</p>
+      <p>Moos, Alfred (2008): <i>XQuery und SQL/XML in DB2-Datenbanken. Verwaltung und Erzeugung von XML-Dokumenten in DB2.</i> Wiesbaden: Vieweg+Teubner.</p>
+      <p>Ryte GmbH (o.J.): <i>Ryte Wiki: JSON-LD.</i> Verfügbar unter: <a href="https://de.ryte.com/wiki/JSON-LD">https://de.ryte.com/wiki/JSON-LD</a> [21.01.2018].</p>
+      <p>SELFHTML (2017): <i>HTML/Entstehung und Entwicklung.</i> Zuletzt geändert am 8. November 2017. Verfügbar unter: <a href="https://wiki.selfhtml.org/wiki/HTML/Entstehung_und_Entwicklung#HTML_als_Auszeichnungssprache">https://wiki.selfhtml.org/wiki/HTML/Entstehung_und_Entwicklung#HTML_als_Auszeichnungssprache</a> [21.01.2018].</p>
+      <p>W3C (2004): <i>XML Schema Part 1: Structures Second Edition. W3C Recommendation 28 October 2004.</i> Verfügbar unter: <a href="https://www.w3.org/TR/xmlschema-1/">https://www.w3.org/TR/xmlschema-1/</a> [03.02.2018].</p>
+      <p>W3C (2009): <i>XForms 1.1. W3C Recommendation 20 October 2009.</i> Verfügbar unter: <a href="https://www.w3.org/TR/xforms/">https://www.w3.org/TR/xforms/</a> [03.02.2018].</p>
+      <p>W3C (2017): <i>XSL Transformations (XSLT) Version 3.0. W3C Recommendation 8 June 2017.</i> Verfügbar unter <a href="https://www.w3.org/TR/xslt/">https://www.w3.org/TR/xslt/</a> [03.02.2018].</p>
+  </div>
+
+
+<!--Kapitel 9-->
+  <div class="col-lg-12" id="900">
+    <h2>9 Abgabeverzeichnis</h2><a href="#index" class =" btn btn-secondary pull-right" > Back to top </a>
+      <p>Abgegeben werden folgende Daten:</p>
+      <ul><li>Das Repository - #wilhelmtell<p>(verfügbar via <a href="https://github.com/hakunana/wilhelmtell">https://github.com/hakunana/wilhelmtell</a>)</p></li></ul>
+      <ul><li>Produktive Version der Website <a href="http://770695-1.web1.fh-htwchur.ch/">http://770695-1.web1.fh-htwchur.ch/</a><p>(Anwendung liegt auf einem Ausbildungsserver der HTW Chur bis 30.04.2019)</p></li></ul>
+      <ul><li>Projektdokumentation im PDF-Format</li></ul>
+
+  </div>
+
+
+<!--Kapitel 10-->
+  <div class="col-lg-12" id="1000">
+    <h2>10 Anhang</h2><a href="#index" class =" btn btn-secondary pull-right" > Back to top </a>
+      <h3 id="1010">Anhang A - Komponenten des Tools</h3>
+        <p>Gliederung der einzelnen Projektelemente und deren Zuordnung an Endnutzer (EN) und Professionals (PRO)</p>
+        <b><img id="abb5" style="color:red;" alt="Abbildung 5"></b>
+      <h3 id="1020">Anhang B - Erste Entwürfe des Layouts</h3>
+        <p>Ausgehend von der ersten Skizze in Abschnitt <a href="#410">4.1 Entscheidungen betreffend Design</a> und den daraus resultierenden Elementen wurden Mockups für die geplante Website angefertigt. Diese gaben eine erste Richtung vor und unterstützten das Projektteam im Auf- und Ausbau der Website.</p>
+        <b><img id="abb6" style="color:red;" alt="Abbildung 6"></b>
+        <b><img id="abb7" style="color:red;" alt="Abbildung 7"></b>
+        <b><img id="abb8" style="color:red;" alt="Abbildung 8"></b>
+      <h3 id="1030">Anhang C - Finales Layout des Tools</h3>
+        <p>Nach mehreren Durchläufen in der Entwicklung des Layouts hat sich gezeigt, dass die ursprünglich geplanten Darstellungen nicht vollständig übernommen werden können. Einerseits gab es Einschränkungen seitens der Technik wie die automatische Generierung der JS/XSLT-Dokumentation, welche keine Überarbeitung ermöglicht, oder die beschränkten Formatierungsmöglichkeiten über die Formulare. Andererseits wurde das Design ausgerichtet auf das zur Verfügung stehende Material, was bei den ersten Entwürfen noch nicht vollständig abgeschätzt werden konnte.</p>
+        <b><img id="abb9" style="color:red;" alt="Abbildung 9"></b>
+
+  </div>
+
+<!--Fusszeilen-->
+  <div>
+    <p><small>
+    &sup1;<dfn>Wenn eine Bedingung erfüllt ist, der Nutzer zum Beispiel nicht mehr weiterweiss, wird der Vorgang abgebrochen.</dfn><br />
+    &sup2;<dfn>WEBROOT steht für das oberste Verzeichnis auf einem Webserver, in welchem sich sämtliche Dateien befinden, aus denen sich eine Website zusammensetzt.</dfn><br />
+    &sup3;<dfn>Empfehlung des W3C via <a href="https://www.w3.org/TR/xml/">https://www.w3.org/TR/xml/</a></dfn><br />
+    <sup>4</sup><dfn>XForms wurde bisher nicht für das Projekt verwendet, da sich der Mehrwert aus Sicht des Projektteams bei einer einfachen Anwendung wie dem #wilhelmtell-Tool in Grenzen hält. Zudem waren bereits Kenntnisse von XML/XSL/JS/HTML5 vorhanden, was ein rasches Auf- und Ausbauen des Tools ermöglichte.</dfn><br />
+    <sup>5</sup><dfn>Ein XML-Dokument, das „well-formed“ ist, erfüllt sämtliche XML-Syntax Regeln.</dfn><br />
+    <sup>6</sup><dfn>Eigens übersetzt aus dem Englischen</dfn><br />
+    <sup>7</sup><dfn>Google-Richtlinien für strukturierte Daten: <a href="https://developers.google.com/search/docs/guides/sd-policies">https://developers.google.com/search/docs/guides/sd-policies</a></dfn><br />
+    <sup>8</sup><dfn>Hiermit ist das „Abholen“ der Daten gemeint.</dfn><br />
+    <sup>9</sup><dfn>Ein Beispiel wäre das «Simple Custom CSS and JS Plugin», welches unter <a href="https://wordpress.org/plugins/custom-css-js/">https://wordpress.org/plugins/custom-css-js/</a> verfügbar ist.</dfn></small></p>
+  </div>
+
+</div>
+</div>

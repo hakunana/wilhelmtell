@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Quicksand');
 @import 'styles';
-
+/* use this to mix new colors: https://www.w3schools.com/colors/colors_mixer.asp */
 body {
 	font-family: 'Roboto', sans-serif;
 	color: $text-color;
 	font-weight: 400;
 }
+
+/* 				*/
+/* Navigation	*/
+/* styles 		*/
 
 nav {
 		
@@ -53,17 +57,14 @@ nav {
 	border-color: #fff;
 }
 
+/* 				*/
+/* pageheader	*/
+/* styles 		*/
 .intro {
 	background-color: #4c7aa5;
 	color: white;
 	padding: 40px 0 80px 0px;
 }
-
-.loslegen {
-	padding: 2vh 0;
-	margin: 2vh 0 ;
-}
-
 .bg-dark {
 	background-color: #4c7aa5;
 
@@ -74,6 +75,11 @@ nav {
 			background-color: white;
 		}
 }
+
+/* 				*/
+/* Button		*/
+/* styles 		*/
+
 .btn {
 	margin:10px 4px;
 }
@@ -93,18 +99,25 @@ nav {
 		}
 }
 	.btn-primary {
-			background-color: #4c7aa5;
+		background-image: none;
+		background-color: #4c7aa5;
+		border-color: #4c7aa5;
 		border-radius: 2px;
 		// width: 100%;
 		color: white;
 		&:hover{
 			color:white;
+
 		}
 }
 .submitbtn {
 	background-color: #002340;
 
 }
+
+/* 						*/
+/* Landingpage > Form	*/
+/* styles 				*/
 
 .nodeelement {
 	background-color: #fafafa;
@@ -114,6 +127,9 @@ nav {
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
+/* 				*/
+/* Form		 	*/
+/* Grid fixes	*/
 %col-lg-6 {
 	width:46%;
 }
@@ -137,6 +153,45 @@ input>.form-control {
 		font-weight: 900;
 	}
 }
+
+/* 					*/
+/* Tutorial  		*/
+/* Navigation		*/
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover{
+	background-image: none;
+	background-color: #E3F2FD;
+}
+.nav>li>a:focus, .nav>li>a:hover{
+	background-color: #BBDEFB;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+	background-color: transparent;
+	color: #002340;
+	text-shadow:none;
+}
+.nav-stacked>li+li{
+	margin-top: 0px;
+}
+
+/* 						*/
+/* Tutorial 	  		*/
+/* Languages			*/
+
+.langselect {
+	border-radius: 0px 0px 4px 4px;
+	display: flex;
+	width: 100%;
+	background-color: #002340;
+
+	p {
+		padding-left: 4px;
+	}
+}
+
+/* 				   		*/
+/* Landingpage   		*/
+/* Languages  			*/
 
 .languageselect {
 	border-radius: 0px 0px 4px 4px;
@@ -164,6 +219,27 @@ input>.form-control {
 
 	}
 }
+/* 					   	*/
+/* Tutorialpage 		*/
+/* tablerow grid 		*/
+/* 					   	*/
+    .is-table-row {
+        display: table;
+        border-spacing: 10px;
+    }
+    .is-table-row [class*="col-"] {
+        float: none;
+        display: table-cell;
+        vertical-align: top;
+        border: 6px solid #fff;
+    }
+    .tutorialcontent{
+    	margin-bottom: 60px;
+    }
+/* 						*/
+/* landingpage  		*/
+/* select a form region */ 
+/* 					   	*/
 
 .formselect {
 	margin-top: 20px;
@@ -173,6 +249,8 @@ input>.form-control {
 	font-size: 1.4em;
 	}
 	select {
+		// -webkit-appearance : none; /* To gain control over the appearance on WebKit/Chromium */
+		// -moz-appearance : none; /* To gain control over the appearance on Gecko */
 		background-color: #4c7aa5;
 		border-top: 0px;
 		border-left: 0px;
@@ -180,10 +258,13 @@ input>.form-control {
 		border-bottom: 2px solid #7da9d7;
 		border-radius: 0px !important;
 		color:#fff;
+		font-size: 1.1em;
 		margin-left: 10px;
 	}
 }
-
+/* 					   			*/
+/* landingpage	 				*/
+/* container with form content 	*/
 .formcontainer {
     background-color: #fff;
     border: 1px solid #eee;
@@ -208,6 +289,7 @@ input>.form-control {
     background-color: white;
     box-shadow: 0 1px 3px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
    	min-height: 100px;
+   	padding-bottom: 120px;
 
 }
 .box {
@@ -250,6 +332,90 @@ input>.form-control {
 	.nav-tabs>li>a:hover, .nav>li>a:focus, .nav>li>a:hover {
 		background-color: #4c7aa5;
 
+	}
+}
+/*			*/
+/* footer	*/
+/*			*/
+
+
+.footer {
+	font-size: 0.9em;
+	color: rgba(255,255,255, 0.5);
+	display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #002340;
+    z-index: 999;
+
+}
+
+/*								*/
+/* Landingpage > forms			*/
+/* special fix for childnodes	*/
+
+.additionalDivAttributes>.additionalDivAttributes>.nodeelement>.additionalDivAttributes>.nodeelement{
+	@extend %col-lg-12;
+}
+
+
+/*								*/
+/* Landingpage > forms			*/
+/* special fix for childnodes	*/
+
+.projektdoku{
+	margin-top: 20px;
+	h1{
+		border-bottom: 2px solid #F5F7FA;
+		color: #336699;
+		margin-top: 40px;
+		// display: inline;
+	}
+
+	h2{
+		border-bottom: 2px solid #F5F7FA;
+		color: #336699;
+		display: -webkit-inline-box;
+		margin-top: 40px;
+		// display: inline;
+	}
+	h3{
+		font-size: 1.2em;
+		font-weight: 900;
+	}
+	.btn-secondary{
+		// float: right;
+	}
+	i{
+		color: #4c7aa5;
+		font-size: 1.4em;
+		padding:4px;
+	}
+	.col-lg-2 i{
+		font-size: 2.0em;
+	}
+	.index{
+		background-color: #F5F7FA;
+		padding: 20px;
+
+	}
+
+	%2columns {
+		-webkit-column-count: 2; /* Chrome, Safari, Opera */
+		-moz-column-count:    2; /* Firefox */
+		column-count:         2;
+	  	-webkit-column-gap:   20px; /* Chrome, Safari, Opera */ 
+		-moz-column-gap:      20px; /* Firefox */
+		column-gap:           20px;
+		column-rule-color: #ccc; /* Optional */
+		column-rule-style:solid; /* Optional */
+		column-rule-width: 1px; /* Optional */
+		text-align: justify; /* Optional */
+	}
+	.index{
+		@extend %2columns;
 	}
 }
 

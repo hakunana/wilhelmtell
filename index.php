@@ -50,11 +50,14 @@
 				</div>
 			</div>
 			<br/>
+
 			<div class="container">
+					<button id="copy-button" data-clipboard-target="#json-content" class ="btn btn-secondary"> <i class="fa fa-clipboard"></i> In Zwischenablage kopieren </button>
 					<pre id="json-content" class="copytoclipboard" name="json-content">
 				
 			</pre>
-			<button id="copy-button" class ="btn btn-secondary "onclick="copyToClipboard()">copy to clipboard</button>
+			
+	<!-- 		<button id="copy-button" data-clipboard-target="#copy-me" class ="btn btn-secondary" onclick="copyToClipboard()">copy to clipboard</button> -->
 			</div>
 			<script>
 				$( document ).ready(function() 
@@ -98,23 +101,20 @@
 						console.log("Loaded: XML-templates");
 						populateXMLTemplatesSelector(xml_filesArray);
 					};
+					// $( ".copytoclipboard" ).wrap( "<div id='json-code'></div>");
+					// $("#copy-button").on("click", function(){
+
+					// });
+					$(function(){
+					    new Clipboard('.btn');
+					});
 					
 				});
-				function copyToClipboard() {
-					  /* Get the text field */
-					  var copyText = document.getElementById("json-content");
-
-					  /* Select the text field */
-					  copyText.select();
-
-					  /* Copy the text inside the text field */
-					  document.execCommand("Copy");
-
-					  /* Alert the copied text */
-					  alert("Copied the text: " + copyText.value);
-				};
 
 
+				
+
+				
 				
 			</script>  
 		</div>
