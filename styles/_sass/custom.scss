@@ -137,7 +137,10 @@ nav {
 %col-lg-12 {
 	width:100%;
 }
+.form-group select{
+	    margin-left: 14px;
 
+}
 input>.form-control {
 	@extend %col-lg-12;
 }
@@ -223,19 +226,19 @@ input>.form-control {
 /* Tutorialpage 		*/
 /* tablerow grid 		*/
 /* 					   	*/
-    .is-table-row {
-        display: table;
-        border-spacing: 10px;
-    }
-    .is-table-row [class*="col-"] {
-        float: none;
-        display: table-cell;
-        vertical-align: top;
-        border: 6px solid #fff;
-    }
-    .tutorialcontent{
-    	margin-bottom: 60px;
-    }
+    // .is-table-row {
+    //     display: table;
+    //     border-spacing: 10px;
+    // }
+    // .is-table-row [class*="col-"] {
+    //     float: none;
+    //     display: table-cell;
+    //     vertical-align: top;
+    //     border: 6px solid #fff;
+    // }
+    // .tutorialcontent{
+    // 	margin-bottom: 60px;
+    // }
 /* 						*/
 /* landingpage  		*/
 /* select a form region */ 

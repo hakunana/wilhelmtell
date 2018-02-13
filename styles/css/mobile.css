@@ -20,6 +20,39 @@
   .control-label {
     width: 100%;
   }
+  /* 					   	*/
+  /* Tutorialpage 		*/
+  /* tablerow grid 		*/
+  /* 					   	*/
+  /* line 24, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  .is-table-row {
+    display: inherit;
+  }
+  /* line 34, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  .tutorialcontent {
+    margin-bottom: 60px;
+  }
+  /* line 37, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  .projektdoku .index {
+    -webkit-column-count: 1;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 1;
+    /* Firefox */
+    column-count: 1;
+  }
+  /* line 41, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  .projektdoku .index ul {
+    -webkit-padding-start: 10px;
+    margin-left: 2px;
+  }
+  /* line 47, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  .footer {
+    display: none;
+  }
+  /* line 51, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  a {
+    word-break: break-all;
+  }
 }
 
 /* Smartphones (landscape) ----------- */
@@ -35,16 +68,112 @@
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   /* Styles */
+  /* 					   	*/
+  /* Tutorialpage 		*/
+  /* tablerow grid 		*/
+  /* 					   	*/
+  /* line 73, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  .is-table-row {
+    display: table;
+    border-spacing: 10px;
+  }
+  /* line 77, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  .is-table-row [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+    border: 6px solid #fff;
+  }
+  /* line 83, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  .tutorialcontent {
+    margin-bottom: 60px;
+  }
+  /* line 86, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  .projektdoku .index {
+    -webkit-column-count: 1;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 1;
+    /* Firefox */
+    column-count: 1;
+  }
+  /* line 91, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  .footer {
+    display: none;
+  }
 }
 
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   /* Styles */
+  /* 					   	*/
+  /* Tutorialpage 		*/
+  /* tablerow grid 		*/
+  /* 					   	*/
+  /* line 104, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  .is-table-row {
+    display: table;
+    border-spacing: 10px;
+  }
+  /* line 108, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  .is-table-row [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+    border: 6px solid #fff;
+  }
+  /* line 114, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  .tutorialcontent {
+    margin-bottom: 60px;
+  }
+  /* line 117, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  .index {
+    -webkit-column-count: 1;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 1;
+    /* Firefox */
+    column-count: 1;
+  }
+  /* line 122, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  footer {
+    display: none;
+  }
 }
 
 /* iPads (portrait) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   /* Styles */
+  /* 					   	*/
+  /* Tutorialpage 		*/
+  /* tablerow grid 		*/
+  /* 					   	*/
+  /* line 135, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  .is-table-row {
+    display: table;
+    border-spacing: 10px;
+  }
+  /* line 139, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  .is-table-row [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+    border: 6px solid #fff;
+  }
+  /* line 145, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  .tutorialcontent {
+    margin-bottom: 60px;
+  }
+  /* line 148, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  .index {
+    -webkit-column-count: 1;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 1;
+    /* Firefox */
+    column-count: 1;
+  }
+  /* line 153, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  footer {
+    display: none;
+  }
 }
 
 /**********
@@ -61,11 +190,55 @@ iPad 3
 /* Desktops and laptops ----------- */
 @media only screen and (min-width: 1224px) {
   /* Styles */
+  /* 					   	*/
+  /* Tutorialpage 		*/
+  /* tablerow grid 		*/
+  /* 					   	*/
+  /* line 175, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  .is-table-row {
+    display: table;
+    border-spacing: 10px;
+  }
+  /* line 179, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  .is-table-row [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+    border: 6px solid #fff;
+  }
+  /* line 185, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  .tutorialcontent {
+    margin-bottom: 60px;
+  }
+  /* line 188, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  footer {
+    display: none;
+  }
 }
 
 /* Large screens ----------- */
 @media only screen and (min-width: 1824px) {
   /* Styles */
+  /* 					   	*/
+  /* Tutorialpage 		*/
+  /* tablerow grid 		*/
+  /* 					   	*/
+  /* line 201, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  .is-table-row {
+    display: table;
+    border-spacing: 10px;
+  }
+  /* line 205, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  .is-table-row [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+    border: 6px solid #fff;
+  }
+  /* line 211, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/mobile.scss */
+  .tutorialcontent {
+    margin-bottom: 60px;
+  }
 }
 
 /* iPhone 4 ----------- */

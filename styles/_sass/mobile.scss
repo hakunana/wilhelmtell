@@ -16,6 +16,41 @@
 	.control-label{
 		width: 100%;
 	}
+
+		/* 					   	*/
+	/* Tutorialpage 		*/
+	/* tablerow grid 		*/
+	/* 					   	*/
+    .is-table-row {
+        display: inherit;
+        // border-spacing: 10px;
+    }
+    .is-table-row [class*="col-"] {
+        // float: none;
+        // display: table-cell;
+        // vertical-align: top;
+        // border: 6px solid #fff;
+    }
+    .tutorialcontent{
+    	margin-bottom: 60px;
+    }
+    .projektdoku .index{
+	-webkit-column-count: 1; /* Chrome, Safari, Opera */
+	-moz-column-count:    1; /* Firefox */
+	column-count:  1;
+		ul{
+			    -webkit-padding-start: 10px;
+			margin-left: 2px;
+		}
+	}
+
+    .footer{
+
+display: none;
+    }
+    a {
+    word-break: break-all;
+	}
 }
 
 /* Smartphones (landscape) ----------- */
@@ -31,16 +66,94 @@
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 /* Styles */
+	/* 					   	*/
+/* Tutorialpage 		*/
+/* tablerow grid 		*/
+/* 					   	*/
+    .is-table-row {
+        display: table;
+        border-spacing: 10px;
+    }
+    .is-table-row [class*="col-"] {
+        float: none;
+        display: table-cell;
+        vertical-align: top;
+        border: 6px solid #fff;
+    }
+    .tutorialcontent{
+    	margin-bottom: 60px;
+    }
+    .projektdoku .index{
+    	-webkit-column-count: 1; /* Chrome, Safari, Opera */
+		-moz-column-count:    1; /* Firefox */
+		column-count:  1;
+    }
+    .footer{
+
+display: none;
+    }
 }
 
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
 /* Styles */
+	/* 					   	*/
+/* Tutorialpage 		*/
+/* tablerow grid 		*/
+/* 					   	*/
+    .is-table-row {
+        display: table;
+        border-spacing: 10px;
+    }
+    .is-table-row [class*="col-"] {
+        float: none;
+        display: table-cell;
+        vertical-align: top;
+        border: 6px solid #fff;
+    }
+    .tutorialcontent{
+    	margin-bottom: 60px;
+    }   
+     .index{
+    	-webkit-column-count: 1; /* Chrome, Safari, Opera */
+		-moz-column-count:    1; /* Firefox */
+		column-count:  1;
+    }
+    footer{
+    	display: none;
+
+    }
 }
 
 /* iPads (portrait) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
 /* Styles */
+	/* 					   	*/
+/* Tutorialpage 		*/
+/* tablerow grid 		*/
+/* 					   	*/
+    .is-table-row {
+        display: table;
+        border-spacing: 10px;
+    }
+    .is-table-row [class*="col-"] {
+        float: none;
+        display: table-cell;
+        vertical-align: top;
+        border: 6px solid #fff;
+    }
+    .tutorialcontent{
+    	margin-bottom: 60px;
+    }
+        .index{
+    	-webkit-column-count: 1; /* Chrome, Safari, Opera */
+		-moz-column-count:    1; /* Firefox */
+		column-count:  1;
+    }
+        footer{
+    	display: none;
+
+    }
 }
 /**********
 iPad 3
@@ -55,11 +168,49 @@ iPad 3
 /* Desktops and laptops ----------- */
 @media only screen  and (min-width : 1224px) {
 /* Styles */
+	/* 					   	*/
+/* Tutorialpage 		*/
+/* tablerow grid 		*/
+/* 					   	*/
+    .is-table-row {
+        display: table;
+        border-spacing: 10px;
+    }
+    .is-table-row [class*="col-"] {
+        float: none;
+        display: table-cell;
+        vertical-align: top;
+        border: 6px solid #fff;
+    }
+    .tutorialcontent{
+    	margin-bottom: 60px;
+    }
+        footer{
+    	display: none;
+
+    }
 }
 
 /* Large screens ----------- */
 @media only screen  and (min-width : 1824px) {
 /* Styles */
+	/* 					   	*/
+/* Tutorialpage 		*/
+/* tablerow grid 		*/
+/* 					   	*/
+    .is-table-row {
+        display: table;
+        border-spacing: 10px;
+    }
+    .is-table-row [class*="col-"] {
+        float: none;
+        display: table-cell;
+        vertical-align: top;
+        border: 6px solid #fff;
+    }
+    .tutorialcontent{
+    	margin-bottom: 60px;
+    }
 }
 
 /* iPhone 4 ----------- */

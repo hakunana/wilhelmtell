@@ -151,6 +151,7 @@ function additionalLabelWithVisibleInputAttributes() {
 
     //Usage Example:
     attributeNameAndValueObject.class="control-label col-lg-12 additionalLabelWithVisibleInputAttributes";
+    
 
     return attributeNameAndValueObject;
 }
@@ -165,7 +166,7 @@ function additionalLabelWithHiddenInputAttributes() {
     var attributeNameAndValueObject = {};
     attributeNameAndValueObject.class="control-label col-md-12 additionalLabelWithHiddenInputAttributes";
     //Usage Example:
-    attributeNameAndValueObject.style="color:green;";
+    // attributeNameAndValueObject.style="color:green;";
     return attributeNameAndValueObject;
 }
 
@@ -259,7 +260,6 @@ function additionalMainSubmitBtnAttributes(){
 function additionalBooleanInputAttributes(){
     var attributeNameAndValueObject = {};
     
-    //Usage Example:
     attributeNameAndValueObject.class="form-control";
     attributeNameAndValueObject.onblur="validateSchemaOrgElem(this.id)"; 
     attributeNameAndValueObject.onfocus="removeValidationMessage(this.id)";
