@@ -22,12 +22,24 @@ nav .navbar-brand:hover {
   color: #ffaaaa;
 }
 
-/* line 26, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 24, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+nav .active {
+  background-color: #f0f0f0;
+}
+
+/* line 30, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover {
+  background-color: rgba(76, 122, 165, 0.2);
+  color: #4c7aa5;
+}
+
+/* line 36, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .navbar {
   margin-bottom: 0px;
 }
 
-/* line 30, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 40, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .navbar-default {
   background-image: none;
   background-color: #fff;
@@ -35,29 +47,29 @@ nav .navbar-brand:hover {
   border-color: #fff;
 }
 
-/* line 37, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 47, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .navbar-default .navbar-brand {
   color: #4c7aa5;
 }
 
-/* line 41, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 51, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .navbar-default .navbar-brand:hover {
   color: #4c7aa5;
 }
 
-/* line 45, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 55, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .navbar-default .navbar-nav > li > a {
   color: #4c7aa5;
   text-shadow: none;
 }
 
-/* line 50, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 60, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .open > a {
   background-image: none;
   background-color: transparent;
 }
 
-/* line 55, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 65, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
   border-color: #fff;
@@ -66,24 +78,24 @@ nav .navbar-brand:hover {
 /* 				*/
 /* pageheader	*/
 /* styles 		*/
-/* line 63, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 73, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .intro {
   background-color: #4c7aa5;
   color: white;
   padding: 40px 0 80px 0px;
 }
 
-/* line 68, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 78, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .bg-dark {
   background-color: #4c7aa5;
 }
 
-/* line 72, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 82, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .text-white {
   color: white;
 }
 
-/* line 74, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 84, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .text-white .btn-light {
   background-color: white;
 }
@@ -91,12 +103,12 @@ nav .navbar-brand:hover {
 /* 				*/
 /* Button		*/
 /* styles 		*/
-/* line 83, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 93, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .btn {
   margin: 10px 4px;
 }
 
-/* line 86, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 96, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .additionalDivAttributes {
   border: 0px solid #eee;
   border-radius: 0px;
@@ -104,19 +116,19 @@ nav .navbar-brand:hover {
   margin: 5px;
 }
 
-/* line 92, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 102, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .btn-secondary {
   background-color: #4c7aa5;
   border-radius: 2px;
   color: white;
 }
 
-/* line 97, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 107, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .btn-secondary:hover {
   color: white;
 }
 
-/* line 101, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 111, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .btn-primary {
   background-image: none;
   background-color: #4c7aa5;
@@ -125,12 +137,12 @@ nav .navbar-brand:hover {
   color: white;
 }
 
-/* line 108, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 118, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .btn-primary:hover {
   color: white;
 }
 
-/* line 113, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 123, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .submitbtn {
   background-color: #002340;
 }
@@ -138,7 +150,7 @@ nav .navbar-brand:hover {
 /* 						*/
 /* Landingpage > Form	*/
 /* styles 				*/
-/* line 122, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 132, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .nodeelement {
   background-color: #fafafa;
   padding: 15px;
@@ -150,22 +162,22 @@ nav .navbar-brand:hover {
 /* 				*/
 /* Form		 	*/
 /* Grid fixes	*/
-/* line 137, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 147, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 input > .form-control, .additionalDivAttributes > .additionalDivAttributes > .nodeelement > .additionalDivAttributes > .nodeelement {
   width: 100%;
 }
 
-/* line 140, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 150, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .form-group select {
   margin-left: 14px;
 }
 
-/* line 150, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 160, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .control-label .subtitle {
   color: #4c7aa5;
 }
 
-/* line 154, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 164, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .control-label .title {
   margin-top: 10px;
   font-weight: 900;
@@ -174,33 +186,54 @@ input > .form-control, .additionalDivAttributes > .additionalDivAttributes > .no
 /* 					*/
 /* Tutorial  		*/
 /* Navigation		*/
-/* line 164, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 174, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
   background-image: none;
-  background-color: #E3F2FD;
+  background-color: rgba(76, 122, 165, 0.2);
 }
 
-/* line 168, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 178, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+.list-group-item:focus, .list-group-item:hover {
+  background-color: rgba(76, 122, 165, 0.1);
+}
+
+/* line 181, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+.list-group-item:focus a:hover, .list-group-item:hover a:hover {
+  color: #337ab7;
+}
+
+/* line 186, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .nav > li > a:focus, .nav > li > a:hover {
-  background-color: #BBDEFB;
+  background-color: rgba(255, 255, 255, 0);
 }
 
-/* line 171, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 189, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
   background-color: transparent;
   color: #002340;
   text-shadow: none;
 }
 
-/* line 176, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 194, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .nav-stacked > li + li {
   margin-top: 0px;
+}
+
+/* line 197, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+.list-group-item:first-child {
+  border: 1px solid rgba(76, 122, 165, 0.2);
+  color: rgba(76, 122, 165, 0.6);
+}
+
+/* line 200, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+.list-group-item:first-child:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* 						*/
 /* Tutorial 	  		*/
 /* Languages			*/
-/* line 184, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 209, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .langselect {
   border-radius: 0px 0px 4px 4px;
   display: flex;
@@ -208,7 +241,7 @@ input > .form-control, .additionalDivAttributes > .additionalDivAttributes > .no
   background-color: #002340;
 }
 
-/* line 190, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 215, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .langselect p {
   padding-left: 4px;
 }
@@ -216,7 +249,7 @@ input > .form-control, .additionalDivAttributes > .additionalDivAttributes > .no
 /* 				   		*/
 /* Landingpage   		*/
 /* Languages  			*/
-/* line 199, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 224, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .languageselect {
   border-radius: 0px 0px 4px 4px;
   display: flex;
@@ -226,13 +259,13 @@ input > .form-control, .additionalDivAttributes > .additionalDivAttributes > .no
   padding: 6px 6px;
 }
 
-/* line 207, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 232, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .languageselect p {
   padding-left: 4px;
   padding-top: 5px;
 }
 
-/* line 212, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 237, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .languageselect select {
   font-size: 0.9em;
   background-color: #002340;
@@ -253,19 +286,19 @@ input > .form-control, .additionalDivAttributes > .additionalDivAttributes > .no
 /* landingpage  		*/
 /* select a form region */
 /* 					   	*/
-/* line 247, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 272, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .formselect {
   margin-top: 20px;
   display: inline-flex;
   display: -webkit-inline-box;
 }
 
-/* line 251, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 276, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .formselect .inline {
   font-size: 1.4em;
 }
 
-/* line 254, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 279, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .formselect select {
   background-color: #4c7aa5;
   border-top: 0px;
@@ -278,10 +311,21 @@ input > .form-control, .additionalDivAttributes > .additionalDivAttributes > .no
   margin-left: 10px;
 }
 
+/* line 294, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+.quellen {
+  font-size: 12px;
+}
+
+/* line 296, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+.quellen i {
+  font-size: 12px;
+  color: #333;
+}
+
 /* 					   			*/
 /* landingpage	 				*/
 /* container with form content 	*/
-/* line 271, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 304, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .formcontainer {
   background-color: #fff;
   border: 1px solid #eee;
@@ -292,7 +336,7 @@ input > .form-control, .additionalDivAttributes > .additionalDivAttributes > .no
   padding: 9.5px;
 }
 
-/* line 280, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 313, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .formcontainer i {
   color: #f0f0f0;
   font-size: 15.0em;
@@ -302,7 +346,7 @@ input > .form-control, .additionalDivAttributes > .additionalDivAttributes > .no
   z-index: -999;
 }
 
-/* line 291, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 324, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .contentcontainer {
   background-color: white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -310,51 +354,51 @@ input > .form-control, .additionalDivAttributes > .additionalDivAttributes > .no
   padding-bottom: 120px;
 }
 
-/* line 298, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 331, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .box {
   margin: 4px;
   padding: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-/* line 303, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 336, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .box i {
   color: #4c7aa5;
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
-/* line 311, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 344, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .langselect {
   color: rgba(255, 255, 255, 0.5);
   background-color: #002340;
   margin-bottom: 40px;
 }
 
-/* line 316, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 349, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .langselect .nav-tabs {
   border: 0px solid;
   border-radius: 0;
 }
 
-/* line 321, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 354, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .langselect a {
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* line 325, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 358, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .langselect .nav > li > p {
   margin-top: 10px;
   margin-right: 10px;
 }
 
-/* line 330, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 363, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .langselect .nav-tabs > li.active > a, .langselect .nav-tabs > li.active > a:focus, .langselect .nav-tabs > li.active > a:hover {
   color: rgba(255, 255, 255, 0.95);
   background-color: #002340;
 }
 
-/* line 335, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 368, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .langselect .nav-tabs > li > a:hover, .langselect .nav > li > a:focus, .langselect .nav > li > a:hover {
   background-color: #4c7aa5;
 }
@@ -362,12 +406,11 @@ input > .form-control, .additionalDivAttributes > .additionalDivAttributes > .no
 /*			*/
 /* footer	*/
 /*			*/
-/* line 345, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 378, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .footer {
   font-size: 0.9em;
   color: rgba(255, 255, 255, 0.5);
   display: block;
-  position: fixed;
   bottom: 0;
   width: 100%;
   height: 20px;
@@ -381,19 +424,19 @@ input > .form-control, .additionalDivAttributes > .additionalDivAttributes > .no
 /*								*/
 /* Landingpage > forms			*/
 /* special fix for childnodes	*/
-/* line 371, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 403, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .projektdoku {
   margin-top: 20px;
 }
 
-/* line 373, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 405, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .projektdoku h1 {
   border-bottom: 2px solid #F5F7FA;
   color: #336699;
   margin-top: 40px;
 }
 
-/* line 380, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 412, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .projektdoku h2 {
   border-bottom: 2px solid #F5F7FA;
   color: #336699;
@@ -401,31 +444,40 @@ input > .form-control, .additionalDivAttributes > .additionalDivAttributes > .no
   margin-top: 40px;
 }
 
-/* line 387, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 419, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .projektdoku h3 {
   font-size: 1.2em;
   font-weight: 900;
 }
 
-/* line 394, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
-.projektdoku i {
-  color: #4c7aa5;
-  font-size: 1.4em;
-  padding: 4px;
-}
-
-/* line 399, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 427, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .projektdoku .col-lg-2 i {
   font-size: 2.0em;
 }
 
-/* line 402, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 430, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .projektdoku .index {
   background-color: #F5F7FA;
   padding: 20px;
 }
 
-/* line 408, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+/* line 435, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+.projektdoku .well {
+  background-image: none;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  padding-left: 40px;
+}
+
+/* line 441, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+.projektdoku .well i {
+  color: #4c7aa5;
+  font-size: 1.8em;
+  padding: 4px;
+}
+
+/* line 447, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
 .projektdoku .index {
   -webkit-column-count: 2;
   /* Chrome, Safari, Opera */
@@ -448,7 +500,7 @@ input > .form-control, .additionalDivAttributes > .additionalDivAttributes > .no
 }
 
 @media (min-width: 1200px) {
-  /* line 427, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
+  /* line 466, /Users/hannakummel/Dropbox/IDM_MSC/PP_dev_hanna/wilhelmtell_DEV-Stefano/styles/_sass/custom.scss */
   .col-lg-3.box {
     width: 24%;
   }

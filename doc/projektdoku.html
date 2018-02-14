@@ -1,4 +1,4 @@
-<div class="projektdoku">
+<div class="container projektdoku">
 <h2>Projektdokumentation</h2>
 
 <div class="index " id="index">
@@ -141,15 +141,16 @@
 <!--Kapitel 3-->
 <div class="col-lg-12" id="300">
   <h2>3 Komponenten des Tools</h2><a href="#index" class =" btn btn-secondary pull-right" > Back to top </a>
-    <p></p>
+    <p>Nach ersten technischen Entwicklungsschritten und vor Überlegungen zum Design wurden die einzelnen Elemente des Projektes aufgegriffen und unterteilt in Endnutzer (EN) wie den Bibliotheksmitarbeitenden und Professionals bzw. Profis (PRO), welche das Tool weiterentwickeln könnten. Entstanden ist eine Unterteilung in drei Hauptkomponenten (s. <a href="#1010">Anhang A - Komponenten des Tools</a>), welche nachfolgend erläutert werden.</p>
   <h3 id="310">3.1 Formular</h3>
-    <p></p>
-    <p></p>
+    <p>Kern des Projektes ist ein Formular, das in erster Linie Veranstaltungen von Bibliotheken abdeckt. Nach Ausfüllen durch den Nutzer soll per Knopfdruck ein JSON-LD-Datensatz generiert werden, welcher dann in die Website eingebunden werden kann.</p>
+    <p>Mit der Einbindung des JSON-LD-Datensatzes wird die Website hinsichtlich der Veranstaltungstermine semantisch so ausgezeichnet, dass der vorgesehene Webcrawler die nötigen Daten identifizieren und in strukturierter Form abholen kann. Ein Nebeneffekt ist, dass dadurch die Webseiten der Bibliotheken für Suchmaschinen optimiert werden, sofern die JSON-LD Tags gemäss den Richtlinien der Anbieter erstellt worden sind (siehe Abschnitt <a href="#426">4.2.6 JSON-LD</a>). Das Formular bietet für Nutzer ausserdem den Vorteil, dass sie keine Kenntnisse von schema.org oder JSON-LD benötigen, sondern lediglich die Webadministratoren kennen oder selber mit ihrem CMS und der Einbindung von script-Tags in den &lt;head&gt;-Teil der Website vertraut sein sollten.</p>
   <h3 id="320">3.2 Tutorial</h3>
-    <p></p>
-    <p></p>
+    <p>Als Unterstützung für die Endnutzer wird ein Tutorial zur Verfügung gestellt. Dieses erläutert dem Nutzer schrittweise, wie das Formular auszufüllen ist. Ebenso wird kurz erläutert, wie der JSON-LD-Datensatz in die Website integriert werden kann.</p>
+    <p>Da die Formulare in den Sprachen Deutsch, Englisch, Französisch und Italienisch zur Verfügung stehen, wird auch das Tutorial übersetzt. Dadurch wird Nutzern aus allen Regionen der Schweiz und darüber hinaus die Anwendung des Tools erleichtert.</p>
   <h3 id="330">3.3 Entwickler</h3>
-    <p></p>
+    <p>Ein Grundgedanke des Projektes ist die Weiterentwicklung des Tools, weshalb dies der umfassendste Bereich darstellt. Bei der Entwicklung wird unterschieden zwischen der Erstellung neuer Formulare und der Erweiterung der Plattform. Im Entwickler-Bereich finden sich Anleitungen und Anweisungen für die Formulare, der Source Code für das Tool (beschränkt auf JS und XSLT) sowie die hier vorliegende Projektdokumentation mit den technischen Details, welche im nächsten Kapitel <a href="#400">4 Design und technische Details</a> folgen. Weitere Kommentare zum Source Code finden sich direkt in den Files (bspw. PHP).</p>
+
 
 
     <h4 id="331">3.3.1 XML-Anleitung und Validator</h4>
@@ -176,7 +177,7 @@
       <p>Jede angezeigte Meldung enthält eine Zusammenfassung des Fehlers und die entsprechende Zeilennummer im XML-File.</p>
     <h4 id="332">3.3.2 Source Code-Dokumentation (JavaScript und XSLT)</h4>
       <p>Die Dokumentation des Source Codes umfasst sämtliche Files aus dem Code-Ordner „js“ und beschränkt sich dadurch auf JavaScript und XSLT. Grundlage für die Zusammenstellung waren die Kommentare im Source Code, für die Erstellung wurde JSDoc/XSLTDoc zu Hilfe gezogen.</p>
-      <div class="row col-lg-12">
+      <div class="well col-lg-12">
         <div class="col-lg-2"> <i class="fa fa-book"></i></div>
         <div class="col-lg-10">
           <p>JSDoc ist eine Programmschnittstelle (auch API genannt) für JavaScript, mit der aus Programmcode automatisch eine Dokumentation generiert werden kann.</p>
@@ -209,14 +210,14 @@
 
       <h4 id="421">4.2.1 XML</h4>
         <p>Ausgangslage für das Formular ist ein XML-File, das von Experten erstellt und eingepflegt wird. Das File definiert, welche Inhalte via #wilhelmtell von dem Bibliothekspersonal erfasst werden sollen.</p>
-        <div class="row col-lg-12">
+        <div class="well col-lg-12">
           <div class="col-lg-2"> <i class="fa fa-book"></i></div>
           <div class="col-lg-10">
             <p>Extensible Markup Language, kurz XML, ist eine vom W3C&sup3; definierte Auszeichnungs- und Metasprache. XML bestimmt, wie „benutzerspezifische Vokabeln in XML-Dokumenten zu verwenden sind“. Diese Vokabeln (sogenannten „tags“, gekennzeichnet mit <…>) wiederum beschreiben die Textabschnitte, die sich in diesem XML-Dokument befinden (Moos 2008, S. 1).</p>
           </div>
         </div>
         <p>Wie ein XML-Template für das Tool #wilhelmtell aufgebaut sein muss, wird im dafür angefertigten Tutorial erläutert, beschrieben in Abschnitt <a href="#331">3.3.1 XML-Anleitung und Validator</a>.</p>
-        <div class="row col-lg-12">
+        <div class="well col-lg-12">
           <div class="col-lg-2"> <i class="fa fa-bullhorn"></i></div>
           <div class="col-lg-10">
             <p>Als (technische) Design-Alternative zur Generierung von HTML-Formularen kann die Auszeichnungssprache XForms verwendet werden, welche stark mit XML verbunden ist. Der W3C-Standard stellt eine XML-Spezifikation für webbasierte Formulare dar und war als Nachfolger von HTML-Formularen angedacht. XForms trennt im Gegensatz zu HTML die Darstellung des Formulars von der Verarbeitung der Daten und orientiert sich damit am Model-View-Controller-Prinzip (W3C 2009)<sup>4</sup>.</p>
@@ -225,7 +226,7 @@
 
       <h4 id="422">4.2.2 XSD</h4>
         <p>Das vorgängig definierte XML-File wird auf den Server, in den Ordner [WEBROOT]/xmltovalidate hochgeladen und kann danach maschinell mittels XML-Schema (XSD) Validierung und XPath Abfragen validiert werden.</p>
-        <div class="row col-lg-12">
+        <div class="well col-lg-12">
           <div class="col-lg-2"> <i class="fa fa-book"></i></div>
           <div class="col-lg-10">
             <p>Die W3C-Empfehlung XSD definiert die Strukturen von XML-Dokumenten und gibt Elemente und Attribute vor, die verwendet werden dürfen. Diese Vorgaben wiederum ermöglichen eine Validierung bzw. Überprüfung von XML-Files auf deren Wohlgeformtheit<sup>5</sup>. Erst eine erfolgreiche Validierung macht das XML-File für eine Anwendung verständlich und ermöglicht dadurch die (W3C 2004).</p>
@@ -237,7 +238,7 @@
 
       <h4 id="423">4.2.3 XSLT</h4>
         <p>XML-Files, welche die Validierung erfolgreich durchlaufen haben und anschliessend publiziert wurden, können von dem User in der Formular-Maske ausgewählt werden. Beim Anwählen, wird das selektierte XML-File in HTML umgewandelt. Diese Umwandlung erfolgt mittels automatisierter XSL Transformation (XSLT).</p>
-        <div class="row col-lg-12">
+        <div class="well col-lg-12">
           <div class="col-lg-2"> <i class="fa fa-book"></i></div>
           <div class="col-lg-10">
             <p>XSLT ist ebenfalls eine Empfehlung des W3C und definiert eine Sprache, welche XML-Dokumente in ein anderes Dokument umwandelt. Zentrale Aufgabe von XSLT ist es, „Styling-Informationen zu einem XML-Quelldokument hinzuzufügen“<sup>6</sup>. Dazu kann beispielsweise eine Umwandlung in ein darstellungsorientiertes Format wie SVG, HTML oder XHTML stattfinden. Es gibt jedoch auch weitere Transformationsaufgaben, für die XSLT verwendet wird. „Eine in XSLT ausgedrückte Transformation beschreibt Regeln für die Transformation von Eingangsdaten in Ausgangsdaten“ (W3C 2017).</p>
@@ -246,7 +247,7 @@
 
       <h4 id="426">4.2.4 HTML</h4>
         <p>Nach erfolgter Transformation steht dem User eine einfache und verständliche Eingabemaske bzw. ein HTML-Formular zur Verfügung. In das Formular können nun alle erforderlichen und relevanten Daten für eine Veranstaltung eingegeben werden.</p>
-        <div class="row col-lg-12">
+        <div class="well col-lg-12">
           <div class="col-lg-2"> <i class="fa fa-book"></i></div>
           <div class="col-lg-10">
             <p>HTML steht für HyperText Markup Language und beschreibt die gängige Auszeichnungssprache, die zur Erstellung von Websites verwendet wird. Mit HTML können Dokumentinhalte wie z.B. Kopfdaten (header), anzuzeigender Inhalt (body) oder Fusszeilen (footer) sowie Elemente wie Überschriften, Absätze, Grafiken, etc. ausgezeichnet werden. Diese Auszeichnungen werden von Webbrowsern aufgelöst und entsprechend am Bildschirm, für den Nutzer grafisch aufbereitet, ausgegeben (SELFHTML 2017).</p>
@@ -256,7 +257,7 @@
 
       <h4 id="426">4.2.5 JavaScript</h4>
         <p>Hat der User alle relevanten Daten eingegeben, kann die Transformation zu JSON-LD durchgeführt werden. Hierzu klickt der User auf den entsprechenden Button (JSON erzeugen), woraufhin die eingepflegten Daten mittels JavaScript in das JSON-LD Format übertragen werden.</p>
-        <div class="row col-lg-12">
+        <div class="well col-lg-12">
           <div class="col-lg-2"> <i class="fa fa-book"></i></div>
           <div class="col-lg-10">
             <p>JavaScript (JS) ist eine von der Firma Netscape entwickelte Skriptsprache, mit der Funktionen für Interaktionen in eine Website integriert und statische HTML-Websites dadurch dynamisch erweitert werden können. Das JS-Skript wird bei Aufruf der Seite von einem sogenannten Interpreter in Maschinencode umgewandelt und ausgeführt (Bewersdorff 2014, S. 42).</p>
@@ -266,13 +267,13 @@
 
       <h4 id="426">4.2.6 JSON-LD</h4>
         <p>Der JSON-LD-Datensatz wird dem User in einem separaten Ausgabefeld angezeigt. Diese kann der User abspeichern oder kopieren und den IT-Experten bzw. Administratoren zur Veröffentlichung auf der Website der Bibliothek aushändigen.</p>
-        <div class="row col-lg-12">
+        <div class="well col-lg-12">
           <div class="col-lg-2"> <i class="fa fa-book"></i></div>
           <div class="col-lg-10"><p>JavaScript Object Notation for Linked Data, kurz JSON-LD ist eine Annotation für Daten, die automatisiert verarbeitet werden sollen und bildet damit unter anderem eine Grundlage für die semantische Auszeichnung von Websites. JSON-LD hat gegenüber Mikrodaten, RDFa, etc. einige Vorteile. Einerseits ist ein JSON-LD-Datensatz kompakter und für Menschen leichter lesbar, andererseits ist keine konkrete Unterstützung durch Content Management Systeme erforderlich, da der Datensatz einfach mittels separatem script-Tag in den Header integriert werden kann (Ryte GmbH, o.J.).</p>
           </div>
         </div>
         <p>Bei der Generierung des JSON-LD Textes im Tool #wilhelmtell ist zu berücksichtigen, dass alle leeren Objekte vor dem Anzeigen gelöscht werden. Das, damit nur relevante Attribute angezeigt werden. Leer definiert sich hier als leeres Array, leeres Objekt oder als Objekt mit nichts ausser einem default @type-Attribut.</p>
-        <div class="row col-lg-12">
+        <div class="well col-lg-12">
           <div class="col-lg-2"> <i class="fa fa-bullhorn"></i></div>
           <div class="col-lg-10">
             <p>Strukturierte Daten wie JSON-LD können unter anderem auch für eine bessere Auffindbarkeit in Suchmaschinen (SEO) wie z.B. Google genutzt werden. Ob der generierte JSON-LD-Datensatz demnach auch für die Google-Crawler auffindbar ist, kann getestet werden via <a href="https://search.google.com/structured-data/testing-tool">Google Testing Tool</a>.</p>
@@ -289,7 +290,7 @@
       <h4 id="432">4.3.2 Serverseitige Tasks (PHP)</h4>
         <p>Alle serverseitigen Aufgaben erfolgen via PHP Script, weshalb das Tool auf einem PHP-Server laufen muss. PHP Version 5 bis 7 werden unterstützt, unter der Voraussetzung, dass die Standard Library zur XML-Verarbeitung installiert ist (XSD und XPath v1.0). Es werden PHP-Funktionen verwendet, die in den PHP-Versionen 4 und darunter nicht oder nur teilweise unterstützt werden.</p>
         <p>Folgende Tasks erfolgen serverseitig:</p>
-        <ul>
+        <ul class="well">
           <li>XSD-Validierung</li>
           <li>Fetching<sup>8</sup> der Währungen</li>
           <li>Fetching und maschinelle Übersetzung von schema.org-Beschreibungen</li>
@@ -363,7 +364,7 @@
 
 
 <!--Kapitel 8-->
-  <div class="col-lg-12" id="800">
+  <div class="col-lg-12 quellen" id="800" ">
     <h2>8 Quellenverzeichnis</h2><a href="#index" class =" btn btn-secondary pull-right" > Back to top </a>
       <p>Bewersdorff, Jörg (2014): <i>Objektorientierte Programmierung mit JavaScript. Direktstart für Einsteiger.</i> Wiesbaden: Springer Vieweg.</p>
       <p>JSDoc 3 (2017): <i>@use JSDoc. JSDoc 3 documentation project.</i> Verfügbar unter: <a href="http://usejsdoc.org/index.html">http://usejsdoc.org/index.html</a> [30.12.2017].</p>

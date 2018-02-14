@@ -61,7 +61,7 @@
 			</div>
 			<script>
 				$( document ).ready(function() 
-				{
+				{	
 					//If client browser is not IE, then inject form. The form is necessary for HTML5 validation of required fields.
 					if(!isMsIE())
 						{
@@ -108,14 +108,10 @@
 					$(function(){
 					    new Clipboard('.btn');
 					});
-					
+					$('#formulare').addClass("active");
+
 				});
 
-
-				
-
-				
-				
 			</script>  
 		</div>
 	</body>

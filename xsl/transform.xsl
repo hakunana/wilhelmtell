@@ -23,16 +23,16 @@
     <button id="genJSONbtn" onclick="validateAndParse('body-content')">
       <xsl:choose>
         <xsl:when test="($labellang = 'labelfr')" >
-          Générer JSON
+          Générer JSON-LD
         </xsl:when>
         <xsl:when test="($labellang = 'labelde')" >
-          JSON erzeugen
+          JSON-LD erzeugen
         </xsl:when>
         <xsl:when test="($labellang = 'labelit')">
-          Generare JSON
+          Generare JSON-LD
         </xsl:when>
         <xsl:otherwise>
-          Generate JSON
+          Generate JSON-LD
         </xsl:otherwise>
       </xsl:choose>
     </button>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DO NOT DELETE ROOT NODE - DO NOT CHANGE NODEID of ROOT NODE --> 
+<node nodeid="root" labelde="Einzelveranstaltung" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true">
+<!-- DO NOT DELETE ROOT NODE - DO NOT CHANGE NODEID of ROOT NODE --> 
+	<input nodeid="@type" required="true" labelde="" labelfr="" labelen="Label EN" labelit="" displaylabel="false" value="Event" edit="false"/>
+	<input nodeid="name" required="true" labelde="Name des Events" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="" datatype="http://schema.org/Text"/>
+	<input nodeid="startDate" required="true" labelde="Start Datum und Zeit" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="2017-11-24T19:30:00-08:00" datatype="http://schema.org/DateTime"/>
+	<input nodeid="endDate" required="true" labelde="End Datum und Zeit" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="2017-11-24T23:00:00-08:00" datatype="http://schema.org/DateTime"/>
+	<input nodeid="description" required="true" labelde="Eventbeschreibung" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="" datatype="http://schema.org/Text"/>
+	<node nodeid="performer" labelde="ModeratorIn" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true">
+		<input nodeid="@type" required="true" labelde="" labelfr="" labelen="Label EN" labelit=""  displaylabel="false" edit="false" value="Person"/>
+		<input nodeid="name" required="true" labelde="Name" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="" datatype="http://schema.org/Text"/>
+	</node>
+	<node nodeid="image" labelde="Verknüpfte Fotos" labelfr="Label FR" labelen="Label EN" labelit="Label IT" multiplechildren="true" displaylabel="true">
+		<nodeelem labelde="Foto" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true">
+			<input nodeid="@type" required="true" labelde="" labelfr="" labelen="Label EN" labelit="" displaylabel="false" edit="false" value="ImageObject"/>
+			<input nodeid="url" required="true" labelde="URL-Adresse" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="http://www.IMAGE1.com" datatype="http://schema.org/URL"/>
+		</nodeelem>
+		<nodeelem labelde="Foto" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true">
+			<input nodeid="@type" required="true" labelde="" labelfr="" labelen="Label EN" labelit="" displaylabel="false" edit="false" value="ImageObject"/>
+			<input nodeid="url" required="true" labelde="URL-Adresse" labelfr="Label FR" labelen="Label EN" labelit="Label IT" displaylabel="true" edit="true" value="http://www.IMAGE2.com" datatype="http://schema.org/URL"/>
+		</nodeelem>
+	</node>
+<!-- DO NOT DELETE ROOT NODE - DO NOT CHANGE NODEID of ROOT NODE --> 
+</node>
+<!-- DO NOT DELETE ROOT NODE - DO NOT CHANGE NODEID of ROOT NODE --> 

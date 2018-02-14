@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node nodeid="root" labelde="TEST"/>
+	<input nodeid="@id"required="true" displaylabel="true" value="http://www.testurl.CH/event1" edit="false"/>
+	<input nodeid="@type"required="true"displaylabel="false" value="TestEvent" edit="false"/>
+	<input nodeid="name"required="true" labelde="TestName"/>
+	<input nodeid="description"required="true" labelde="TestBeschreibung"/>
+	<input nodeid="url"required="true" labelde="TestURL"/>
+</node>

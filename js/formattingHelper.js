@@ -441,6 +441,16 @@ function setAdditionalFormatsAfterXSLInit(){
             }
     });
 
+
+
+        // $(function(){
+        //                 console.log($('input').attr('schemaorgid'));
+        //                 // if (schemaorgidVal == 'description'){
+        //                 //  $(this).replaceWith($('<textarea>' + this.innerHTML + '</textarea>'));
+        //                 // }
+        //                 // console.log(schemaorgidVal + ' bla');
+        //             });
+
 }
 
 /**
