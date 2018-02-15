@@ -82,9 +82,6 @@
                             <div id="languagetabs-two" role="tabpanel" class="tab-pane" aria-expanded="false">
                                 <div class="col-lg-2">
                                     <ul class="nav nav-pills nav-stacked">
-                                        <li class="list-group-item title">
-                                            Topics
-                                        </li>
                                         <li class="list-group-item ">
                                             <a href="tutorials/create.php">Create an eventcode</a>
                                         </li>
@@ -121,9 +118,6 @@
                             <div id="languagetabs-three" role="tabpanel" class="tab-pane" aria-expanded="false">
                                 <div class="col-lg-2">
                                     <ul class="nav nav-pills nav-stacked">
-                                        <li class="list-group-item title">
-                                            Topics
-                                        </li>
                                         <li class="list-group-item active">
                                             <a href="tutorials/create.php">
                                             Créer un événement</a>
@@ -164,9 +158,6 @@
                             <div id="languagetabs-four" role="tabpanel" class="tab-pane" aria-expanded="false">
                                 <div class="col-lg-2">
                                     <ul class="nav nav-pills nav-stacked">
-                                        <li class="list-group-item title">
-                                            Topics
-                                        </li>
                                         <li class="list-group-item active">
                                             <a href="tutorials/create.php">
                                             Creare un testo evento JSON-LD</a>

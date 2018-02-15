@@ -75,7 +75,7 @@
                             <div class="col-lg-3 col-md-6 text-center box">
                                 <i class="fa fa-4x fa-external-link text-primary mb-3 sr-icons"></i>
                                 <h3 class="mb-3">Schritt 4</h3>
-                                <p class="text-muted mb-0">Kopieren sie das JSON-LD-Script und fügen Sie es in den Header Ihrer Website ein. Eine ausführliche Anleitung kann unter "Einbinden in meine Seite" gefunden werden. </p>
+                                <p class="text-muted mb-0">Kopieren sie das JSON-LD-Script und fügen Sie es in den Header Ihrer Website ein</p>
                             </div>
                         </div>
                         <!-- ENDE ERKLAERUNG DE -->
@@ -127,7 +127,7 @@
                                 <i class="fa fa-4x fa-external-link text-primary mb-3 sr-icons"></i>
                                     <h3 class="mb-3">Step 4</h3>
                                     <p class="text-muted mb-0">
-                                        Copy the JSON-LD script to your clipboard and place the code within your header of your website. Further tutorials on this can be found under "How to embedd within my page" </p><br>
+                                        Copy the JSON-LD script to your clipboard and place the code within your header of your website. Further tutorials on this can be found under </p><br>
                                     </div>
                                 </div>
                                 <!-- ENDE ERKLAERUNG EN -->
@@ -177,7 +177,7 @@
                                 <i class="fa fa-4x fa-external-link text-primary mb-3 sr-icons"></i>
                                         <h3 class="mb-3">Étape 4</h3>
                                         <p class="text-muted mb-0">
-                                            Copiez le script JSON-LD dans votre bloc-notes (clipboard) et placez le code dans le "header" de votre site Web. D'autres tutoriels sur ce sujet peuvent être trouvés sous "Intégrer dans ma page".</p><br>
+                                            Copiez le script JSON-LD dans votre bloc-notes (clipboard) et placez le code dans le "header" de votre site Web. D'autres tutoriels sur ce sujet peuvent être trouvés sous </p><br>
                                         </div>
                                     </div>
                                     <!-- ENDE ERKLAERUNG FR -->
@@ -227,7 +227,7 @@
                                 <i class="fa fa-4x fa-external-link text-primary mb-3 sr-icons"></i>
                                             <h3 class="mb-3">Passaggio 4</h3>
                                             <p class="text-muted mb-0">
-                                                opiare lo script JSON-LD negli appunti e inserire il codice all' interno dell' intestazione del sito Web. Ulteriori guide su questo punto si trovano in questo sito "Come integrare nella mia pagina".</p><br>
+                                                opiare lo script JSON-LD negli appunti e inserire il codice all' interno dell' intestazione del sito Web. Ulteriori guide su questo punto si trovano in questo sito </p><br>
                                             </div>
                                         </div>
                                         <!-- ENDE ERKLAERUNG IT -->
