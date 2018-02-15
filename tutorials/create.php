@@ -30,8 +30,8 @@
             <div>
                 <div class="tab-content">
                     <div id="languagetabs-one" role="tabpanel" class="tab-pane active" aria-expanded="true">
-                        <!-- startnav -->
-                        <div class="col-lg-2">
+                        <!-- startnav can be reactivated if more tutorials are implemented -->
+                        <!-- div class="col-lg-2">
                             <ul class="nav nav-pills nav-stacked">
                                 <li class="list-group-item title">
                                     Tutorial-Themen
@@ -44,15 +44,15 @@
                                     <a href="tutorials/copyToHeader.php">Einbinden in meine Seite</a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                         <!-- endnav -->
                         <!-- START ERKLAERUNG DE -->
-                        <div class="col-lg-10 headline">
+                        <div class="col-lg-12 headline">
                             
                             <h1 class="section-heading">Wie erstelle ich den JSON-LD Code für meine Veranstaltungen?</h1>
                             <hr>
                         </div>
-                        <div class="col-lg-10 is-table-row">
+                        <div class="col-lg-12 is-table-row">
                             <div class="col-lg-3 col-md-6 text-center box">
                                 <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
                                 <h3 class="mb-3">Schritt 1</h3>
@@ -75,13 +75,16 @@
                             <div class="col-lg-3 col-md-6 text-center box">
                                 <i class="fa fa-4x fa-external-link text-primary mb-3 sr-icons"></i>
                                 <h3 class="mb-3">Schritt 4</h3>
-                                <p class="text-muted mb-0">Kopieren sie das JSON-LD-Script und fügen Sie es in den Header Ihrer Website ein</p>
+                                <p class="text-muted mb-0">Kopieren sie das JSON-LD-Script und fügen Sie es in den Header Ihrer Website ein. Eine ausführliche Anleitung kann unter "Einbinden in meine Seite" gefunden werden. </p>
                             </div>
                         </div>
                         <!-- ENDE ERKLAERUNG DE -->
                     </div>
                     <div id="languagetabs-two" role="tabpanel" class="tab-pane" aria-expanded="false">
-                        <div class="col-lg-2">
+
+                        <!-- startnav can be reactivated if more tutorials are implemented -->
+
+                        <!-- <div class="col-lg-2">
                             <ul class="nav nav-pills nav-stacked">
                                 <li class="list-group-item title">
                                                 Subjects
@@ -94,15 +97,16 @@
                                     <a href="#">How to embedd within my page</a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
+                        <!-- end startnav -->
                         <!-- START ERKLAERUNG EN -->
-                        <div class="col-lg-10 headline">
+                        <div class="col-lg-12 headline">
                             
                             <h1>How do I create the JSON-LD Code for my Events?</h1>
                             <hr>
 
                         </div>
-                        <div class="col-lg-10 is-table-row">
+                        <div class="col-lg-12 is-table-row">
                             <div class="col-lg-3 col-md-6 text-center box">
                                 <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
                                 <h3 class="mb-3">Step 1</h3>
@@ -127,13 +131,14 @@
                                 <i class="fa fa-4x fa-external-link text-primary mb-3 sr-icons"></i>
                                     <h3 class="mb-3">Step 4</h3>
                                     <p class="text-muted mb-0">
-                                        Copy the JSON-LD script to your clipboard and place the code within your header of your website. Further tutorials on this can be found under </p><br>
+                                        Copy the JSON-LD script to your clipboard and place the code within your header of your website. Further tutorials on this can be found under "How to embedd within my page" </p><br>
                                     </div>
                                 </div>
                                 <!-- ENDE ERKLAERUNG EN -->
                             </div>
                             <div id="languagetabs-three" role="tabpanel" class="tab-pane" aria-expanded="false">
-                                <div class="col-lg-2">
+                             <!-- startnav can be reactivated if more tutorials are implemented -->
+                                <!-- <div class="col-lg-2">
                                     <ul class="nav nav-pills nav-stacked">
                                        <li class="list-group-item title">
                                             Sujets
@@ -146,13 +151,13 @@
                                             <a href="#">Intégrer dans ma page</a>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> -->
                                 <!-- START ERKLAERUNG FR -->
-                                <div class="col-lg-10 headline">
+                                <div class="col-lg-12 headline">
                                     <h1>Comment créer le code JSON pour votre événements?</h1>
                                     <hr>
                                 </div>
-                                <div class="col-lg-10 is-table-row">
+                                <div class="col-lg-12 is-table-row">
                                     <div class="col-lg-3 col-md-6 text-center box">
                                         <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
                                         <h3 class="mb-3">Étape 1</h3>
@@ -177,13 +182,15 @@
                                 <i class="fa fa-4x fa-external-link text-primary mb-3 sr-icons"></i>
                                         <h3 class="mb-3">Étape 4</h3>
                                         <p class="text-muted mb-0">
-                                            Copiez le script JSON-LD dans votre bloc-notes (clipboard) et placez le code dans le "header" de votre site Web. D'autres tutoriels sur ce sujet peuvent être trouvés sous </p><br>
+                                            Copiez le script JSON-LD dans votre bloc-notes (clipboard) et placez le code dans le "header" de votre site Web. D'autres tutoriels sur ce sujet peuvent être trouvés sous "Intégrer dans ma page".</p><br>
                                         </div>
                                     </div>
                                     <!-- ENDE ERKLAERUNG FR -->
                                 </div>
                                 <div id="languagetabs-four" role="tabpanel" class="tab-pane" aria-expanded="false">
-                                    <div class="col-lg-2">
+                                    <!-- startnav can be reactivated if more tutorials are implemented -->
+
+                                    <!-- <div class="col-lg-2">
                                         <ul class="nav nav-pills nav-stacked">
                                            <li class="list-group-item title">
                                                 Temi
@@ -196,15 +203,15 @@
                                                 <a href="#">Come integrare nella mia pagina</a>
                                             </li>
                                         </ul>
-                                    </div>
+                                    </div> -->
                                     <!-- START ERKLAERUNG IT -->
-                                    <div class="col-lg-10 headline">
+                                    <div class="col-lg-12 headline">
 <!--                                         <h1>Creare un testo evento JSON-LD</h1>
  -->                                        <!-- <h4 class="section-heading">Come posso creare il codice JSON-LD per i miei eventi?</h4>    --> 
                                     <h1>Come posso creare il codice JSON-LD per i miei eventi?</h1>
                                     <hr>
                                     </div>
-                                    <div class="col-lg-10 is-table-row">
+                                    <div class="col-lg-12 is-table-row">
                                         <div class="col-lg-3 col-md-6 text-center box">
                                             <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
                                             <h3 class="mb-3">1. passo</h3>
@@ -227,7 +234,7 @@
                                 <i class="fa fa-4x fa-external-link text-primary mb-3 sr-icons"></i>
                                             <h3 class="mb-3">Passaggio 4</h3>
                                             <p class="text-muted mb-0">
-                                                opiare lo script JSON-LD negli appunti e inserire il codice all' interno dell' intestazione del sito Web. Ulteriori guide su questo punto si trovano in questo sito </p><br>
+                                                opiare lo script JSON-LD negli appunti e inserire il codice all' interno dell' intestazione del sito Web. Ulteriori guide su questo punto si trovano in questo sito "Come integrare nella mia pagina".</p><br>
                                             </div>
                                         </div>
                                         <!-- ENDE ERKLAERUNG IT -->
