@@ -85,7 +85,7 @@
 <!--Kapitel 1-->
 <div class="col-lg-12" id="100">
   <h2>1 Einleitung</h2><a href="#index" class =" btn btn-secondary pull-right" > Back to top </a>
-    <p>In der Schweiz bieten viele Bibliotheken neben dem klassischem Buchverleih weitere Zusatzdienstleistung wie das Veranstalten von eigenen Events an. Diese Veranstaltungen werden von den Bibliotheken auf ihren eigenen Websites angeboten, einen bibliotheksübergreifenden Veranstaltungskalender gibt es jedoch nicht. Dies soll durch ein Praxisprojekt im Masterstudiengang Information and Data Management an der HTW Chur geändert werden.</p>
+    <p>In der Schweiz bieten viele Bibliotheken neben dem klassischen Buchverleih weitere Zusatzdienstleistung wie das Veranstalten von eigenen Events an. Diese Veranstaltungen werden von den Bibliotheken auf ihren eigenen Websites angeboten, einen bibliotheksübergreifenden Veranstaltungskalender gibt es jedoch nicht. Dies soll durch ein Praxisprojekt im Masterstudiengang Information and Data Management an der HTW Chur geändert werden.</p>
     <p>Der Auftraggeber Prof. Bruno Wenk hat hierfür ein Konzept zur Realisierung eines zentralen Veranstaltungskalenders erarbeitet. Das Konzept fusst auf den Grundsätzen des „Semantic Web“, bei dem Anbieter von Daten (Bibliotheken) diese mit Metainformation anreichern und als maschinenlesbares Format im Internet bereitstellen. Daraufhin können automatisierte „Web-Crawler“ diese Daten (zentraler Veranstaltungskalender) regelmässig abgreifen und weiterverarbeiten. Dateiformat und Schema wurden auf JSON-LD Format nach schema.org Definition festgelegt. Die Erstellung der JSON-LD Daten soll dabei für das Bibliothekspersonal möglichst einfach sein.</p>
     <br />
     <center><figure role="group">
@@ -111,7 +111,7 @@
 
 
     <h3 id="120">1.2 Abgrenzung und Vorgehensweise</h3>
-      <p>Bei Erstellung der gesamten Website werden wissenschaftliche Prinzipien wie bspw. die der Usability berücksichtigt.</p>
+      <p>Bei Erstellung der gesamten Website werden wissenschaftliche Prinzipien wie beispielsweise die der Usability berücksichtigt.</p>
       <p>Für die Erarbeitung des Tools wurde von der Projektgruppe ein agiler Ansatz gewählt. Das Projekt wurde in drei Phasen aufgeteilt, welche die Maturitätsstufen nach Priorität des Auftraggebers umfassen. Diese Phasen werden in mehreren Durchläufen abgehandelt. Ein solches Vorgehen ermöglicht dem Team, immer wieder Rücksprache mit dem Auftraggeber zu nehmen und dessen Wünsche, Ideen und Anforderungen aufzufassen. Durch die Integration neuer Komponenten kann das Tool schrittweise entwickelt und ausgebaut werden.</p>
       <br />
       <center><figure role="group">
@@ -142,11 +142,22 @@
 
     <h3 id="210">2.1 Use Case Endnutzer</h3>
       <p>Der erste Use Case befasst sich mit dem Prozess, den ein Endnutzer wie beispielsweise ein Bibliotheksmitarbeitender durchläuft.</p>
-      <b><img style="color:red;" alt="Abbildung Use Case 1"></b>
+      <p>Der Ablauf ist in vier Phasen unterteilt, wobei bereits zu Beginn in der ersten Verzweigung zu erkennen ist, dass der Nutzer n Formulare zur Verfügung haben kann, die aber im Wesentlichen dem gleichen Bedienungsablauf folgen. Der hier dargestellte Prozess fokussiert sich einzig und beispielhaft auf das Publizieren von Veranstaltungsdaten.</p>
+      <p>Aufgezeigte Abbruchbedingungen sollen potentielle (vermutete) Hürden für den Endnutzer darstellen. Hier hat die Seite mit seinem Tutorial und seiner Nutzerfreundlichkeit das klare Ziel, diese Schwachstellen zu decken und mögliche Abbrüche zu verhindern.</p>
+      <p>Diese Abbruchbedingungen können aber in einer Folgeuntersuchung genauer durchleuchtet werden und die Schwachpunkte noch weiter gedeckt und gestärkt werden. </p>
+      <br />
+      <center><figure role="group">
+        <img style="max-width:100%" src="/doc/images/2.1_UseCase Endnutzer.png" alt="Abbildung 3: Use Case - Erstellen von JSON-LD-Code via Formular">
+        <figcaption>Abbildung 3: Use Case - Erstellen von JSON-LD-Code via Formular</figcaption> 
+      </figure></center>
 
     <h3 id="220">2.2 Use Case Entwickler</h3>
-      <p>Der zweite Use Case beschreibt den Prozess, der ausgeführt wird, wenn jemand ein XML-Template hoch lädt und validiert.</p>
-      <b><img style="color:red;" alt="Abbildung Use Case 2"></b>
+      <p>Der zweite Use Case beschreibt den Prozess, der ausgeführt wird, wenn ein Entwickler seitens der Projektgruppe ein XML-Template auf den Server lädt und dort validieren möchte. Hierbei werden Abbruchbedingungen nicht weiter berücksichtigt, da bereits von einem tiefgreifenden technischen Verständnis der Anwendergruppe ausgegangen wird.</p>
+      <br />
+      <center><figure role="group">
+        <img style="max-width:100%" src="/doc/images/2.2_UseCase Entwickler.png" alt="Abbildung 4: Use Case - Upload, Validierung und Publizieren von XML-Files">
+        <figcaption>Abbildung 4: Use Case - Upload, Validierung und Publizieren von XML-Files</figcaption> 
+      </figure></center>
 </div>
 
 
@@ -161,7 +172,7 @@
     <p>Als Unterstützung für die Endnutzer wird ein Tutorial zur Verfügung gestellt. Dieses erläutert dem Nutzer schrittweise, wie das Formular auszufüllen ist. Ebenso wird kurz erläutert, wie der JSON-LD-Datensatz in die Website integriert werden kann.</p>
     <p>Da die Formulare in den Sprachen Deutsch, Englisch, Französisch und Italienisch zur Verfügung stehen, wird auch das Tutorial übersetzt. Dadurch wird Nutzern aus allen Regionen der Schweiz und darüber hinaus die Anwendung des Tools erleichtert.</p>
   <h3 id="330">3.3 Entwickler</h3>
-    <p>Ein Grundgedanke des Projektes ist die Weiterentwicklung des Tools, weshalb dies der umfassendste Bereich darstellt. Bei der Entwicklung wird unterschieden zwischen der Erstellung neuer Formulare und der Erweiterung der Plattform. Im Entwickler-Bereich finden sich Anleitungen und Anweisungen für die Formulare, der Source Code für das Tool (beschränkt auf JS und XSLT) sowie die hier vorliegende Projektdokumentation mit den technischen Details, welche im nächsten Kapitel <a href="#400">4 Design und technische Details</a> folgen. Weitere Kommentare zum Source Code finden sich direkt in den Files (bspw. PHP).</p>
+    <p>Ein Grundgedanke des Projektes ist die Weiterentwicklung des Tools, weshalb dies der umfassendste Bereich darstellt. Bei der Entwicklung wird unterschieden zwischen der Erstellung neuer Formulare und der Erweiterung der Plattform. Im Entwickler-Bereich finden sich Anleitungen und Anweisungen für die Formulare, der Source Code für das Tool (beschränkt auf JS und XSLT) sowie die hier vorliegende Projektdokumentation mit den technischen Details, welche im nächsten Kapitel <a href="#400">4 Design und technische Details</a> folgen. Weitere Kommentare zum Source Code finden sich direkt in den Files (beispielsweise PHP).</p>
 
 
 
@@ -177,8 +188,8 @@
       <p>Die Verfasser der XML-Templates laden diese hierfür in das separate Verzeichnis [WEBROOT]/xmltovalidate<a href="#footline">&sup2;</a> auf den Server. Danach können sie auf einfache Art und Weise das hochgeladene XML-File via [meine_URL]/validate validieren. Wenn bei der Validierung keine Fehler entdeckt werden, kann der Entwickler das validierte File auf Knopfdruck "veröffentlichen". Das File wird dabei serverseitig in das Verzeichnis [WEBROOT]/xml kopiert und somit für den eigentlichen JSON-LD Prozess zur Verfügung gestellt.</p>
       <p>Das XML-File wird 4-Stufig validiert:</p>
       <ul>
-        <li><b>1. Stufe - Fehler</b><p>Prüfung ob das XML-File den Anforderungen gemäss XSD entspricht. Erfolgt serverseitig via PHP default XML-XSD Validierungsfunktion.</p></li>
-        <li><b>2. Stufe - Fehler</b><p>Prüfung nach Logik-Fehlern wie bspw. Check, dass bei als sichtbar konfigurierten Labels auch ein Wert für die Labels mitgegeben wird. Erfolgt serverseitig via XPath-Abfragen.</p></li>
+        <li><b>1. Stufe - Fehler</b><p>Prüfung ob das XML-File den Anforderungen gemäss XSD entspricht. Erfolgt serverseitig via PHP "default" XML-XSD Validierungsfunktion.</p></li>
+        <li><b>2. Stufe - Fehler</b><p>Prüfung nach Logik-Fehlern wie beispielsweise Check, dass bei als sichtbar konfigurierten Labels auch ein Wert für die Labels mitgegeben wird. Erfolgt serverseitig via XPath-Abfragen.</p></li>
         <li><b>3. Stufe - Warnung</b><p>Es wird eine Warnung ausgegeben, falls nicht alle Elemente eine @type-Annotation besitzen.</p></li>
         <li><b>4. Stufe - Info</b><p>Ein Info-Text wird ausgegeben, falls nicht alle Elemente eine @id-Annotation besitzen.</p></li>
       </ul>
@@ -313,18 +324,19 @@
           <li>Fetching und maschinelle Übersetzung von schema.org-Beschreibungen</li>
           <li>Fetching der XML-Files auf dem Server</li>
         </ul>
-        <p>Währungs- und Schema.org-Fetch haben einen Fallback auf die lokale Datei im Ordner [WEBROOT]/php/local-bakfalls die remote-Files nicht verfügbar wären. Der Order „local-bak“ ist relevant und sollte nur sporadisch aktualisiert werden. Eine lokale „fallback-Datei“ wird verwendet, da damit das Tool auch ohne Internet-Verbindung funktioniert. Zudem können remote-Abfragen immer mal wieder fehlerhaft sein (bspw. remote-host offline oder host-Datei fehlerhaft). Die lokale „fallback-Datei“ könnte auch automatisiert periodisch heruntergeladen werden (bspw. via Cron-Job). Bei dieser Variante wird ein manuelles nach-testen strengstens empfohlen.</p>
+        <p>Währungs- und Schema.org-Fetch haben einen Fallback auf die lokale Datei im Ordner [WEBROOT]/php/local-bakfalls die remote-Files nicht verfügbar wären. Der Order „local-bak“ ist relevant und sollte nur sporadisch aktualisiert werden. Eine lokale „fallback-Datei“ wird verwendet, da damit das Tool auch ohne Internet-Verbindung funktioniert. Zudem können remote-Abfragen immer mal wieder fehlerhaft sein (beispielsweise remote-host offline oder host-Datei fehlerhaft). Die lokale „fallback-Datei“ könnte auch automatisiert periodisch heruntergeladen werden (beispielsweise via Cron-Job). Bei dieser Variante wird ein manuelles nach-testen strengstens empfohlen.</p>
+        <p>Auch wurden Tutorial- und Entwickler-Seiten unter PHP entwickelt, da dadurch die mehrsprachige Ausarbeitung sowie die Informationsarchitektur, welche zwei Hierarchieebenen übersteigt, besser gelingen konnten. Durch den modularisierten Aufbau der gesamten Anwendung können Redundanzen im Code vermieden werden, was Fehlerquellen minimiert. Die Seite kann damit leichter und flexibler erweitert werden.</p>
 
       <h4 id="433">4.3.3 Besonderheiten des Formulars</h4>
-        <p>Für das Formular, welches dem Endnutzer angezeigt wird, gibt es einige Spezialitäten. Diese sind auch bei der Weiterentwicklung zu berücksichtigen.</p>
+        <p>Das Formular, welches dem Endnutzer angezeigt wird, bringt einige besondere Merkmale mit sich. Diese sind auch bei der Weiterentwicklung zu berücksichtigen, da sie Dependenzen mit der Kernanwendung haben.</p>
         <ul>
           <li><b>Validierung der Eingabefelder</b>
             <p>Die Eingabemaske wird auf zwei verschiedene Arten validiert:</p>
-            <p><b>Pflichtfelder</b> werden für alle Browser ausser für MS-IE mittels Standard HTML5 Validierung gemacht. Die Dialoge der HTML5-Validierung sind jeweils immer in der Systemsprache des Users. Das bedeutet, dass bei Systemsprache Deutsch eine Meldung in Deutsch ausgegeben wird, auch wenn für das Formular die Sprache Französisch (FR) ausgewählt wurde. Aufgrund von Kompatibilitätsgründen wurde für die Trident-Engine (bspw. MS-IE ohne Edge) eine eigene Validierung mittels Popups entwickelt. Diese Popups sind folglich in der Sprache, die im Formular eingestellt wurde (nicht zwingend die Systemsprache).</p>
+            <p><b>Pflichtfelder</b> werden für alle Browser ausser für MS-IE mittels Standard HTML5 Validierung gemacht. Die Dialoge der HTML5-Validierung sind jeweils immer in der Systemsprache des Users. Das bedeutet, dass bei Systemsprache Deutsch eine Meldung in Deutsch ausgegeben wird, auch wenn für das Formular die Sprache Französisch (FR) ausgewählt wurde. Aufgrund von Kompatibilitätsgründen wurde für die Trident-Engine (beispielsweise MS-IE ohne Edge) eine eigene Validierung mittels Popups entwickelt. Diese Popups sind folglich in der Sprache, die im Formular eingestellt wurde (nicht zwingend die Systemsprache).</p>
             <p>Die Validierung der <b>Datentypen</b>, ob also beispielsweise auch wirklich eine Zahl in ein Zahlenfeld eingegeben wurde, wird mittels regex überprüft, allfällige Fehlermeldungen werden via Bootstrap Elemente angezeigt. Hier ist zu beachten, dass bei Drücken des „JSON-erzeugen“-Buttons geprüft wird, ob noch Fehlermeldungen zum Format bestehen. Sollen die Format-Fehlermeldungen angepasst werden, muss dies auch bei der „finalen“ Prüfung vor der JSON-LD-Generierung mitberücksichtigt werden.</p>
           </li>
           <li><b>Datumsfelder</b><p>Alle Datumsfelder werden live an die Zeitzone des Users angepasst. Wenn im XML-Template beispielsweise der Default-Wert Zeitzone US-Ostküste gespeichert ist, wird das Datum beim Aufrufen in die lokale Zeit konvertiert (lokale Zeit entspricht der Lokalisation des Clients).</p></li>
-          <li><b>Add-/Delete-Buttons</b><p>Jedes Node-Element kann mit einem Klick auf den „löschen“-Button gelöscht werden. Pflichtelemente können nur solange gelöscht werden, wie es mehr als ein gleiches Element gibt. Das letzte Pflichtelement kann nicht gelöscht werden. Weitere Node-Elemente können via „hinzufügen“-Button hinzugefügt werden. Bei erstmaligem Aufruf des Formulars werden relevante Elemente geklont, deren Inhalt gelöscht und zwischengespeichert. Bei Klick auf „hinzufügen“ wird schliesslich das zu klonende Element identifiziert und innerhalb der entsprechenden Hierarchiestufe zuunterst hinzugefügt. Das Klonen der Elemente bei erstmaligem Aufruf („Blueprinting“) ermöglicht es, dass ein Element hinzugefügt werden kann, auch wenn keine „peer-Elemente“ mehr existieren (bspw. Hinzufügen eines Fotos, auch wenn keine vorgehenden Fotos mehr vorhanden sind).</p></li>
+          <li><b>Add-/Delete-Buttons</b><p>Jedes Node-Element kann mit einem Klick auf den „löschen“-Button gelöscht werden. Pflichtelemente können nur solange gelöscht werden, wie es mehr als ein gleiches Element gibt. Das letzte Pflichtelement kann nicht gelöscht werden. Weitere Node-Elemente können via „hinzufügen“-Button hinzugefügt werden. Bei erstmaligem Aufruf des Formulars werden relevante Elemente geklont, deren Inhalt gelöscht und zwischengespeichert. Bei Klick auf „hinzufügen“ wird schliesslich das zu klonende Element identifiziert und innerhalb der entsprechenden Hierarchiestufe zuunterst hinzugefügt. Das Klonen der Elemente bei erstmaligem Aufruf („Blueprinting“) ermöglicht es, dass ein Element hinzugefügt werden kann, auch wenn keine „peer-Elemente“ mehr existieren (beispielsweise Hinzufügen eines Fotos, auch wenn keine vorgehenden Fotos mehr vorhanden sind).</p></li>
         </ul>
         <p></p>
   </div>
@@ -340,9 +352,9 @@
         <p>Mit der ausführlichen Dokumentation des Projektes wurde zudem eine gute Grundlage für den Unterhalt und die Weiterentwicklung des Tools geschaffen.</p>
         <p>Des Weiteren sind bereits viele Verbesserungen implementiert, die über das Primärziel hinausgehen. Alle Masken (inkl. die wichtigsten Tutorials für Endbenutzer) sind viersprachig vorhanden, resp. können via XML-Template viersprachig konfiguriert werden. Zusätzlich werden automatisiert und dynamisch die aktuellsten Definitionen gemäss schema.org live abgegriffen und maschinell in die User-Sprache übersetzt. Um die Qualität der XML-Templates zu verbessern und die Administration zu erleichtern, wurde eine hochwertige Validierungsfunktion erstellt, die nicht nur auf das XML-Schema prüft, sondern auch erweiterte Prüfungen mittels XPath Abfragen durchführt.</p>
         <ul>
-          <li><b>Intuitives webbasiertes Formular</b><p>Das Formular ist einfach zu bedienen und orientiert sich optisch an gängigen Formularen auf Websites. Dies bietet Nutzern einen gewissen Wiedererkennungswert, was es intuitiv macht. Die Platzierung auf der Startseite macht es leicht auffindbar und Nutzer können ohne Umwege starten. Unterstrichene Begriffe beinhalten Beschreibungen, die automatisch aus schema.org übersetzt werden. Hier besteht allenfalls Optimierungsbedarf, da die Übersetzungen maschinell geschehen und die Sätze je nach dahinter stehendem HTML-Element nicht vollständig sind. Um die Qualität der übersetzen Elemente zu erhöhen, könnte zusätzlich eine manuelle Übersetzung von ausgewählten Elementen durchgeführt werden, es ist jedoch fraglich ob der dadurch entstehende Aufwand gerechtfertigt wäre. Weiter sollen Platzhalter in den Felder Beispiele anzeigen, wie das Formular ausgefüllt werden muss.</p></li>
+          <li><b>Intuitives webbasiertes Formular</b><p>Das Formular ist einfach zu bedienen und orientiert sich optisch an gängigen Formularen auf Websites. Dies bietet Nutzern einen gewissen Wiedererkennungswert, was es intuitiv macht. Die Platzierung auf der Startseite macht es leicht auffindbar und Nutzer können ohne Umwege starten. Unterstrichene Begriffe beinhalten Beschreibungen, die automatisch aus schema.org übersetzt werden. Hier besteht allenfalls Optimierungsbedarf, da die Übersetzungen maschinell geschehen und die Sätze je nach dahinterstehendem HTML-Element nicht vollständig sind. Um die Qualität der übersetzen Elemente zu erhöhen, könnte zusätzlich eine manuelle Übersetzung von ausgewählten Elementen durchgeführt werden, es ist jedoch fraglich ob der dadurch entstehende Aufwand gerechtfertigt wäre.</p></li>
           <li><b>Umfassendes Tutorial</b><p>Das Tutorial für die Nutzung des Formulars ist kurz und verständlich gehalten. Es ist in einer einfachen Sprache verfasst und auf komplizierte Satzstellungen wurde bewusst verzichtet. Erweiterungspotential bietet sich besonders in der Erläuterung der JSON-LD-Einbindung, eine erste Empfehlung findet sich im nächsten Kapitel. Das Tutorial ist mit Screenshots eines konkreten Beispiels versehen, was es für Nutzer noch einfacher macht.</p></li>
-          <li><b>Anleitung zur Erstellung von XML-Templates</b><p>Das XML-Tutorial für die Generierung neuer Formulare ist detailliert und dennoch kurz gehalten. Es legt den Aufbau eines XML-Files dar und beschreibt die Elemente und Attribute die vorhanden sein müssen und optional genutzt werden können. Zudem wurden gezielt XML-Templates erstellt, die als Beispiel dienen können: Ein komplexes Beispiel, ein einfaches Beispiel und jeweils Testfiles für alle Formate und Hierarchieausprägungen zu Testingzwecke. Auch liegen Testfiles für die XML-Validierung vor, bei denen jede einzelne Prüfung greift und entsprechend ausgegeben wird.</p></li>
+          <li><b>Anleitung zur Erstellung von XML-Templates</b><p>Das XML-Tutorial für die Generierung neuer Formulare ist detailliert und dennoch kurz gehalten. Es legt den Aufbau eines XML-Files dar und beschreibt die Elemente und Attribute die vorhanden sein müssen und optional genutzt werden können. Zudem wurden gezielt XML-Templates erstellt, die als Beispiel dienen können: Ein komplexes Beispiel, ein einfaches Beispiel und jeweils Testfiles für alle Formate und Hierarchieausprägungen zu Testzwecken. Auch liegen Testfiles für die XML-Validierung vor, bei denen jede einzelne Prüfung greift und entsprechend ausgegeben wird.</p></li>
           <li><b>Projektdokumentation</b><p>In der Projektdokumentation wurden die Zielsetzung, das Vorgehen und angewandte Methoden sowie Entscheidungsgrundlagen ausführlich festgehalten. Des Weiteren enthält sie technische Details sowie Grundlagen theoretischer Konzepte. Es ist zu berücksichtigen, dass es sich hierbei um eine zusammengefasste Dokumentation des Projektes und nicht um einen detaillierten Bericht handelt.</p></li>
           <li><b>Vollständige technische Dokumentation</b><p>Die technischen Erläuterungen sind umfassend und bestehen aus Code-Kommentare, der Quellcode-Dokumentation (JS-DOC/XSLT-DOC), den Entwickler-Tutorials und den Angaben in dieser Hauptdokumentation.</p></li>
         </ul>
@@ -359,12 +371,16 @@
     <h2>6 Erweiterungsideen und Empfehlungen</h2><a href="#index" class =" btn btn-secondary pull-right" > Back to top </a>
       <p>Das entwickelte Tool hat Potential für Weiterentwicklungen. Erste Ideen und Empfehlungen werden nachfolgend aufgeführt. Dabei wird unterschieden zwischen funktionaler Weiterentwicklung und der Optimierung des Layouts.</p>
       <h3 id="610">6.1 Funktionale Erweiterungen</h3>
-        <p>Die gesamte Website ist, soweit möglich, „responsive“ und damit Smartphone-freundlich aufgebaut. Dies mit dem Hintergedanken, dass beispielsweise Bibliotheksmitarbeitende das Formular auch dann ausfüllen können, wenn sie unterwegs bzw. nicht an einem stationären Computer sind (bspw. Tablet-Computer). Damit der JSON-LD-Datensatz dennoch schnellstmöglich von den Administratoren in die Website eingepflegt werden kann, bietet es sich an, das Formular um einen <b>E-Mail-Versand</b> zu erweitern. Per Knopfdruck soll der Datensatz in eine E-Mail kopiert und versandt werden können, was jedoch erweiterte Konfigurationen bezüglich IT-Security (spam-mails / robos) und Mailserver bedingt.</p>
+        <p>Die gesamte Website ist, soweit möglich, „responsive“ und damit Smartphone-freundlich aufgebaut. Dies mit dem Hintergedanken, dass beispielsweise Bibliotheksmitarbeitende das Formular auch dann ausfüllen können, wenn sie unterwegs bzw. nicht an einem stationären Computer sind (beispielsweise aber an einem Tablet-Computer). Damit der JSON-LD-Datensatz dennoch schnellstmöglich von den Administratoren in die Website eingepflegt werden kann, bietet es sich an, das Formular um einen <b>E-Mail-Versand</b> zu erweitern. Per Knopfdruck soll der Datensatz in eine E-Mail kopiert und versandt werden können, was jedoch erweiterte Konfigurationen bezüglich IT-Security (spam-mails / robos) und Mailserver bedingt.</p>
         <p>Eine weitere Möglichkeit, den generierten Datensatz schnell verschicken oder in die Website einpflegen zu können, ist die Speicherung in der Zwischenablage. Mit einem <b>Button „In Zwischenablage speichern“</b> kann dafür gesorgt werden, dass der gesamte Datensatz mit einem Klick zur Weiterverarbeitung gesichert wird. Dadurch werden den Bibliotheksmitarbeitenden die Schritte des Markierens sowie des Kopierens erspart.</p>
-        <p>Für weitere Zeitersparnis könnte eine <b>Upload-Funktion</b> integriert werden. Diese soll den Bibliotheksmitarbeitenden ermöglichen, alte Datensätze erneut ins Formular zu laden um dann beispielsweise nur geringfügige Änderungen im Formular vorzunehmen. Vergangene Events, die sich in den Folgejahren ähnlich wiederholen, könnten im JSON-LD-Format gesichert und zukünftig erneut, mit wenigen Anpassungen, verwendet werden. Die Erweiterung ist jedoch sehr Aufwändig, da eine „Rückkonvertierung“ von JSON-LD in XML nicht vorgesehen ist. Zudem sind Security-Aspekte zu berücksichtigen (bspw. das Hochladen von Schadcode verhindern). Als Workaround kann aktuell ein XML-Template dienen, dass Default-Werte enthält.</p>
+        <p>Für weitere Zeitersparnis könnte eine <b>Upload-Funktion</b> integriert werden. Diese soll den Bibliotheksmitarbeitenden ermöglichen, alte Datensätze erneut ins Formular zu laden um dann beispielsweise nur geringfügige Änderungen im Formular vorzunehmen. Vergangene Events, die sich in den Folgejahren ähnlich wiederholen, könnten im JSON-LD-Format gesichert und zukünftig erneut, mit wenigen Anpassungen, verwendet werden. Die Erweiterung ist jedoch sehr Aufwändig, da eine „Rückkonvertierung“ von JSON-LD in XML nicht vorgesehen ist. Zudem sind Security-Aspekte zu berücksichtigen (beispielsweise das Hochladen von Schadcode verhindern). Als Workaround kann aktuell ein XML-Template dienen, dass Default-Werte enthält.</p>
         <p>Mit den aktuellen XML-Vorlagen können die Formulare in den Sprachen Deutsch, Englisch, Französisch und Italienisch ausgegeben werden. Die Übersetzung erfolgt manuell im XML-File, indem die Labels für die Sprachen befüllt werden. Das bedeutet, dass die Formulare nicht in anderen Sprachen zur Verfügung stehen, wenn diese nicht bewusst übersetzt werden. Dennoch erscheinen die Sprachmöglichkeiten in der Dropdown-Liste auf der Formular-Seite. Um Unmut seitens der Endnutzer zu vermeiden, für die die gewünschte Sprache trotz Anzeige nicht zur Verfügung steht, empfiehlt sich eine <b>dynamisch generierte Dropdown-Liste</b>. Sprachen sollten demnach nur angezeigt werden, wenn die Labels entsprechend ausgefüllt wurden. Werden die Labels leer gelassen, soll die Sprache nicht in der Liste zur Verfügung stehen. Da der Aufwand verhältnismässig gross ist, beispielsweise man feststellt, dass eine Sprache nicht vergessen wurde, sondern absichtlich fehlt, ist diese Optimierung noch nicht erfolgt.</p>
         <p>Das Tool kann nach heutigem Stand aus JSON-LD aus einem XML-Template erstellten. Zudem verarbeitet es live schema.org-Referenzen für die Übersetzungen im Formular. Hier bietet es sich als Weiterentwicklung an, die <b>Generierung von XML-Templates zu automatisieren</b>. Zeitgleich könnten schema.org-Klassen vorgeschlagen oder gegengeprüft werden. Dies würde die Bereitstellung von Formularen unterstützten und könnte der Anwendung eine breitere Nutzung ermöglichen.</p>
       <h3 id="620">6.2 Ideen für Design-Optimierungen</h3>
+      	<p>Um das User Interface zu optimieren, können noch einige weitere Massnamen und Erweiterungen vorgenommen werden.</p>
+      	<p>Zum einen ist die Navigation noch nicht an allen Stellen gleichermassen konsistent, vor allem aber sollte sie mit zunehmendem Umfang der Anwendung noch etwas vereinfacht werden. Wohingegen zum jetzigen Zeitpunkt das Dropdown zur Auswahl der Formulare passend ist, kann diese Form der Navigation mit steigendem Umfang nicht mehr ausreichend sein. Dann empfiehlt es sich, eine linke Navigationsbox zu integrieren und die Formulare beispielsweise zu kategorisieren.</p>
+      	<p><i>Bei der bisherigen Herangehensweise der Konvertierung der XML-Dateien zu HTML-Formularen werden keine Klassen berücksichtigt. Da auch die IDs der HTML Tags automatisch generiert werden, wird empfohlen das XML zu erweitern.</i></p>
+      	<p><i>Sollte der Wunsch bestehen, die Tutorials zu erweitern und weitere Tutorials hinzuzufügen, so ist zum einen eine Vorlage im Ordner Tutorials zu finden (tutorials/template.php). Des Weiteren ist die Menüführung in der Datei tutorials/create.php bereits als HTML vorhanden und muss nur re-aktiviert werden (derzeit ist der Code auskommentiert).</i></p>
       <h3 id="630">6.3 Empfehlungen für die Dokumentation</h3>
         <p>Um CMS-Verantwortlichen die Einbindung des JSON-LD-Datensatzes in die Website zu erleichtern, wird eine ausführliche Erweiterung des Tutorials empfohlen. Insbesondere wenn nur begrenzt Kenntnisse zur Handhabung des CMS vorhanden sind, kann die <b>Integration externer Links</b> zu konkreten CMS-Tutorials hilfreich sein. Für das CMS Wordpress gibt es beispielsweise diverse Plug-Ins<a href="#footline"><sup>9</sup></a>, um den Header zu bearbeiten, die Anzahl solcher Erweiterungen stellt Verantwortliche aber auch vor die Qual der Wahl. Links mit guten und einfach einsetzbaren Plug-Ins können demnach auch die Motivation steigern.</p>
   </div>
@@ -439,8 +455,25 @@
 
       <h3 id="1030">Anhang C - Finales Layout des Tools</h3>
         <p>Nach mehreren Durchläufen in der Entwicklung des Layouts hat sich gezeigt, dass die ursprünglich geplanten Darstellungen nicht vollständig übernommen werden können. Einerseits gab es Einschränkungen seitens der Technik wie die automatische Generierung der JS/XSLT-Dokumentation, welche keine Überarbeitung ermöglicht, oder die beschränkten Formatierungsmöglichkeiten über die Formulare. Andererseits wurde das Design ausgerichtet auf das zur Verfügung stehende Material, was bei den ersten Entwürfen noch nicht vollständig abgeschätzt werden konnte.</p>
-        <b><img id="abb10" style="color:red;" alt="Abbildung 10"></b>
+        <br />
+        <center><figure role="group">
+          <img style="max-width:100%" src="/doc/images/10C.1_Layout Formular.png" alt="Abbildung 10: Layout Formular"> 
+          <figcaption>Abbildung 10: Layout Formular</figcaption> 
+        </figure></center>
 
+        <br />
+        <center><figure role="group">
+          <img style="max-width:100%" src="/doc/images/10C.2_Layout Tutorial.png" alt="Abbildung 11: Layout Tutorial"> 
+          <figcaption>Abbildung 11: Layout Tutorial</figcaption> 
+        </figure></center>
+
+        <br />
+        <center><figure role="group">
+          <img style="max-width:100%" src="/doc/images/10C.3_Layout Entwickler.png" alt="Abbildung 12: Layout Entwickler"> 
+          <figcaption>Abbildung 12: Layout Entwickler</figcaption> 
+        </figure></center>
+        <br />
+        <br />
   </div>
 
 <!--Fusszeilen-->

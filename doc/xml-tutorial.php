@@ -31,11 +31,12 @@
 							<li>
 								Laden Sie das Dokument auf den Server, in den Ordner xmltovalidate
 							</li>
-							<li>
-								Validieren Sie das XML-File via <a href="../validate/index.html">validate</a>
+							<li>Validieren Sie das XML-File via <a href="../validate/index.php">validate</a></li>
+							<ul>
+								
 								<li>a.	Bei Ausgabe eines Errors: Überarbeiten Sie das XML-File gemäss Fehlermeldung und laden Sie es erneut auf den Server</li>
 								<li>b.	Validierung erfolgreich ("XML file is valid."): Drücken Sie auf den Button "Publish", um das File freizugeben</li>
-							</li>
+							</ul>
 							<p>Wenn das XML-File freigegeben und auf dem Server in den Ordner xml verschoben wurde, erhalten Sie die Meldung "XML file has been published susccessfully." Es kann nun als Formular auf der<a href="../index.php"> Startseite </a> verwendet werden.</p>
 						</ul>
 					</section>
@@ -146,21 +147,14 @@
 							<tbody>
 								<tr>
 									<th scope="row">1</th>
-									<td>labelde, labelfr, 
-labelen, labelit
-</td>
-									<td>Attribut ist optional
-Wird ein label-Attribut gesetzt, müssen alle anderen label-Attribute ebenfalls gesetzt werden
-</td>
-									
+									<td>labelde, labelfr, labelen, labelit </td>
+									<td>Attribut ist optional. Wird ein label-Attribut gesetzt, müssen alle anderen label-Attribute ebenfalls gesetzt werden </td>
 								</tr>
 								<tr>
 									<th scope="row">2</th>
-									<td>labelde, labelfr, labelen, labelit</td>
-									<td>Attribut ist optional
-										Wird ein label-Attribut gesetzt, müssen alle anderen label-Attribute ebenfalls gesetzt werden
+									<td>displaylabel</td>
+									<td>Attribut ist optional. Wird das Attribut nicht gesetzt, ist der Standard displaylabel="false"
 									</td>
-									
 								</tr>
 								<tr>
 							</tbody>

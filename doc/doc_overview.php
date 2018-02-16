@@ -15,10 +15,10 @@
                 <a href="doc/xml-tutorial.php" class=" btn btn-primary" target="">Link</a>
             </div>
 
-            <div class="col-lg-3 text-center box">  <i class="fa  fa-4x fa-code"></i>  <p>JS&XSLT Dokumentation</p>
+            <div class="col-lg-3 text-center box">  <i class="fa  fa-4x fa-code"></i>  <p>XSLT Process Dokumentation</p>
                 <a href="doc/xslt/index.html" class=" btn btn-primary" target="_blank">Link</a>
             </div>
-            <div class="col-lg-3 text-center box"><i class="fa  fa-4x fa-code"></i>  <p>JSON-LD Dokumentation</p>
+            <div class="col-lg-3 text-center box"><i class="fa  fa-4x fa-code"></i>  <p>JS Dokumentation</p>
                 <a href="doc/index.html" class=" btn btn-primary" target="_blank">Link</a>
             </div>
         </div>
